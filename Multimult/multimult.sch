@@ -1,0 +1,2343 @@
+EESchema Schematic File Version 4
+LIBS:multimult-cache
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:D_Schottky D2
+U 1 1 5EE46BB1
+P 9850 950
+F 0 "D2" H 9850 1166 50  0000 C CNN
+F 1 "D_Schottky" H 9850 1075 50  0000 C CNN
+F 2 "Diode_THT:D_A-405_P7.62mm_Horizontal" H 9850 950 50  0001 C CNN
+F 3 "~" H 9850 950 50  0001 C CNN
+	1    9850 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_Schottky D3
+U 1 1 5EE47445
+P 9850 1350
+F 0 "D3" H 9850 1134 50  0000 C CNN
+F 1 "D_Schottky" H 9850 1225 50  0000 C CNN
+F 2 "Diode_THT:D_A-405_P7.62mm_Horizontal" H 9850 1350 50  0001 C CNN
+F 3 "~" H 9850 1350 50  0001 C CNN
+	1    9850 1350
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	10700 1250 10700 1150
+Wire Wire Line
+	10700 1150 10700 1050
+Connection ~ 10700 1150
+Wire Wire Line
+	10200 1250 10200 1150
+Wire Wire Line
+	10200 1050 10200 1150
+Connection ~ 10200 1150
+$Comp
+L power:+12V #PWR0101
+U 1 1 5EE67C71
+P 9500 800
+F 0 "#PWR0101" H 9500 650 50  0001 C CNN
+F 1 "+12V" H 9515 973 50  0000 C CNN
+F 2 "" H 9500 800 50  0001 C CNN
+F 3 "" H 9500 800 50  0001 C CNN
+	1    9500 800 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9700 950  9500 950 
+Wire Wire Line
+	9500 950  9500 800 
+$Comp
+L power:-12V #PWR0102
+U 1 1 5EE6964E
+P 9500 1500
+F 0 "#PWR0102" H 9500 1600 50  0001 C CNN
+F 1 "-12V" H 9515 1673 50  0000 C CNN
+F 2 "" H 9500 1500 50  0001 C CNN
+F 3 "" H 9500 1500 50  0001 C CNN
+	1    9500 1500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9700 1350 9500 1350
+Wire Wire Line
+	9500 1350 9500 1500
+Wire Wire Line
+	10200 950  10000 950 
+Wire Wire Line
+	10200 1150 10700 1150
+Wire Wire Line
+	10200 950  10700 950 
+Wire Wire Line
+	10200 1350 10700 1350
+$Comp
+L Connector_Generic:Conn_02x05_Odd_Even J5
+U 1 1 5EE47F28
+P 10500 1150
+F 0 "J5" H 10550 1567 50  0000 C CNN
+F 1 "Conn_02x05_Odd_Even" H 10550 1476 50  0000 C CNN
+F 2 "Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical" H 10500 1150 50  0001 C CNN
+F 3 "~" H 10500 1150 50  0001 C CNN
+	1    10500 1150
+	-1   0    0    1   
+$EndComp
+Connection ~ 10200 950 
+Wire Wire Line
+	10000 1350 10200 1350
+Connection ~ 10200 1350
+$Comp
+L power:Earth #PWR0103
+U 1 1 5F51F55B
+P 10900 1250
+F 0 "#PWR0103" H 10900 1000 50  0001 C CNN
+F 1 "Earth" H 10900 1100 50  0001 C CNN
+F 2 "" H 10900 1250 50  0001 C CNN
+F 3 "~" H 10900 1250 50  0001 C CNN
+	1    10900 1250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10700 1150 10900 1150
+Wire Wire Line
+	10900 1150 10900 1250
+$Comp
+L Device:CP C2
+U 1 1 5FE8AB3D
+P 9350 1350
+F 0 "C2" H 9468 1396 50  0000 L CNN
+F 1 "10u" H 9468 1305 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 9388 1200 50  0001 C CNN
+F 3 "~" H 9350 1350 50  0001 C CNN
+	1    9350 1350
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:CP C1
+U 1 1 5FE8B081
+P 9350 950
+F 0 "C1" H 9468 996 50  0000 L CNN
+F 1 "10u" H 9468 905 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 9388 800 50  0001 C CNN
+F 3 "~" H 9350 950 50  0001 C CNN
+	1    9350 950 
+	0    -1   -1   0   
+$EndComp
+Connection ~ 9500 950 
+Connection ~ 9500 1350
+$Comp
+L power:Earth #PWR0104
+U 1 1 5FE8D4C5
+P 9100 1500
+F 0 "#PWR0104" H 9100 1250 50  0001 C CNN
+F 1 "Earth" H 9100 1350 50  0001 C CNN
+F 2 "" H 9100 1500 50  0001 C CNN
+F 3 "~" H 9100 1500 50  0001 C CNN
+	1    9100 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9200 1350 9100 1350
+Wire Wire Line
+	9100 1350 9100 1500
+Wire Wire Line
+	9200 950  9100 950 
+Wire Wire Line
+	9100 950  9100 1350
+Connection ~ 9100 1350
+$Comp
+L Connector:AudioJack2 J1
+U 1 1 5FE8E57E
+P 1000 1000
+F 0 "J1" H 1032 1325 50  0000 C CNN
+F 1 "AudioJack2" H 1032 1234 50  0000 C CNN
+F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 1000 1000 50  0001 C CNN
+F 3 "~" H 1000 1000 50  0001 C CNN
+	1    1000 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0105
+U 1 1 5FE9086B
+P 1250 1050
+F 0 "#PWR0105" H 1250 800 50  0001 C CNN
+F 1 "Earth" H 1250 900 50  0001 C CNN
+F 2 "" H 1250 1050 50  0001 C CNN
+F 3 "~" H 1250 1050 50  0001 C CNN
+	1    1250 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1200 900  1250 900 
+Wire Wire Line
+	1250 900  1250 1050
+$Comp
+L Amplifier_Operational:TL074 U1
+U 1 1 5FE90EFF
+P 1800 1100
+F 0 "U1" H 1800 1467 50  0000 C CNN
+F 1 "TL074" H 1800 1376 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 1750 1200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 1850 1300 50  0001 C CNN
+	1    1800 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1200 1000 1350 1000
+Wire Wire Line
+	2100 1100 2100 1400
+Wire Wire Line
+	2100 1400 1500 1400
+Wire Wire Line
+	1500 1400 1500 1200
+$Comp
+L Device:R R4
+U 1 1 5FE97BC7
+P 2250 1100
+F 0 "R4" V 2043 1100 50  0000 C CNN
+F 1 "100R" V 2134 1100 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 2180 1100 50  0001 C CNN
+F 3 "~" H 2250 1100 50  0001 C CNN
+	1    2250 1100
+	0    1    1    0   
+$EndComp
+Connection ~ 2100 1100
+$Comp
+L Connector:AudioJack2 J4
+U 1 1 5FE983D4
+P 2750 1000
+F 0 "J4" H 2570 1075 50  0000 R CNN
+F 1 "AudioJack2" H 2570 984 50  0000 R CNN
+F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 2750 1000 50  0001 C CNN
+F 3 "~" H 2750 1000 50  0001 C CNN
+	1    2750 1000
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0106
+U 1 1 5FE9AC21
+P 2500 1050
+F 0 "#PWR0106" H 2500 800 50  0001 C CNN
+F 1 "Earth" H 2500 900 50  0001 C CNN
+F 2 "" H 2500 1050 50  0001 C CNN
+F 3 "~" H 2500 1050 50  0001 C CNN
+	1    2500 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 900  2500 900 
+Wire Wire Line
+	2500 900  2500 1050
+Wire Wire Line
+	2550 1000 2400 1000
+Wire Wire Line
+	2400 1000 2400 1100
+$Comp
+L Amplifier_Operational:TL074 U1
+U 4 1 5FE9DC6F
+P 1750 1850
+F 0 "U1" H 1750 2217 50  0000 C CNN
+F 1 "TL074" H 1750 2126 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 1700 1950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 1800 2050 50  0001 C CNN
+	4    1750 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2050 1850 2050 2150
+Wire Wire Line
+	2050 2150 1450 2150
+Wire Wire Line
+	1450 2150 1450 1950
+$Comp
+L Device:R R1
+U 1 1 5FE9DC79
+P 2200 1850
+F 0 "R1" V 1993 1850 50  0000 C CNN
+F 1 "100R" V 2084 1850 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 2130 1850 50  0001 C CNN
+F 3 "~" H 2200 1850 50  0001 C CNN
+	1    2200 1850
+	0    1    1    0   
+$EndComp
+Connection ~ 2050 1850
+$Comp
+L Connector:AudioJack2 J2
+U 1 1 5FE9DC80
+P 2700 1750
+F 0 "J2" H 2520 1825 50  0000 R CNN
+F 1 "AudioJack2" H 2520 1734 50  0000 R CNN
+F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 2700 1750 50  0001 C CNN
+F 3 "~" H 2700 1750 50  0001 C CNN
+	1    2700 1750
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0107
+U 1 1 5FE9DC86
+P 2450 1800
+F 0 "#PWR0107" H 2450 1550 50  0001 C CNN
+F 1 "Earth" H 2450 1650 50  0001 C CNN
+F 2 "" H 2450 1800 50  0001 C CNN
+F 3 "~" H 2450 1800 50  0001 C CNN
+	1    2450 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 1650 2450 1650
+Wire Wire Line
+	2450 1650 2450 1800
+Wire Wire Line
+	2500 1750 2350 1750
+Wire Wire Line
+	2350 1750 2350 1850
+$Comp
+L Amplifier_Operational:TL074 U1
+U 3 1 5FEA0BF0
+P 1750 2600
+F 0 "U1" H 1750 2967 50  0000 C CNN
+F 1 "TL074" H 1750 2876 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 1700 2700 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 1800 2800 50  0001 C CNN
+	3    1750 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2050 2600 2050 2900
+Wire Wire Line
+	2050 2900 1450 2900
+Wire Wire Line
+	1450 2900 1450 2700
+$Comp
+L Device:R R2
+U 1 1 5FEA0BFA
+P 2200 2600
+F 0 "R2" V 1993 2600 50  0000 C CNN
+F 1 "100R" V 2084 2600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 2130 2600 50  0001 C CNN
+F 3 "~" H 2200 2600 50  0001 C CNN
+	1    2200 2600
+	0    1    1    0   
+$EndComp
+Connection ~ 2050 2600
+$Comp
+L Connector:AudioJack2 J3
+U 1 1 5FEA0C01
+P 2700 2500
+F 0 "J3" H 2520 2575 50  0000 R CNN
+F 1 "AudioJack2" H 2520 2484 50  0000 R CNN
+F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 2700 2500 50  0001 C CNN
+F 3 "~" H 2700 2500 50  0001 C CNN
+	1    2700 2500
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0108
+U 1 1 5FEA0C07
+P 2450 2550
+F 0 "#PWR0108" H 2450 2300 50  0001 C CNN
+F 1 "Earth" H 2450 2400 50  0001 C CNN
+F 2 "" H 2450 2550 50  0001 C CNN
+F 3 "~" H 2450 2550 50  0001 C CNN
+	1    2450 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 2400 2450 2400
+Wire Wire Line
+	2450 2400 2450 2550
+Wire Wire Line
+	2500 2500 2350 2500
+Wire Wire Line
+	2350 2500 2350 2600
+Wire Wire Line
+	1450 1750 1350 1750
+Wire Wire Line
+	1350 1750 1350 1000
+Connection ~ 1350 1000
+Wire Wire Line
+	1350 1000 1500 1000
+Wire Wire Line
+	1350 1750 1350 2500
+Wire Wire Line
+	1350 2500 1450 2500
+Connection ~ 1350 1750
+$Comp
+L Device:R R3
+U 1 1 5FEAC6A1
+P 2200 3350
+F 0 "R3" V 1993 3350 50  0000 C CNN
+F 1 "1k" V 2084 3350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 2130 3350 50  0001 C CNN
+F 3 "~" H 2200 3350 50  0001 C CNN
+	1    2200 3350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2050 3350 2050 3650
+Wire Wire Line
+	2050 3650 1450 3650
+Wire Wire Line
+	1450 3650 1450 3450
+Wire Wire Line
+	1350 3250 1450 3250
+Wire Wire Line
+	1350 3250 1350 2500
+Connection ~ 1350 2500
+Connection ~ 2050 3350
+Wire Wire Line
+	2350 3350 2500 3350
+Wire Wire Line
+	3150 3350 3100 3350
+Wire Wire Line
+	3150 3400 3150 3350
+$Comp
+L power:Earth #PWR0109
+U 1 1 5FEAE9B2
+P 3150 3400
+F 0 "#PWR0109" H 3150 3150 50  0001 C CNN
+F 1 "Earth" H 3150 3250 50  0001 C CNN
+F 2 "" H 3150 3400 50  0001 C CNN
+F 3 "~" H 3150 3400 50  0001 C CNN
+	1    3150 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED_Dual_2pin D1
+U 1 1 5FEA4122
+P 2800 3350
+F 0 "D1" H 2800 3746 50  0000 C CNN
+F 1 "LED_Dual_2pin" H 2800 3655 50  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm" H 2800 3350 50  0001 C CNN
+F 3 "~" H 2800 3350 50  0001 C CNN
+	1    2800 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:TL074 U1
+U 2 1 5FEB617A
+P 1750 3350
+F 0 "U1" H 1750 3717 50  0000 C CNN
+F 1 "TL074" H 1750 3626 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 1700 3450 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 1800 3550 50  0001 C CNN
+	2    1750 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:AudioJack2 J6
+U 1 1 5FF0088C
+P 950 4100
+F 0 "J6" H 982 4425 50  0000 C CNN
+F 1 "AudioJack2" H 982 4334 50  0000 C CNN
+F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 950 4100 50  0001 C CNN
+F 3 "~" H 950 4100 50  0001 C CNN
+	1    950  4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0110
+U 1 1 5FF00892
+P 1200 4150
+F 0 "#PWR0110" H 1200 3900 50  0001 C CNN
+F 1 "Earth" H 1200 4000 50  0001 C CNN
+F 2 "" H 1200 4150 50  0001 C CNN
+F 3 "~" H 1200 4150 50  0001 C CNN
+	1    1200 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1150 4000 1200 4000
+Wire Wire Line
+	1200 4000 1200 4150
+$Comp
+L Amplifier_Operational:TL074 U2
+U 1 1 5FF0089A
+P 1750 4200
+F 0 "U2" H 1750 4567 50  0000 C CNN
+F 1 "TL074" H 1750 4476 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 1700 4300 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 1800 4400 50  0001 C CNN
+	1    1750 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1150 4100 1300 4100
+Wire Wire Line
+	2050 4200 2050 4500
+Wire Wire Line
+	2050 4500 1450 4500
+Wire Wire Line
+	1450 4500 1450 4300
+$Comp
+L Device:R R8
+U 1 1 5FF008A4
+P 2200 4200
+F 0 "R8" V 1993 4200 50  0000 C CNN
+F 1 "100R" V 2084 4200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 2130 4200 50  0001 C CNN
+F 3 "~" H 2200 4200 50  0001 C CNN
+	1    2200 4200
+	0    1    1    0   
+$EndComp
+Connection ~ 2050 4200
+$Comp
+L Connector:AudioJack2 J9
+U 1 1 5FF008AB
+P 2700 4100
+F 0 "J9" H 2520 4175 50  0000 R CNN
+F 1 "AudioJack2" H 2520 4084 50  0000 R CNN
+F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 2700 4100 50  0001 C CNN
+F 3 "~" H 2700 4100 50  0001 C CNN
+	1    2700 4100
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0111
+U 1 1 5FF008B1
+P 2450 4150
+F 0 "#PWR0111" H 2450 3900 50  0001 C CNN
+F 1 "Earth" H 2450 4000 50  0001 C CNN
+F 2 "" H 2450 4150 50  0001 C CNN
+F 3 "~" H 2450 4150 50  0001 C CNN
+	1    2450 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 4000 2450 4000
+Wire Wire Line
+	2450 4000 2450 4150
+Wire Wire Line
+	2500 4100 2350 4100
+Wire Wire Line
+	2350 4100 2350 4200
+$Comp
+L Amplifier_Operational:TL074 U2
+U 4 1 5FF008BB
+P 1700 4950
+F 0 "U2" H 1700 5317 50  0000 C CNN
+F 1 "TL074" H 1700 5226 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 1650 5050 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 1750 5150 50  0001 C CNN
+	4    1700 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 4950 2000 5250
+Wire Wire Line
+	2000 5250 1400 5250
+Wire Wire Line
+	1400 5250 1400 5050
+$Comp
+L Device:R R5
+U 1 1 5FF008C4
+P 2150 4950
+F 0 "R5" V 1943 4950 50  0000 C CNN
+F 1 "100R" V 2034 4950 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 2080 4950 50  0001 C CNN
+F 3 "~" H 2150 4950 50  0001 C CNN
+	1    2150 4950
+	0    1    1    0   
+$EndComp
+Connection ~ 2000 4950
+$Comp
+L Connector:AudioJack2 J7
+U 1 1 5FF008CB
+P 2650 4850
+F 0 "J7" H 2470 4925 50  0000 R CNN
+F 1 "AudioJack2" H 2470 4834 50  0000 R CNN
+F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 2650 4850 50  0001 C CNN
+F 3 "~" H 2650 4850 50  0001 C CNN
+	1    2650 4850
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0112
+U 1 1 5FF008D1
+P 2400 4900
+F 0 "#PWR0112" H 2400 4650 50  0001 C CNN
+F 1 "Earth" H 2400 4750 50  0001 C CNN
+F 2 "" H 2400 4900 50  0001 C CNN
+F 3 "~" H 2400 4900 50  0001 C CNN
+	1    2400 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 4750 2400 4750
+Wire Wire Line
+	2400 4750 2400 4900
+Wire Wire Line
+	2450 4850 2300 4850
+Wire Wire Line
+	2300 4850 2300 4950
+$Comp
+L Amplifier_Operational:TL074 U2
+U 3 1 5FF008DB
+P 1700 5700
+F 0 "U2" H 1700 6067 50  0000 C CNN
+F 1 "TL074" H 1700 5976 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 1650 5800 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 1750 5900 50  0001 C CNN
+	3    1700 5700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 5700 2000 6000
+Wire Wire Line
+	2000 6000 1400 6000
+Wire Wire Line
+	1400 6000 1400 5800
+$Comp
+L Device:R R6
+U 1 1 5FF008E4
+P 2150 5700
+F 0 "R6" V 1943 5700 50  0000 C CNN
+F 1 "100R" V 2034 5700 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 2080 5700 50  0001 C CNN
+F 3 "~" H 2150 5700 50  0001 C CNN
+	1    2150 5700
+	0    1    1    0   
+$EndComp
+Connection ~ 2000 5700
+$Comp
+L Connector:AudioJack2 J8
+U 1 1 5FF008EB
+P 2650 5600
+F 0 "J8" H 2470 5675 50  0000 R CNN
+F 1 "AudioJack2" H 2470 5584 50  0000 R CNN
+F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 2650 5600 50  0001 C CNN
+F 3 "~" H 2650 5600 50  0001 C CNN
+	1    2650 5600
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0113
+U 1 1 5FF008F1
+P 2400 5650
+F 0 "#PWR0113" H 2400 5400 50  0001 C CNN
+F 1 "Earth" H 2400 5500 50  0001 C CNN
+F 2 "" H 2400 5650 50  0001 C CNN
+F 3 "~" H 2400 5650 50  0001 C CNN
+	1    2400 5650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 5500 2400 5500
+Wire Wire Line
+	2400 5500 2400 5650
+Wire Wire Line
+	2450 5600 2300 5600
+Wire Wire Line
+	2300 5600 2300 5700
+Wire Wire Line
+	1400 4850 1300 4850
+Wire Wire Line
+	1300 4850 1300 4100
+Connection ~ 1300 4100
+Wire Wire Line
+	1300 4100 1450 4100
+Wire Wire Line
+	1300 4850 1300 5600
+Wire Wire Line
+	1300 5600 1400 5600
+Connection ~ 1300 4850
+$Comp
+L Device:R R7
+U 1 1 5FF00902
+P 2150 6450
+F 0 "R7" V 1943 6450 50  0000 C CNN
+F 1 "1k" V 2034 6450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 2080 6450 50  0001 C CNN
+F 3 "~" H 2150 6450 50  0001 C CNN
+	1    2150 6450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2000 6450 2000 6750
+Wire Wire Line
+	2000 6750 1400 6750
+Wire Wire Line
+	1400 6750 1400 6550
+Wire Wire Line
+	1300 6350 1400 6350
+Wire Wire Line
+	1300 6350 1300 5600
+Connection ~ 1300 5600
+Connection ~ 2000 6450
+Wire Wire Line
+	2300 6450 2450 6450
+Wire Wire Line
+	3100 6450 3050 6450
+Wire Wire Line
+	3100 6500 3100 6450
+$Comp
+L power:Earth #PWR0114
+U 1 1 5FF00912
+P 3100 6500
+F 0 "#PWR0114" H 3100 6250 50  0001 C CNN
+F 1 "Earth" H 3100 6350 50  0001 C CNN
+F 2 "" H 3100 6500 50  0001 C CNN
+F 3 "~" H 3100 6500 50  0001 C CNN
+	1    3100 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED_Dual_2pin D4
+U 1 1 5FF00918
+P 2750 6450
+F 0 "D4" H 2750 6846 50  0000 C CNN
+F 1 "LED_Dual_2pin" H 2750 6755 50  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm" H 2750 6450 50  0001 C CNN
+F 3 "~" H 2750 6450 50  0001 C CNN
+	1    2750 6450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:TL074 U2
+U 2 1 5FF0091E
+P 1700 6450
+F 0 "U2" H 1700 6817 50  0000 C CNN
+F 1 "TL074" H 1700 6726 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 1650 6550 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 1750 6650 50  0001 C CNN
+	2    1700 6450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:AudioJack2 J11
+U 1 1 5FF40A11
+P 3800 1000
+F 0 "J11" H 3832 1325 50  0000 C CNN
+F 1 "AudioJack2" H 3832 1234 50  0000 C CNN
+F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 3800 1000 50  0001 C CNN
+F 3 "~" H 3800 1000 50  0001 C CNN
+	1    3800 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0115
+U 1 1 5FF40A17
+P 4050 1050
+F 0 "#PWR0115" H 4050 800 50  0001 C CNN
+F 1 "Earth" H 4050 900 50  0001 C CNN
+F 2 "" H 4050 1050 50  0001 C CNN
+F 3 "~" H 4050 1050 50  0001 C CNN
+	1    4050 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 900  4050 900 
+Wire Wire Line
+	4050 900  4050 1050
+$Comp
+L Amplifier_Operational:TL074 U4
+U 1 1 5FF40A1F
+P 4600 1100
+F 0 "U4" H 4600 1467 50  0000 C CNN
+F 1 "TL074" H 4600 1376 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 4550 1200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4650 1300 50  0001 C CNN
+	1    4600 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 1000 4150 1000
+Wire Wire Line
+	4900 1100 4900 1400
+Wire Wire Line
+	4900 1400 4300 1400
+Wire Wire Line
+	4300 1400 4300 1200
+$Comp
+L Device:R R16
+U 1 1 5FF40A29
+P 5050 1100
+F 0 "R16" V 4843 1100 50  0000 C CNN
+F 1 "100R" V 4934 1100 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4980 1100 50  0001 C CNN
+F 3 "~" H 5050 1100 50  0001 C CNN
+	1    5050 1100
+	0    1    1    0   
+$EndComp
+Connection ~ 4900 1100
+$Comp
+L Connector:AudioJack2 J17
+U 1 1 5FF40A30
+P 5550 1000
+F 0 "J17" H 5370 1075 50  0000 R CNN
+F 1 "AudioJack2" H 5370 984 50  0000 R CNN
+F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 5550 1000 50  0001 C CNN
+F 3 "~" H 5550 1000 50  0001 C CNN
+	1    5550 1000
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0116
+U 1 1 5FF40A36
+P 5300 1050
+F 0 "#PWR0116" H 5300 800 50  0001 C CNN
+F 1 "Earth" H 5300 900 50  0001 C CNN
+F 2 "" H 5300 1050 50  0001 C CNN
+F 3 "~" H 5300 1050 50  0001 C CNN
+	1    5300 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 900  5300 900 
+Wire Wire Line
+	5300 900  5300 1050
+Wire Wire Line
+	5350 1000 5200 1000
+Wire Wire Line
+	5200 1000 5200 1100
+$Comp
+L Amplifier_Operational:TL074 U4
+U 4 1 5FF40A40
+P 4550 1850
+F 0 "U4" H 4550 2217 50  0000 C CNN
+F 1 "TL074" H 4550 2126 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 4500 1950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4600 2050 50  0001 C CNN
+	4    4550 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 1850 4850 2150
+Wire Wire Line
+	4850 2150 4250 2150
+Wire Wire Line
+	4250 2150 4250 1950
+$Comp
+L Device:R R12
+U 1 1 5FF40A49
+P 5000 1850
+F 0 "R12" V 4793 1850 50  0000 C CNN
+F 1 "100R" V 4884 1850 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4930 1850 50  0001 C CNN
+F 3 "~" H 5000 1850 50  0001 C CNN
+	1    5000 1850
+	0    1    1    0   
+$EndComp
+Connection ~ 4850 1850
+$Comp
+L Connector:AudioJack2 J14
+U 1 1 5FF40A50
+P 5500 1750
+F 0 "J14" H 5320 1825 50  0000 R CNN
+F 1 "AudioJack2" H 5320 1734 50  0000 R CNN
+F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 5500 1750 50  0001 C CNN
+F 3 "~" H 5500 1750 50  0001 C CNN
+	1    5500 1750
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0117
+U 1 1 5FF40A56
+P 5250 1800
+F 0 "#PWR0117" H 5250 1550 50  0001 C CNN
+F 1 "Earth" H 5250 1650 50  0001 C CNN
+F 2 "" H 5250 1800 50  0001 C CNN
+F 3 "~" H 5250 1800 50  0001 C CNN
+	1    5250 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 1650 5250 1650
+Wire Wire Line
+	5250 1650 5250 1800
+Wire Wire Line
+	5300 1750 5150 1750
+Wire Wire Line
+	5150 1750 5150 1850
+$Comp
+L Amplifier_Operational:TL074 U4
+U 3 1 5FF40A60
+P 4550 2600
+F 0 "U4" H 4550 2967 50  0000 C CNN
+F 1 "TL074" H 4550 2876 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 4500 2700 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4600 2800 50  0001 C CNN
+	3    4550 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 2600 4850 2900
+Wire Wire Line
+	4850 2900 4250 2900
+Wire Wire Line
+	4250 2900 4250 2700
+$Comp
+L Device:R R13
+U 1 1 5FF40A69
+P 5000 2600
+F 0 "R13" V 4793 2600 50  0000 C CNN
+F 1 "100R" V 4884 2600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4930 2600 50  0001 C CNN
+F 3 "~" H 5000 2600 50  0001 C CNN
+	1    5000 2600
+	0    1    1    0   
+$EndComp
+Connection ~ 4850 2600
+$Comp
+L Connector:AudioJack2 J15
+U 1 1 5FF40A70
+P 5500 2500
+F 0 "J15" H 5320 2575 50  0000 R CNN
+F 1 "AudioJack2" H 5320 2484 50  0000 R CNN
+F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 5500 2500 50  0001 C CNN
+F 3 "~" H 5500 2500 50  0001 C CNN
+	1    5500 2500
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0118
+U 1 1 5FF40A76
+P 5250 2550
+F 0 "#PWR0118" H 5250 2300 50  0001 C CNN
+F 1 "Earth" H 5250 2400 50  0001 C CNN
+F 2 "" H 5250 2550 50  0001 C CNN
+F 3 "~" H 5250 2550 50  0001 C CNN
+	1    5250 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 2400 5250 2400
+Wire Wire Line
+	5250 2400 5250 2550
+Wire Wire Line
+	5300 2500 5150 2500
+Wire Wire Line
+	5150 2500 5150 2600
+Wire Wire Line
+	4250 1750 4150 1750
+Wire Wire Line
+	4150 1750 4150 1000
+Connection ~ 4150 1000
+Wire Wire Line
+	4150 1000 4300 1000
+Wire Wire Line
+	4150 1750 4150 2500
+Wire Wire Line
+	4150 2500 4250 2500
+Connection ~ 4150 1750
+$Comp
+L Device:R R14
+U 1 1 5FF40A87
+P 5000 3350
+F 0 "R14" V 4793 3350 50  0000 C CNN
+F 1 "1k" V 4884 3350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4930 3350 50  0001 C CNN
+F 3 "~" H 5000 3350 50  0001 C CNN
+	1    5000 3350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4850 3350 4850 3650
+Wire Wire Line
+	4850 3650 4250 3650
+Wire Wire Line
+	4250 3650 4250 3450
+Wire Wire Line
+	4150 3250 4250 3250
+Wire Wire Line
+	4150 3250 4150 2500
+Connection ~ 4150 2500
+Connection ~ 4850 3350
+Wire Wire Line
+	5150 3350 5300 3350
+Wire Wire Line
+	5950 3350 5900 3350
+Wire Wire Line
+	5950 3400 5950 3350
+$Comp
+L power:Earth #PWR0119
+U 1 1 5FF40A97
+P 5950 3400
+F 0 "#PWR0119" H 5950 3150 50  0001 C CNN
+F 1 "Earth" H 5950 3250 50  0001 C CNN
+F 2 "" H 5950 3400 50  0001 C CNN
+F 3 "~" H 5950 3400 50  0001 C CNN
+	1    5950 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED_Dual_2pin D6
+U 1 1 5FF40A9D
+P 5600 3350
+F 0 "D6" H 5600 3746 50  0000 C CNN
+F 1 "LED_Dual_2pin" H 5600 3655 50  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm" H 5600 3350 50  0001 C CNN
+F 3 "~" H 5600 3350 50  0001 C CNN
+	1    5600 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:TL074 U4
+U 2 1 5FF40AA3
+P 4550 3350
+F 0 "U4" H 4550 3717 50  0000 C CNN
+F 1 "TL074" H 4550 3626 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 4500 3450 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4600 3550 50  0001 C CNN
+	2    4550 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:AudioJack2 J10
+U 1 1 5FF40AA9
+P 3750 4100
+F 0 "J10" H 3782 4425 50  0000 C CNN
+F 1 "AudioJack2" H 3782 4334 50  0000 C CNN
+F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 3750 4100 50  0001 C CNN
+F 3 "~" H 3750 4100 50  0001 C CNN
+	1    3750 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0120
+U 1 1 5FF40AAF
+P 4000 4150
+F 0 "#PWR0120" H 4000 3900 50  0001 C CNN
+F 1 "Earth" H 4000 4000 50  0001 C CNN
+F 2 "" H 4000 4150 50  0001 C CNN
+F 3 "~" H 4000 4150 50  0001 C CNN
+	1    4000 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 4000 4000 4000
+Wire Wire Line
+	4000 4000 4000 4150
+$Comp
+L Amplifier_Operational:TL074 U3
+U 1 1 5FF40AB7
+P 4550 4200
+F 0 "U3" H 4550 4567 50  0000 C CNN
+F 1 "TL074" H 4550 4476 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 4500 4300 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4600 4400 50  0001 C CNN
+	1    4550 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 4100 4100 4100
+Wire Wire Line
+	4850 4200 4850 4500
+Wire Wire Line
+	4850 4500 4250 4500
+Wire Wire Line
+	4250 4500 4250 4300
+$Comp
+L Device:R R15
+U 1 1 5FF40AC1
+P 5000 4200
+F 0 "R15" V 4793 4200 50  0000 C CNN
+F 1 "100R" V 4884 4200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4930 4200 50  0001 C CNN
+F 3 "~" H 5000 4200 50  0001 C CNN
+	1    5000 4200
+	0    1    1    0   
+$EndComp
+Connection ~ 4850 4200
+$Comp
+L Connector:AudioJack2 J16
+U 1 1 5FF40AC8
+P 5500 4100
+F 0 "J16" H 5320 4175 50  0000 R CNN
+F 1 "AudioJack2" H 5320 4084 50  0000 R CNN
+F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 5500 4100 50  0001 C CNN
+F 3 "~" H 5500 4100 50  0001 C CNN
+	1    5500 4100
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0121
+U 1 1 5FF40ACE
+P 5250 4150
+F 0 "#PWR0121" H 5250 3900 50  0001 C CNN
+F 1 "Earth" H 5250 4000 50  0001 C CNN
+F 2 "" H 5250 4150 50  0001 C CNN
+F 3 "~" H 5250 4150 50  0001 C CNN
+	1    5250 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 4000 5250 4000
+Wire Wire Line
+	5250 4000 5250 4150
+Wire Wire Line
+	5300 4100 5150 4100
+Wire Wire Line
+	5150 4100 5150 4200
+$Comp
+L Amplifier_Operational:TL074 U3
+U 4 1 5FF40AD8
+P 4500 4950
+F 0 "U3" H 4500 5317 50  0000 C CNN
+F 1 "TL074" H 4500 5226 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 4450 5050 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4550 5150 50  0001 C CNN
+	4    4500 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 4950 4800 5250
+Wire Wire Line
+	4800 5250 4200 5250
+Wire Wire Line
+	4200 5250 4200 5050
+$Comp
+L Device:R R9
+U 1 1 5FF40AE1
+P 4950 4950
+F 0 "R9" V 4743 4950 50  0000 C CNN
+F 1 "100R" V 4834 4950 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4880 4950 50  0001 C CNN
+F 3 "~" H 4950 4950 50  0001 C CNN
+	1    4950 4950
+	0    1    1    0   
+$EndComp
+Connection ~ 4800 4950
+$Comp
+L Connector:AudioJack2 J12
+U 1 1 5FF40AE8
+P 5450 4850
+F 0 "J12" H 5270 4925 50  0000 R CNN
+F 1 "AudioJack2" H 5270 4834 50  0000 R CNN
+F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 5450 4850 50  0001 C CNN
+F 3 "~" H 5450 4850 50  0001 C CNN
+	1    5450 4850
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0122
+U 1 1 5FF40AEE
+P 5200 4900
+F 0 "#PWR0122" H 5200 4650 50  0001 C CNN
+F 1 "Earth" H 5200 4750 50  0001 C CNN
+F 2 "" H 5200 4900 50  0001 C CNN
+F 3 "~" H 5200 4900 50  0001 C CNN
+	1    5200 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 4750 5200 4750
+Wire Wire Line
+	5200 4750 5200 4900
+Wire Wire Line
+	5250 4850 5100 4850
+Wire Wire Line
+	5100 4850 5100 4950
+$Comp
+L Amplifier_Operational:TL074 U3
+U 3 1 5FF40AF8
+P 4500 5700
+F 0 "U3" H 4500 6067 50  0000 C CNN
+F 1 "TL074" H 4500 5976 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 4450 5800 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4550 5900 50  0001 C CNN
+	3    4500 5700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 5700 4800 6000
+Wire Wire Line
+	4800 6000 4200 6000
+Wire Wire Line
+	4200 6000 4200 5800
+$Comp
+L Device:R R10
+U 1 1 5FF40B01
+P 4950 5700
+F 0 "R10" V 4743 5700 50  0000 C CNN
+F 1 "100R" V 4834 5700 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4880 5700 50  0001 C CNN
+F 3 "~" H 4950 5700 50  0001 C CNN
+	1    4950 5700
+	0    1    1    0   
+$EndComp
+Connection ~ 4800 5700
+$Comp
+L Connector:AudioJack2 J13
+U 1 1 5FF40B08
+P 5450 5600
+F 0 "J13" H 5270 5675 50  0000 R CNN
+F 1 "AudioJack2" H 5270 5584 50  0000 R CNN
+F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 5450 5600 50  0001 C CNN
+F 3 "~" H 5450 5600 50  0001 C CNN
+	1    5450 5600
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0123
+U 1 1 5FF40B0E
+P 5200 5650
+F 0 "#PWR0123" H 5200 5400 50  0001 C CNN
+F 1 "Earth" H 5200 5500 50  0001 C CNN
+F 2 "" H 5200 5650 50  0001 C CNN
+F 3 "~" H 5200 5650 50  0001 C CNN
+	1    5200 5650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 5500 5200 5500
+Wire Wire Line
+	5200 5500 5200 5650
+Wire Wire Line
+	5250 5600 5100 5600
+Wire Wire Line
+	5100 5600 5100 5700
+Wire Wire Line
+	4200 4850 4100 4850
+Wire Wire Line
+	4100 4850 4100 4100
+Connection ~ 4100 4100
+Wire Wire Line
+	4100 4100 4250 4100
+Wire Wire Line
+	4100 4850 4100 5600
+Wire Wire Line
+	4100 5600 4200 5600
+Connection ~ 4100 4850
+$Comp
+L Device:R R11
+U 1 1 5FF40B1F
+P 4950 6450
+F 0 "R11" V 4743 6450 50  0000 C CNN
+F 1 "1k" V 4834 6450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4880 6450 50  0001 C CNN
+F 3 "~" H 4950 6450 50  0001 C CNN
+	1    4950 6450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4800 6450 4800 6750
+Wire Wire Line
+	4800 6750 4200 6750
+Wire Wire Line
+	4200 6750 4200 6550
+Wire Wire Line
+	4100 6350 4200 6350
+Wire Wire Line
+	4100 6350 4100 5600
+Connection ~ 4100 5600
+Connection ~ 4800 6450
+Wire Wire Line
+	5100 6450 5250 6450
+Wire Wire Line
+	5900 6450 5850 6450
+Wire Wire Line
+	5900 6500 5900 6450
+$Comp
+L power:Earth #PWR0124
+U 1 1 5FF40B2F
+P 5900 6500
+F 0 "#PWR0124" H 5900 6250 50  0001 C CNN
+F 1 "Earth" H 5900 6350 50  0001 C CNN
+F 2 "" H 5900 6500 50  0001 C CNN
+F 3 "~" H 5900 6500 50  0001 C CNN
+	1    5900 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED_Dual_2pin D5
+U 1 1 5FF40B35
+P 5550 6450
+F 0 "D5" H 5550 6846 50  0000 C CNN
+F 1 "LED_Dual_2pin" H 5550 6755 50  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm" H 5550 6450 50  0001 C CNN
+F 3 "~" H 5550 6450 50  0001 C CNN
+	1    5550 6450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:TL074 U3
+U 2 1 5FF40B3B
+P 4500 6450
+F 0 "U3" H 4500 6817 50  0000 C CNN
+F 1 "TL074" H 4500 6726 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 4450 6550 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4550 6650 50  0001 C CNN
+	2    4500 6450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:AudioJack2 J19
+U 1 1 5FF83C8C
+P 6550 1000
+F 0 "J19" H 6582 1325 50  0000 C CNN
+F 1 "AudioJack2" H 6582 1234 50  0000 C CNN
+F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 6550 1000 50  0001 C CNN
+F 3 "~" H 6550 1000 50  0001 C CNN
+	1    6550 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0125
+U 1 1 5FF83C92
+P 6800 1050
+F 0 "#PWR0125" H 6800 800 50  0001 C CNN
+F 1 "Earth" H 6800 900 50  0001 C CNN
+F 2 "" H 6800 1050 50  0001 C CNN
+F 3 "~" H 6800 1050 50  0001 C CNN
+	1    6800 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6750 900  6800 900 
+Wire Wire Line
+	6800 900  6800 1050
+$Comp
+L Amplifier_Operational:TL074 U6
+U 1 1 5FF83C9A
+P 7350 1100
+F 0 "U6" H 7350 1467 50  0000 C CNN
+F 1 "TL074" H 7350 1376 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 7300 1200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 7400 1300 50  0001 C CNN
+	1    7350 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6750 1000 6900 1000
+Wire Wire Line
+	7650 1100 7650 1400
+Wire Wire Line
+	7650 1400 7050 1400
+Wire Wire Line
+	7050 1400 7050 1200
+$Comp
+L Device:R R24
+U 1 1 5FF83CA4
+P 7800 1100
+F 0 "R24" V 7593 1100 50  0000 C CNN
+F 1 "100R" V 7684 1100 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 7730 1100 50  0001 C CNN
+F 3 "~" H 7800 1100 50  0001 C CNN
+	1    7800 1100
+	0    1    1    0   
+$EndComp
+Connection ~ 7650 1100
+$Comp
+L Connector:AudioJack2 J25
+U 1 1 5FF83CAB
+P 8300 1000
+F 0 "J25" H 8120 1075 50  0000 R CNN
+F 1 "AudioJack2" H 8120 984 50  0000 R CNN
+F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 8300 1000 50  0001 C CNN
+F 3 "~" H 8300 1000 50  0001 C CNN
+	1    8300 1000
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0126
+U 1 1 5FF83CB1
+P 8050 1050
+F 0 "#PWR0126" H 8050 800 50  0001 C CNN
+F 1 "Earth" H 8050 900 50  0001 C CNN
+F 2 "" H 8050 1050 50  0001 C CNN
+F 3 "~" H 8050 1050 50  0001 C CNN
+	1    8050 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8100 900  8050 900 
+Wire Wire Line
+	8050 900  8050 1050
+Wire Wire Line
+	8100 1000 7950 1000
+Wire Wire Line
+	7950 1000 7950 1100
+$Comp
+L Amplifier_Operational:TL074 U6
+U 4 1 5FF83CBB
+P 7300 1850
+F 0 "U6" H 7300 2217 50  0000 C CNN
+F 1 "TL074" H 7300 2126 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 7250 1950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 7350 2050 50  0001 C CNN
+	4    7300 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7600 1850 7600 2150
+Wire Wire Line
+	7600 2150 7000 2150
+Wire Wire Line
+	7000 2150 7000 1950
+$Comp
+L Device:R R20
+U 1 1 5FF83CC4
+P 7750 1850
+F 0 "R20" V 7543 1850 50  0000 C CNN
+F 1 "100R" V 7634 1850 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 7680 1850 50  0001 C CNN
+F 3 "~" H 7750 1850 50  0001 C CNN
+	1    7750 1850
+	0    1    1    0   
+$EndComp
+Connection ~ 7600 1850
+$Comp
+L Connector:AudioJack2 J22
+U 1 1 5FF83CCB
+P 8250 1750
+F 0 "J22" H 8070 1825 50  0000 R CNN
+F 1 "AudioJack2" H 8070 1734 50  0000 R CNN
+F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 8250 1750 50  0001 C CNN
+F 3 "~" H 8250 1750 50  0001 C CNN
+	1    8250 1750
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0127
+U 1 1 5FF83CD1
+P 8000 1800
+F 0 "#PWR0127" H 8000 1550 50  0001 C CNN
+F 1 "Earth" H 8000 1650 50  0001 C CNN
+F 2 "" H 8000 1800 50  0001 C CNN
+F 3 "~" H 8000 1800 50  0001 C CNN
+	1    8000 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8050 1650 8000 1650
+Wire Wire Line
+	8000 1650 8000 1800
+Wire Wire Line
+	8050 1750 7900 1750
+Wire Wire Line
+	7900 1750 7900 1850
+$Comp
+L Amplifier_Operational:TL074 U6
+U 3 1 5FF83CDB
+P 7300 2600
+F 0 "U6" H 7300 2967 50  0000 C CNN
+F 1 "TL074" H 7300 2876 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 7250 2700 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 7350 2800 50  0001 C CNN
+	3    7300 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7600 2600 7600 2900
+Wire Wire Line
+	7600 2900 7000 2900
+Wire Wire Line
+	7000 2900 7000 2700
+$Comp
+L Device:R R21
+U 1 1 5FF83CE4
+P 7750 2600
+F 0 "R21" V 7543 2600 50  0000 C CNN
+F 1 "100R" V 7634 2600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 7680 2600 50  0001 C CNN
+F 3 "~" H 7750 2600 50  0001 C CNN
+	1    7750 2600
+	0    1    1    0   
+$EndComp
+Connection ~ 7600 2600
+$Comp
+L Connector:AudioJack2 J23
+U 1 1 5FF83CEB
+P 8250 2500
+F 0 "J23" H 8070 2575 50  0000 R CNN
+F 1 "AudioJack2" H 8070 2484 50  0000 R CNN
+F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 8250 2500 50  0001 C CNN
+F 3 "~" H 8250 2500 50  0001 C CNN
+	1    8250 2500
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0128
+U 1 1 5FF83CF1
+P 8000 2550
+F 0 "#PWR0128" H 8000 2300 50  0001 C CNN
+F 1 "Earth" H 8000 2400 50  0001 C CNN
+F 2 "" H 8000 2550 50  0001 C CNN
+F 3 "~" H 8000 2550 50  0001 C CNN
+	1    8000 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8050 2400 8000 2400
+Wire Wire Line
+	8000 2400 8000 2550
+Wire Wire Line
+	8050 2500 7900 2500
+Wire Wire Line
+	7900 2500 7900 2600
+Wire Wire Line
+	7000 1750 6900 1750
+Wire Wire Line
+	6900 1750 6900 1000
+Connection ~ 6900 1000
+Wire Wire Line
+	6900 1000 7050 1000
+Wire Wire Line
+	6900 1750 6900 2500
+Wire Wire Line
+	6900 2500 7000 2500
+Connection ~ 6900 1750
+$Comp
+L Device:R R22
+U 1 1 5FF83D02
+P 7750 3350
+F 0 "R22" V 7543 3350 50  0000 C CNN
+F 1 "1k" V 7634 3350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 7680 3350 50  0001 C CNN
+F 3 "~" H 7750 3350 50  0001 C CNN
+	1    7750 3350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7600 3350 7600 3650
+Wire Wire Line
+	7600 3650 7000 3650
+Wire Wire Line
+	7000 3650 7000 3450
+Wire Wire Line
+	6900 3250 7000 3250
+Wire Wire Line
+	6900 3250 6900 2500
+Connection ~ 6900 2500
+Connection ~ 7600 3350
+Wire Wire Line
+	7900 3350 8050 3350
+Wire Wire Line
+	8700 3350 8650 3350
+Wire Wire Line
+	8700 3400 8700 3350
+$Comp
+L power:Earth #PWR0129
+U 1 1 5FF83D12
+P 8700 3400
+F 0 "#PWR0129" H 8700 3150 50  0001 C CNN
+F 1 "Earth" H 8700 3250 50  0001 C CNN
+F 2 "" H 8700 3400 50  0001 C CNN
+F 3 "~" H 8700 3400 50  0001 C CNN
+	1    8700 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED_Dual_2pin D8
+U 1 1 5FF83D18
+P 8350 3350
+F 0 "D8" H 8350 3746 50  0000 C CNN
+F 1 "LED_Dual_2pin" H 8350 3655 50  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm" H 8350 3350 50  0001 C CNN
+F 3 "~" H 8350 3350 50  0001 C CNN
+	1    8350 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:TL074 U6
+U 2 1 5FF83D1E
+P 7300 3350
+F 0 "U6" H 7300 3717 50  0000 C CNN
+F 1 "TL074" H 7300 3626 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 7250 3450 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 7350 3550 50  0001 C CNN
+	2    7300 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:AudioJack2 J18
+U 1 1 5FF83D24
+P 6500 4100
+F 0 "J18" H 6532 4425 50  0000 C CNN
+F 1 "AudioJack2" H 6532 4334 50  0000 C CNN
+F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 6500 4100 50  0001 C CNN
+F 3 "~" H 6500 4100 50  0001 C CNN
+	1    6500 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0130
+U 1 1 5FF83D2A
+P 6750 4150
+F 0 "#PWR0130" H 6750 3900 50  0001 C CNN
+F 1 "Earth" H 6750 4000 50  0001 C CNN
+F 2 "" H 6750 4150 50  0001 C CNN
+F 3 "~" H 6750 4150 50  0001 C CNN
+	1    6750 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6700 4000 6750 4000
+Wire Wire Line
+	6750 4000 6750 4150
+$Comp
+L Amplifier_Operational:TL074 U5
+U 1 1 5FF83D32
+P 7300 4200
+F 0 "U5" H 7300 4567 50  0000 C CNN
+F 1 "TL074" H 7300 4476 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 7250 4300 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 7350 4400 50  0001 C CNN
+	1    7300 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6700 4100 6850 4100
+Wire Wire Line
+	7600 4200 7600 4500
+Wire Wire Line
+	7600 4500 7000 4500
+Wire Wire Line
+	7000 4500 7000 4300
+$Comp
+L Device:R R23
+U 1 1 5FF83D3C
+P 7750 4200
+F 0 "R23" V 7543 4200 50  0000 C CNN
+F 1 "100R" V 7634 4200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 7680 4200 50  0001 C CNN
+F 3 "~" H 7750 4200 50  0001 C CNN
+	1    7750 4200
+	0    1    1    0   
+$EndComp
+Connection ~ 7600 4200
+$Comp
+L Connector:AudioJack2 J24
+U 1 1 5FF83D43
+P 8250 4100
+F 0 "J24" H 8070 4175 50  0000 R CNN
+F 1 "AudioJack2" H 8070 4084 50  0000 R CNN
+F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 8250 4100 50  0001 C CNN
+F 3 "~" H 8250 4100 50  0001 C CNN
+	1    8250 4100
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0131
+U 1 1 5FF83D49
+P 8000 4150
+F 0 "#PWR0131" H 8000 3900 50  0001 C CNN
+F 1 "Earth" H 8000 4000 50  0001 C CNN
+F 2 "" H 8000 4150 50  0001 C CNN
+F 3 "~" H 8000 4150 50  0001 C CNN
+	1    8000 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8050 4000 8000 4000
+Wire Wire Line
+	8000 4000 8000 4150
+Wire Wire Line
+	8050 4100 7900 4100
+Wire Wire Line
+	7900 4100 7900 4200
+$Comp
+L Amplifier_Operational:TL074 U5
+U 4 1 5FF83D53
+P 7250 4950
+F 0 "U5" H 7250 5317 50  0000 C CNN
+F 1 "TL074" H 7250 5226 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 7200 5050 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 7300 5150 50  0001 C CNN
+	4    7250 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 4950 7550 5250
+Wire Wire Line
+	7550 5250 6950 5250
+Wire Wire Line
+	6950 5250 6950 5050
+$Comp
+L Device:R R17
+U 1 1 5FF83D5C
+P 7700 4950
+F 0 "R17" V 7493 4950 50  0000 C CNN
+F 1 "100R" V 7584 4950 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 7630 4950 50  0001 C CNN
+F 3 "~" H 7700 4950 50  0001 C CNN
+	1    7700 4950
+	0    1    1    0   
+$EndComp
+Connection ~ 7550 4950
+$Comp
+L Connector:AudioJack2 J20
+U 1 1 5FF83D63
+P 8200 4850
+F 0 "J20" H 8020 4925 50  0000 R CNN
+F 1 "AudioJack2" H 8020 4834 50  0000 R CNN
+F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 8200 4850 50  0001 C CNN
+F 3 "~" H 8200 4850 50  0001 C CNN
+	1    8200 4850
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0132
+U 1 1 5FF83D69
+P 7950 4900
+F 0 "#PWR0132" H 7950 4650 50  0001 C CNN
+F 1 "Earth" H 7950 4750 50  0001 C CNN
+F 2 "" H 7950 4900 50  0001 C CNN
+F 3 "~" H 7950 4900 50  0001 C CNN
+	1    7950 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 4750 7950 4750
+Wire Wire Line
+	7950 4750 7950 4900
+Wire Wire Line
+	8000 4850 7850 4850
+Wire Wire Line
+	7850 4850 7850 4950
+$Comp
+L Amplifier_Operational:TL074 U5
+U 3 1 5FF83D73
+P 7250 5700
+F 0 "U5" H 7250 6067 50  0000 C CNN
+F 1 "TL074" H 7250 5976 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 7200 5800 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 7300 5900 50  0001 C CNN
+	3    7250 5700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 5700 7550 6000
+Wire Wire Line
+	7550 6000 6950 6000
+Wire Wire Line
+	6950 6000 6950 5800
+$Comp
+L Device:R R18
+U 1 1 5FF83D7C
+P 7700 5700
+F 0 "R18" V 7493 5700 50  0000 C CNN
+F 1 "100R" V 7584 5700 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 7630 5700 50  0001 C CNN
+F 3 "~" H 7700 5700 50  0001 C CNN
+	1    7700 5700
+	0    1    1    0   
+$EndComp
+Connection ~ 7550 5700
+$Comp
+L Connector:AudioJack2 J21
+U 1 1 5FF83D83
+P 8200 5600
+F 0 "J21" H 8020 5675 50  0000 R CNN
+F 1 "AudioJack2" H 8020 5584 50  0000 R CNN
+F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 8200 5600 50  0001 C CNN
+F 3 "~" H 8200 5600 50  0001 C CNN
+	1    8200 5600
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0133
+U 1 1 5FF83D89
+P 7950 5650
+F 0 "#PWR0133" H 7950 5400 50  0001 C CNN
+F 1 "Earth" H 7950 5500 50  0001 C CNN
+F 2 "" H 7950 5650 50  0001 C CNN
+F 3 "~" H 7950 5650 50  0001 C CNN
+	1    7950 5650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 5500 7950 5500
+Wire Wire Line
+	7950 5500 7950 5650
+Wire Wire Line
+	8000 5600 7850 5600
+Wire Wire Line
+	7850 5600 7850 5700
+Wire Wire Line
+	6950 4850 6850 4850
+Wire Wire Line
+	6850 4850 6850 4100
+Connection ~ 6850 4100
+Wire Wire Line
+	6850 4100 7000 4100
+Wire Wire Line
+	6850 4850 6850 5600
+Wire Wire Line
+	6850 5600 6950 5600
+Connection ~ 6850 4850
+$Comp
+L Device:R R19
+U 1 1 5FF83D9A
+P 7700 6450
+F 0 "R19" V 7493 6450 50  0000 C CNN
+F 1 "1k" V 7584 6450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 7630 6450 50  0001 C CNN
+F 3 "~" H 7700 6450 50  0001 C CNN
+	1    7700 6450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7550 6450 7550 6750
+Wire Wire Line
+	7550 6750 6950 6750
+Wire Wire Line
+	6950 6750 6950 6550
+Wire Wire Line
+	6850 6350 6950 6350
+Wire Wire Line
+	6850 6350 6850 5600
+Connection ~ 6850 5600
+Connection ~ 7550 6450
+Wire Wire Line
+	7850 6450 8000 6450
+Wire Wire Line
+	8650 6450 8600 6450
+Wire Wire Line
+	8650 6500 8650 6450
+$Comp
+L power:Earth #PWR0134
+U 1 1 5FF83DAA
+P 8650 6500
+F 0 "#PWR0134" H 8650 6250 50  0001 C CNN
+F 1 "Earth" H 8650 6350 50  0001 C CNN
+F 2 "" H 8650 6500 50  0001 C CNN
+F 3 "~" H 8650 6500 50  0001 C CNN
+	1    8650 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED_Dual_2pin D7
+U 1 1 5FF83DB0
+P 8300 6450
+F 0 "D7" H 8300 6846 50  0000 C CNN
+F 1 "LED_Dual_2pin" H 8300 6755 50  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm" H 8300 6450 50  0001 C CNN
+F 3 "~" H 8300 6450 50  0001 C CNN
+	1    8300 6450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:TL074 U5
+U 2 1 5FF83DB6
+P 7250 6450
+F 0 "U5" H 7250 6817 50  0000 C CNN
+F 1 "TL074" H 7250 6726 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 7200 6550 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 7300 6650 50  0001 C CNN
+	2    7250 6450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:TL074 U2
+U 5 1 5FFB1921
+P 10800 2400
+F 0 "U2" H 10758 2446 50  0000 L CNN
+F 1 "TL074" H 10758 2355 50  0000 L CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 10750 2500 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 10850 2600 50  0001 C CNN
+	5    10800 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-12V #PWR0135
+U 1 1 5FFB48BB
+P 10700 2700
+F 0 "#PWR0135" H 10700 2800 50  0001 C CNN
+F 1 "-12V" H 10715 2873 50  0000 C CNN
+F 2 "" H 10700 2700 50  0001 C CNN
+F 3 "" H 10700 2700 50  0001 C CNN
+	1    10700 2700
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+12V #PWR0136
+U 1 1 5FFC2C59
+P 10700 2100
+F 0 "#PWR0136" H 10700 1950 50  0001 C CNN
+F 1 "+12V" H 10715 2273 50  0000 C CNN
+F 2 "" H 10700 2100 50  0001 C CNN
+F 3 "" H 10700 2100 50  0001 C CNN
+	1    10700 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C9
+U 1 1 5FFD08A7
+P 10400 2100
+F 0 "C9" V 10148 2100 50  0000 C CNN
+F 1 "100n" V 10239 2100 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 10438 1950 50  0001 C CNN
+F 3 "~" H 10400 2100 50  0001 C CNN
+	1    10400 2100
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C10
+U 1 1 5FFD226D
+P 10400 2700
+F 0 "C10" V 10148 2700 50  0000 C CNN
+F 1 "100n" V 10239 2700 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 10438 2550 50  0001 C CNN
+F 3 "~" H 10400 2700 50  0001 C CNN
+	1    10400 2700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10550 2700 10700 2700
+Connection ~ 10700 2700
+Wire Wire Line
+	10550 2100 10700 2100
+Connection ~ 10700 2100
+$Comp
+L power:Earth #PWR0137
+U 1 1 5FFFD95B
+P 10250 2700
+F 0 "#PWR0137" H 10250 2450 50  0001 C CNN
+F 1 "Earth" H 10250 2550 50  0001 C CNN
+F 2 "" H 10250 2700 50  0001 C CNN
+F 3 "~" H 10250 2700 50  0001 C CNN
+	1    10250 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10250 2700 10250 2100
+Connection ~ 10250 2700
+$Comp
+L Amplifier_Operational:TL074 U1
+U 5 1 60012830
+P 10000 2400
+F 0 "U1" H 9958 2446 50  0000 L CNN
+F 1 "TL074" H 9958 2355 50  0000 L CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 9950 2500 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 10050 2600 50  0001 C CNN
+	5    10000 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-12V #PWR0138
+U 1 1 60012836
+P 9900 2700
+F 0 "#PWR0138" H 9900 2800 50  0001 C CNN
+F 1 "-12V" H 9915 2873 50  0000 C CNN
+F 2 "" H 9900 2700 50  0001 C CNN
+F 3 "" H 9900 2700 50  0001 C CNN
+	1    9900 2700
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+12V #PWR0139
+U 1 1 6001283C
+P 9900 2100
+F 0 "#PWR0139" H 9900 1950 50  0001 C CNN
+F 1 "+12V" H 9915 2273 50  0000 C CNN
+F 2 "" H 9900 2100 50  0001 C CNN
+F 3 "" H 9900 2100 50  0001 C CNN
+	1    9900 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 60012842
+P 9600 2100
+F 0 "C3" V 9348 2100 50  0000 C CNN
+F 1 "100n" V 9439 2100 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 9638 1950 50  0001 C CNN
+F 3 "~" H 9600 2100 50  0001 C CNN
+	1    9600 2100
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C4
+U 1 1 60012848
+P 9600 2700
+F 0 "C4" V 9348 2700 50  0000 C CNN
+F 1 "100n" V 9439 2700 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 9638 2550 50  0001 C CNN
+F 3 "~" H 9600 2700 50  0001 C CNN
+	1    9600 2700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9750 2700 9900 2700
+Connection ~ 9900 2700
+Wire Wire Line
+	9750 2100 9900 2100
+Connection ~ 9900 2100
+$Comp
+L power:Earth #PWR0140
+U 1 1 60012852
+P 9450 2700
+F 0 "#PWR0140" H 9450 2450 50  0001 C CNN
+F 1 "Earth" H 9450 2550 50  0001 C CNN
+F 2 "" H 9450 2700 50  0001 C CNN
+F 3 "~" H 9450 2700 50  0001 C CNN
+	1    9450 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9450 2700 9450 2100
+Connection ~ 9450 2700
+$Comp
+L Amplifier_Operational:TL074 U3
+U 5 1 60026703
+P 10000 3500
+F 0 "U3" H 9958 3546 50  0000 L CNN
+F 1 "TL074" H 9958 3455 50  0000 L CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 9950 3600 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 10050 3700 50  0001 C CNN
+	5    10000 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-12V #PWR0141
+U 1 1 60026709
+P 9900 3800
+F 0 "#PWR0141" H 9900 3900 50  0001 C CNN
+F 1 "-12V" H 9915 3973 50  0000 C CNN
+F 2 "" H 9900 3800 50  0001 C CNN
+F 3 "" H 9900 3800 50  0001 C CNN
+	1    9900 3800
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+12V #PWR0142
+U 1 1 6002670F
+P 9900 3200
+F 0 "#PWR0142" H 9900 3050 50  0001 C CNN
+F 1 "+12V" H 9915 3373 50  0000 C CNN
+F 2 "" H 9900 3200 50  0001 C CNN
+F 3 "" H 9900 3200 50  0001 C CNN
+	1    9900 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C5
+U 1 1 60026715
+P 9600 3200
+F 0 "C5" V 9348 3200 50  0000 C CNN
+F 1 "100n" V 9439 3200 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 9638 3050 50  0001 C CNN
+F 3 "~" H 9600 3200 50  0001 C CNN
+	1    9600 3200
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C6
+U 1 1 6002671B
+P 9600 3800
+F 0 "C6" V 9348 3800 50  0000 C CNN
+F 1 "100n" V 9439 3800 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 9638 3650 50  0001 C CNN
+F 3 "~" H 9600 3800 50  0001 C CNN
+	1    9600 3800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9750 3800 9900 3800
+Connection ~ 9900 3800
+Wire Wire Line
+	9750 3200 9900 3200
+Connection ~ 9900 3200
+$Comp
+L power:Earth #PWR0143
+U 1 1 60026725
+P 9450 3800
+F 0 "#PWR0143" H 9450 3550 50  0001 C CNN
+F 1 "Earth" H 9450 3650 50  0001 C CNN
+F 2 "" H 9450 3800 50  0001 C CNN
+F 3 "~" H 9450 3800 50  0001 C CNN
+	1    9450 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9450 3800 9450 3200
+Connection ~ 9450 3800
+$Comp
+L Amplifier_Operational:TL074 U4
+U 5 1 600363BF
+P 10800 3550
+F 0 "U4" H 10758 3596 50  0000 L CNN
+F 1 "TL074" H 10758 3505 50  0000 L CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 10750 3650 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 10850 3750 50  0001 C CNN
+	5    10800 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-12V #PWR0144
+U 1 1 600363C5
+P 10700 3850
+F 0 "#PWR0144" H 10700 3950 50  0001 C CNN
+F 1 "-12V" H 10715 4023 50  0000 C CNN
+F 2 "" H 10700 3850 50  0001 C CNN
+F 3 "" H 10700 3850 50  0001 C CNN
+	1    10700 3850
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+12V #PWR0145
+U 1 1 600363CB
+P 10700 3250
+F 0 "#PWR0145" H 10700 3100 50  0001 C CNN
+F 1 "+12V" H 10715 3423 50  0000 C CNN
+F 2 "" H 10700 3250 50  0001 C CNN
+F 3 "" H 10700 3250 50  0001 C CNN
+	1    10700 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C11
+U 1 1 600363D1
+P 10400 3250
+F 0 "C11" V 10148 3250 50  0000 C CNN
+F 1 "100n" V 10239 3250 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 10438 3100 50  0001 C CNN
+F 3 "~" H 10400 3250 50  0001 C CNN
+	1    10400 3250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C12
+U 1 1 600363D7
+P 10400 3850
+F 0 "C12" V 10148 3850 50  0000 C CNN
+F 1 "100n" V 10239 3850 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 10438 3700 50  0001 C CNN
+F 3 "~" H 10400 3850 50  0001 C CNN
+	1    10400 3850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10550 3850 10700 3850
+Connection ~ 10700 3850
+Wire Wire Line
+	10550 3250 10700 3250
+Connection ~ 10700 3250
+$Comp
+L power:Earth #PWR0146
+U 1 1 600363E1
+P 10250 3850
+F 0 "#PWR0146" H 10250 3600 50  0001 C CNN
+F 1 "Earth" H 10250 3700 50  0001 C CNN
+F 2 "" H 10250 3850 50  0001 C CNN
+F 3 "~" H 10250 3850 50  0001 C CNN
+	1    10250 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10250 3850 10250 3250
+Connection ~ 10250 3850
+$Comp
+L Amplifier_Operational:TL074 U5
+U 5 1 60047606
+P 10000 4600
+F 0 "U5" H 9958 4646 50  0000 L CNN
+F 1 "TL074" H 9958 4555 50  0000 L CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 9950 4700 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 10050 4800 50  0001 C CNN
+	5    10000 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-12V #PWR0147
+U 1 1 6004760C
+P 9900 4900
+F 0 "#PWR0147" H 9900 5000 50  0001 C CNN
+F 1 "-12V" H 9915 5073 50  0000 C CNN
+F 2 "" H 9900 4900 50  0001 C CNN
+F 3 "" H 9900 4900 50  0001 C CNN
+	1    9900 4900
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+12V #PWR0148
+U 1 1 60047612
+P 9900 4300
+F 0 "#PWR0148" H 9900 4150 50  0001 C CNN
+F 1 "+12V" H 9915 4473 50  0000 C CNN
+F 2 "" H 9900 4300 50  0001 C CNN
+F 3 "" H 9900 4300 50  0001 C CNN
+	1    9900 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C7
+U 1 1 60047618
+P 9600 4300
+F 0 "C7" V 9348 4300 50  0000 C CNN
+F 1 "100n" V 9439 4300 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 9638 4150 50  0001 C CNN
+F 3 "~" H 9600 4300 50  0001 C CNN
+	1    9600 4300
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C8
+U 1 1 6004761E
+P 9600 4900
+F 0 "C8" V 9348 4900 50  0000 C CNN
+F 1 "100n" V 9439 4900 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 9638 4750 50  0001 C CNN
+F 3 "~" H 9600 4900 50  0001 C CNN
+	1    9600 4900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9750 4900 9900 4900
+Connection ~ 9900 4900
+Wire Wire Line
+	9750 4300 9900 4300
+Connection ~ 9900 4300
+$Comp
+L power:Earth #PWR0149
+U 1 1 60047628
+P 9450 4900
+F 0 "#PWR0149" H 9450 4650 50  0001 C CNN
+F 1 "Earth" H 9450 4750 50  0001 C CNN
+F 2 "" H 9450 4900 50  0001 C CNN
+F 3 "~" H 9450 4900 50  0001 C CNN
+	1    9450 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9450 4900 9450 4300
+Connection ~ 9450 4900
+$Comp
+L Amplifier_Operational:TL074 U6
+U 5 1 600593A7
+P 10800 4650
+F 0 "U6" H 10758 4696 50  0000 L CNN
+F 1 "TL074" H 10758 4605 50  0000 L CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 10750 4750 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 10850 4850 50  0001 C CNN
+	5    10800 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-12V #PWR0150
+U 1 1 600593AD
+P 10700 4950
+F 0 "#PWR0150" H 10700 5050 50  0001 C CNN
+F 1 "-12V" H 10715 5123 50  0000 C CNN
+F 2 "" H 10700 4950 50  0001 C CNN
+F 3 "" H 10700 4950 50  0001 C CNN
+	1    10700 4950
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+12V #PWR0151
+U 1 1 600593B3
+P 10700 4350
+F 0 "#PWR0151" H 10700 4200 50  0001 C CNN
+F 1 "+12V" H 10715 4523 50  0000 C CNN
+F 2 "" H 10700 4350 50  0001 C CNN
+F 3 "" H 10700 4350 50  0001 C CNN
+	1    10700 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C13
+U 1 1 600593B9
+P 10400 4350
+F 0 "C13" V 10148 4350 50  0000 C CNN
+F 1 "100n" V 10239 4350 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 10438 4200 50  0001 C CNN
+F 3 "~" H 10400 4350 50  0001 C CNN
+	1    10400 4350
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C14
+U 1 1 600593BF
+P 10400 4950
+F 0 "C14" V 10148 4950 50  0000 C CNN
+F 1 "100n" V 10239 4950 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 10438 4800 50  0001 C CNN
+F 3 "~" H 10400 4950 50  0001 C CNN
+	1    10400 4950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10550 4950 10700 4950
+Connection ~ 10700 4950
+Wire Wire Line
+	10550 4350 10700 4350
+Connection ~ 10700 4350
+$Comp
+L power:Earth #PWR0152
+U 1 1 600593C9
+P 10250 4950
+F 0 "#PWR0152" H 10250 4700 50  0001 C CNN
+F 1 "Earth" H 10250 4800 50  0001 C CNN
+F 2 "" H 10250 4950 50  0001 C CNN
+F 3 "~" H 10250 4950 50  0001 C CNN
+	1    10250 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10250 4950 10250 4350
+Connection ~ 10250 4950
+$Comp
+L Connector_Generic:Conn_01x01 J26
+U 1 1 60041A75
+P 1300 7200
+F 0 "J26" H 1380 7242 50  0000 L CNN
+F 1 "WEEE" H 1380 7151 50  0000 L CNN
+F 2 "Symbol:WEEE-Logo_4.2x6mm_SilkScreen" H 1300 7200 50  0001 C CNN
+F 3 "~" H 1300 7200 50  0001 C CNN
+	1    1300 7200
+	1    0    0    -1  
+$EndComp
+NoConn ~ 1100 7200
+NoConn ~ 1100 7450
+$Comp
+L Connector_Generic:Conn_01x01 J27
+U 1 1 600400DA
+P 1300 7450
+F 0 "J27" H 1380 7492 50  0000 L CNN
+F 1 "OSHW" H 1380 7401 50  0000 L CNN
+F 2 "Symbol:OSHW-Logo_5.7x6mm_SilkScreen" H 1300 7450 50  0001 C CNN
+F 3 "~" H 1300 7450 50  0001 C CNN
+	1    1300 7450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J28
+U 1 1 600AF0BC
+P 1900 7200
+F 0 "J28" H 1980 7242 50  0000 L CNN
+F 1 "WEEE" H 1980 7151 50  0000 L CNN
+F 2 "Symbol:WEEE-Logo_4.2x6mm_SilkScreen" H 1900 7200 50  0001 C CNN
+F 3 "~" H 1900 7200 50  0001 C CNN
+	1    1900 7200
+	1    0    0    -1  
+$EndComp
+NoConn ~ 1700 7200
+NoConn ~ 1700 7450
+$Comp
+L Connector_Generic:Conn_01x01 J29
+U 1 1 600AF0C4
+P 1900 7450
+F 0 "J29" H 1980 7492 50  0000 L CNN
+F 1 "OSHW" H 1980 7401 50  0000 L CNN
+F 2 "Symbol:OSHW-Logo_5.7x6mm_SilkScreen" H 1900 7450 50  0001 C CNN
+F 3 "~" H 1900 7450 50  0001 C CNN
+	1    1900 7450
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	1000 7000 2300 7000
+Wire Notes Line
+	2300 7000 2300 7750
+Wire Notes Line
+	2300 7750 1000 7750
+Wire Notes Line
+	1000 7750 1000 7000
+Text Notes 1550 7700 0    50   ~ 0
+Logos
+$EndSCHEMATC
