@@ -1,7 +1,3 @@
----
-typora-root-url: images
----
-
 # Multimult
 
 ##### What is this?
@@ -32,4 +28,4 @@ Sorry, no. Things go out of stock so frequently it'd be a lot of work to keep th
 
 Send me an email (twigathy+synth@gmail.com)...
 
-![multmult-panel](/multmult-panel.png)
+![multmult-panel](images/multmult-panel.png)
