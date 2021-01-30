@@ -14,5 +14,6 @@ Finally, I'm a complete amateur when it comes to PCB and schematic design. The s
 ##### Projects
 
 - [Multimult](multimult/) - 8hp, 6-way Buffered Multiple
+- [Pirate Radio](pirate-radio/) - 4hp panel for [Radio Music](https://github.com/TomWhitwell/RadioMusic)
 - [VCDO](VCDO/) - 10hp, Wavetable VCDO using the ElectricDruid [Wavetable chip](https://electricdruid.net/product/vcdo-wavetable-oscillator/)
 
