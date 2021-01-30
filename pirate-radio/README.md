@@ -6,7 +6,9 @@ This is a panel for the Radio Music module from Music Thing Modular. Designed to
 
 ##### Where does the design come from?
 
-Essentially, this is the Radio Music panel, but modified a little - Radio Music's github is the original source (https://github.com/TomWhitwell/RadioMusic). While you _could_ DIY both the panel and the PCBs, I'd strongly recommend supporting Thonk & Music Thing Modular by buying a PCB set instead (https://www.thonk.co.uk/shop/radio-pcb/).
+Essentially, this is the Radio Music panel, but modified a little - Radio Music's github is the original source (https://github.com/TomWhitwell/RadioMusic). As it's essentially a remix of Tom's panel, the license for this one is CC-BY-SA. 
+
+While you _could_ DIY both the panel and the PCBs, I'd strongly recommend supporting Thonk & Music Thing Modular by buying a PCB set instead (https://www.thonk.co.uk/shop/radio-pcb/).
 
 ##### Are there any rare/weird parts used?
 
