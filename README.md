@@ -14,6 +14,7 @@ Finally, I'm a complete amateur when it comes to PCB and schematic design. The s
 ##### Projects
 
 - [Multimult](multimult/) - 8hp, 6-way Buffered Multiple
+- [Pentanoise](pentanoise) - 4hp, 5-way binary white noise source using the ElectricDruid [Pentanoise chip](https://electricdruid.net/product/pentanoise-noise-generator/)
 - [Pirate Radio](pirate-radio/) - 4hp panel for [Radio Music](https://github.com/TomWhitwell/RadioMusic)
 - [VCDO](VCDO/) - 10hp, Wavetable VCDO using the ElectricDruid [Wavetable chip](https://electricdruid.net/product/vcdo-wavetable-oscillator/)
 
