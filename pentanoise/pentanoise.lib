@@ -1,0 +1,24 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# pentanoise
+#
+DEF pentanoise U 0 40 Y Y 1 F N
+F0 "U" 0 300 50 H V C CNN
+F1 "pentanoise" 0 -300 50 H V C CNN
+F2 "" 0 300 50 H I C CNN
+F3 "" 0 300 50 H I C CNN
+DRAW
+S 300 250 -300 -250 0 1 0 N
+X 5v 1 -400 150 100 R 50 50 1 1 I
+X Noise_1 2 400 200 100 L 50 50 1 1 O
+X Noise_2 3 400 100 100 L 50 50 1 1 O
+X ~ 4 -400 0 100 R 50 50 1 1 N
+X Noise_3 5 400 0 100 L 50 50 1 1 O
+X Noise_4 6 400 -100 100 L 50 50 1 1 O
+X Noise_5 7 400 -200 100 L 50 50 1 1 O
+X Earth 8 -400 -150 100 R 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+#End Library
