@@ -32,8 +32,6 @@ Sorry, no. Things go out of stock so frequently it'd be a lot of work to keep th
 
 Send me an email (twigathy+synth@gmail.com)...
 
-(Add some rendered images of the panel and back of PCB(s).)
-
 ![lpg-panel](images/lpg-panel.png)
 
 ![lpg-board](images/lpg-board.png)
