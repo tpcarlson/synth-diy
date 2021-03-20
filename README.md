@@ -14,6 +14,7 @@ Finally, I'm a complete amateur when it comes to PCB and schematic design. The s
 ##### Projects
 
 - [LPG](lpg/) - 4hp Low Pass Gate with a vacrtrol at its core, based on the [LPG & CV Tools](https://modularsynth.wordpress.com/module-diy-lpgatt/) module
+- [Mix](mix/) - 3hp, 4-to-1 mixer based on the [CGS04 DC Mixer](https://elby-designs.com/webtek/cgs/cgs04/cgs04_mix.html)
 - [Multimult](multimult/) - 8hp, 6-way Buffered Multiple
 - [Pentanoise](pentanoise) - 4hp, 5-way binary white noise source using the ElectricDruid [Pentanoise chip](https://electricdruid.net/product/pentanoise-noise-generator/)
 - [Pirate Radio](pirate-radio/) - 4hp panel for [Radio Music](https://github.com/TomWhitwell/RadioMusic)
