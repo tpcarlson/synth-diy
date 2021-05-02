@@ -35,6 +35,8 @@ Next, the box header. This, too, is polarised. You will want to line the stripe 
 
 When soldering the box header, I find it easiest to solder just one pin and check whether the header is in straight. If not, re-melting the solder and wiggling the header around a bit can help get it nice and flush to the PCB.
 
+![3-power3](images/3-power3.jpg)
+
 That's it! You're done with the power side of things.
 
 ##### Logic IC board
