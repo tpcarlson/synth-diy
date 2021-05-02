@@ -13,29 +13,29 @@ First, gather together the tools you are going to use to assemble the module. At
 - Tub to hold parts ready for soldering
 - Multi-meter for continuity testing
 
-![tools](images/1-tools.jpg)
+<img src="images/1-tools.jpg" alt="tools" style="zoom:50%;" />
 
 Take a look through the bill of materials and make sure you have all the parts. I like to organise mine by putting them into tupperware or take-away boxes - if you do, just don't use them for food again afterwards.
 
-![2-parts](images/2-parts.jpg)
+<img src="images/2-parts.jpg" alt="2-parts" style="zoom:50%;" />
 
 ##### Power
 
 First, place the low profile 10uF electrolytic capacitors into the board, following the silkscreen to match the negative side of the capacitor up with the silkscreen.
 
-![3-power](images/3-power.jpg)
+<img src="images/3-power.jpg" alt="3-power" style="zoom:50%;" />
 
 Next, bend the leads on the diodes so they match the spacing on the PCB and solder these too. I like to solder the diodes from the "top down", avoiding flipping over the PCB. You can also fold back one of the leads and solder from the back if you prefer.
 
 Note that these are polarized parts like the capacitors, follow the silkscreen on the PCB to match the line on the diode with the line on the PCB. The lines should point towards the *bottom* of the PCB.
 
-![3-power2](images/3-power2.jpg)
+<img src="images/3-power2.jpg" alt="3-power2" style="zoom:50%;" />
 
 Next, the box header. This, too, is polarised. You will want to line the stripe on the PCB up with the notch on the bottom and stripe on the left hand side. If you're not sure, grab a power cable and verify before soldering.
 
 When soldering the box header, I find it easiest to solder just one pin and check whether the header is in straight. If not, re-melting the solder and wiggling the header around a bit can help get it nice and flush to the PCB.
 
-![3-power3](images/3-power3.jpg)
+<img src="images/3-power3.jpg" alt="3-power3" style="zoom:50%;" />
 
 That's it! You're done with the power side of things.
 
@@ -43,31 +43,31 @@ That's it! You're done with the power side of things.
 
 Next up is the small board for the logic IC. First, gather the parts you'll need and break the male and female pinheaders up into 2x 7 pin lengths. A 14 pin IC socket is also required. The female headers will need a strong cutter to cut - don't use your nice side cutters if you can avoid it.
 
-![4-ic](images/4-ic.jpg)
+<img src="images/4-ic.jpg" alt="4-ic" style="zoom:50%;" />
 
 First, the IC socket. Drop the socket in as indicated by the silkscreen, being careful to align the notch on the IC socket with the notch on the PCB. Flip the board over and solder the two pins on opposite ends of the IC socket. Check that it lies flush with the PCB once you're done, and carry on to solder the rest of the pins.
 
-![4-ic2](images/4-ic2.jpg)
+<img src="images/4-ic2.jpg" alt="4-ic2" style="zoom:50%;" />
 
 Next, take the male headers and put them into the opposite side the IC socket is installed, as indicated by the silkscreen on the PCB.
 
-![4-ic3](images/4-ic3.jpg)
+<img src="images/4-ic3.jpg" alt="4-ic3" style="zoom:50%;" />
 
 To keep the pins from wobbling around, take the female headers and place them across the male headers. You can skip this step if you like, and just solder the pins by hand, but I found this a little easier than trying to get the male pins to stand straight up without.
 
-![4-ic4](images/4-ic4.jpg)
+<img src="images/4-ic4.jpg" alt="4-ic4" style="zoom:50%;" />
 
 Solder these in, once again soldering one pin first on both sides and checking that everything looks straight before doing the rest.
 
-![4-ic5](images/4-ic5.jpg)
+<img src="images/4-ic5.jpg" alt="4-ic5" style="zoom:50%;" />
 
 Now take the female headers off their temporary home and stick the male ones into them.
 
-![4-ic6](images/4-ic6.jpg)
+<img src="images/4-ic6.jpg" alt="4-ic6" style="zoom:50%;" />
 
 Put the small board into the main board, making sure that the notches in the main board and small board line up, and solder from the back.
 
-![4-ic7](images/4-ic7.jpg)
+<img src="images/4-ic7.jpg" alt="4-ic7" style="zoom:50%;" />
 
 That's all for the IC board.
 
@@ -79,15 +79,15 @@ Row by row, add jacks and LEDs. The LEDs need to be inserted so that the longer 
 
 Do not solder anything at this point - for the best alignment, wait until the front panel is on.
 
-![5-jacks](images/5-jacks.jpg)
+<img src="images/5-jacks.jpg" alt="5-jacks" style="zoom:50%;" />
 
-![5-jacks2](images/5-jacks2.jpg)
+<img src="images/5-jacks2.jpg" alt="5-jacks2" style="zoom:50%;" />
 
 Using washers and nuts, secure the front panel to the jacks. Take four of the washers and nuts, securing the top left, right, bottom left and right jacks - the rest should stay in place on their own.
 
-![5-jacks3](images/5-jacks3.jpg)
+<img src="images/5-jacks3.jpg" alt="5-jacks3" style="zoom:50%;" />
 
-![5-jacks4](images/5-jacks4.jpg)
+<img src="images/5-jacks4.jpg" alt="5-jacks4" style="zoom:50%;" />
 
 I moved the PCB vice to grab the front panel rather than the main PCB here.
 
@@ -95,7 +95,7 @@ Next, flip the PCB and panel over, locating the LEDs into their holes in the fro
 
 Solder the LEDs and jacks, being careful not to touch any of the small surface mount components. I found it easiest to do one row at a time, cutting the LED legs after finishing a row.
 
-![5-jacks5](images/5-jacks5.jpg)
+<img src="images/5-jacks5.jpg" alt="5-jacks5" style="zoom:50%;" />
 
 
 
@@ -107,15 +107,15 @@ Remove the four nuts and washers added to secure the front panel to the jacks, a
 
 Cut a male header to size (9 pins long), and insert it into the space as indicated by the silkscreen. I found it easiest to remove the small IC holder PCB from the main PCB to get the board to lay more flat when doing this.
 
-![6-indicators](images/6-indicators.jpg)
+<img src="images/6-indicators.jpg" alt="6-indicators" style="zoom:50%;" />
 
-![7-indicators-2](images/7-indicators2.jpg)
+<img src="images/7-indicators2.jpg" alt="7-indicators-2" style="zoom:50%;" />
 
 Next, add LEDs to the spaces left, as indicated by the silkscreen. Once again, make sure the long leg (The anode) goes into the round hole. Don't solder them yet!
 
 Take the front panel and thread it carefully over the jacks and LEDs. Once again, add washers and nuts to a couple of the jacks to secure the panel to the main PCB, then slot the new indicators LEDs into their holes. Solder the indicator LEDs.
 
-![7-indicators3](images/7-indicators3.jpg)
+<img src="images/7-indicators3.jpg" alt="7-indicators3" style="zoom:50%;" />
 
 
 
@@ -127,21 +127,21 @@ First, choose which of the logic chips that you wish to use. I went for a CD4070
 
 Insert the IC into the IC socket, making sure that the notch on the PCB and IC socket match up with the one on the IC itself.
 
-![8-finish1](images/8-finish1.jpg)
+<img src="images/8-finish1.jpg" alt="8-finish1" style="zoom:50%;" />
 
 Then install into the main board, once again being mindful of alignment of notches.
 
-![8-finish2](images/8-finish2.jpg)
+<img src="images/8-finish2.jpg" alt="8-finish2" style="zoom:50%;" />
 
 Next, install the jumper across the pins in the top header so they match up with the chip you've installed. For example, here I've bridged pins 5 and 6 for xor.
 
-![8-finish3](images/8-finish3.jpg)
+<img src="images/8-finish3.jpg" alt="8-finish3" style="zoom:50%;" />
 
 Next, a quick check for shorts. Set your multi-meter to continuity mode and bridge combinations of pins at the power socket.
 
-![8-finish4](images/8-finish4.jpg)
+<img src="images/8-finish4.jpg" alt="8-finish4" style="zoom:33%;" />
 
-![8-finish5](images/8-finish5.jpg)
+<img src="images/8-finish5.jpg" alt="8-finish5" style="zoom:50%;" />
 
 If any of these checks come back giving continuity then you probably have a short somewhere on the board - don't plug it in to find out, but do go back over your soldering and check there's no bridged pins or anything like that.
 
@@ -151,4 +151,4 @@ Finally, If in the future you do want the swap the small PCB out for a different
 
 That's it! You can now plug the module in and start to explore the world of logic gates.
 
-![8-finish6](images/8-finish6.jpg)
+<img src="images/8-finish6.jpg" alt="8-finish6" style="zoom:33%;" />
