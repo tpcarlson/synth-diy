@@ -21,5 +21,6 @@ Finally, I'm a complete amateur when it comes to PCB and schematic design. The s
 - [Sloth](slew-limiter/) - 4hp Dual Slew Limiter with state LEDs, based on the [dintree D107](http://www.dintree.com/#D107)
 - [VCA](VCA/) - 6hp Dual VCA, based on the [ElectricDruid LM13700 VCA](https://electricdruid.net/design-a-eurorack-vintage-vca-with-the-lm13700/)
 - [VCDO](VCDO/) - 10hp, Wavetable VCDO using the ElectricDruid [Wavetable chip](https://electricdruid.net/product/vcdo-wavetable-oscillator/)
-- [YASH](yash/) - 5hp Sample and Hold based on the Rene Schmitz [YASH](https://www.schmitzbits.de/sah.html) design, with some modifications
+- [YARM+](yarmplus/) - 4hp Ring Modulator, based on the René Schmitz [YARM+](https://www.schmitzbits.de/vca.html) design
+- [YASH](yash/) - 5hp Sample and Hold based on the René Schmitz [YASH](https://www.schmitzbits.de/sah.html) design, with some modifications
 
