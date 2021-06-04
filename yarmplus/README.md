@@ -28,6 +28,6 @@ Sorry, no. Things go out of stock so frequently it'd be a lot of work to keep th
 
 Send me an email (twigathy+synth@gmail.com)...
 
-<img src="/yarmplus-logic.png" alt="yarmplus-logic" style="zoom:25%;" />
+<img src="/images/yarmplus-logic.png" alt="yarmplus-logic" style="zoom:25%;" />
 
-<img src="/yarmplus-panel.png" alt="yarmplus-panel" style="zoom:25%;" />
+<img src="/images/yarmplus-panel.png" alt="yarmplus-panel" style="zoom:25%;" />
