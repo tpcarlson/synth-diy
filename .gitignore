@@ -27,3 +27,17 @@ fp-info-cache
 
 # OSX junk
 *.DS_STORE
+
+# Project files for individual boards
+# Merged boards still get a .pro(ject) file
+turing-machine-panels/pulses.pro
+turing-machine-panels/turing-machine.pro
+turing-machine-panels/volts.pro
+VCA/vca-panel.pro
+VCA/vca-board.pro
+through/through-panel.pro
+through/through-logic.pro
+logic/main.pro
+logic/mini-board.pro
+logic/panel.pro
+lpg/lpg-board.pro
