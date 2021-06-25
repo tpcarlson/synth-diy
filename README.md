@@ -19,6 +19,7 @@ Finally, I'm a complete amateur when it comes to PCB and schematic design. The s
 - [Pentanoise](pentanoise) - 4hp, 5-way binary white noise source using the ElectricDruid [Pentanoise chip](https://electricdruid.net/product/pentanoise-noise-generator/)
 - [Pirate Radio](pirate-radio/) - 4hp panel for [Radio Music](https://github.com/TomWhitwell/RadioMusic)
 - [Sloth](slew-limiter/) - 4hp Dual Slew Limiter with state LEDs, based on the [dintree D107](http://www.dintree.com/#D107)
+- [Turing Machine Panels](turing-machine-panels/) - Panels for the [Turing Machine](https://github.com/TomWhitwell/TuringMachine), and [Volts](https://github.com/TomWhitwell/Volts) and [Pulses](https://github.com/TomWhitwell/Turing-Pulse-Expander) expanders
 - [VCA](VCA/) - 6hp Dual VCA, based on the [ElectricDruid LM13700 VCA](https://electricdruid.net/design-a-eurorack-vintage-vca-with-the-lm13700/)
 - [VCDO](VCDO/) - 10hp, Wavetable VCDO using the ElectricDruid [Wavetable chip](https://electricdruid.net/product/vcdo-wavetable-oscillator/)
 - [YARM+](yarmplus/) - 4hp Ring Modulator, based on the René Schmitz [YARM+](https://www.schmitzbits.de/vca.html) design

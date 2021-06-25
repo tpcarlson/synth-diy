@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name turing-machine-panels)(type KiCad)(uri D:/synth-diy/turing-machine-panels.pretty)(options "")(descr ""))
+)
