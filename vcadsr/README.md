@@ -22,10 +22,14 @@ You'll need one of the EnvGen8 chips in order to make this function at all!
 
 Just a couple, which are corrected in the version here. First, the LEDs for gate and trigger had some issues drawing too much power due to an oversight in the schematic. As it turns out LEDs don't really like being driven without a resistor! Second, the panel design had the mode and linear/exponential graphics switched which makes operating it a little bit more confusing than it otherwise ought to be.
 
-These problems are both fixed in the repository right now though.
+These problems are both fixed in the repository right now though, however the fixes are *untested*. If I make another run of these boards, I will verify that the fix worked and remove this whole section!
 
 ##### Do you have a BOM/Mouser cart/Tayda links?
 
 Sorry, no. Things go out of stock so frequently it'd be a lot of work to keep these up to date. Everything in this project is easy to source though, so you should not have any trouble.
+
+##### Other resources
+
+- [Assembly instructions](ASSEMBLY.md)
 
 ![](images/vcadsr.png)
