@@ -8,7 +8,7 @@ The mode toggle switch allows for gated looping, just looping (Almost like an LF
 
 ##### How much power does it use?
 
-As measured by the joranalogue Test 3, around x mA on +12v and y mA on -12v at peak. The 5v rail is unused.
+As measured by the joranalogue Test 3, around 40mA on +12v and 30mA on -12v at peak. The 5v rail is unused.
 
 ##### Where does the design come from?
 
@@ -27,3 +27,5 @@ These problems are both fixed in the repository right now though.
 ##### Do you have a BOM/Mouser cart/Tayda links?
 
 Sorry, no. Things go out of stock so frequently it'd be a lot of work to keep these up to date. Everything in this project is easy to source though, so you should not have any trouble.
+
+![](images/vcadsr.png)
