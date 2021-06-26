@@ -1,0 +1,3199 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A3 16535 11693
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:+5V #PWR0101
+U 1 1 607C20A1
+P 1150 650
+F 0 "#PWR0101" H 1150 500 50  0001 C CNN
+F 1 "+5V" H 1165 823 50  0000 C CNN
+F 2 "" H 1150 650 50  0001 C CNN
+F 3 "" H 1150 650 50  0001 C CNN
+	1    1150 650 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 607C2A7F
+P 1150 900
+F 0 "R2" H 1220 946 50  0000 L CNN
+F 1 "10k" H 1220 855 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 1080 900 50  0001 C CNN
+F 3 "~" H 1150 900 50  0001 C CNN
+	1    1150 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 607C3C26
+P 1150 1200
+F 0 "R3" H 1220 1246 50  0000 L CNN
+F 1 "10k" H 1220 1155 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 1080 1200 50  0001 C CNN
+F 3 "~" H 1150 1200 50  0001 C CNN
+	1    1150 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0102
+U 1 1 607C4E22
+P 1150 1350
+F 0 "#PWR0102" H 1150 1100 50  0001 C CNN
+F 1 "Earth" H 1150 1200 50  0001 C CNN
+F 2 "" H 1150 1350 50  0001 C CNN
+F 3 "~" H 1150 1350 50  0001 C CNN
+	1    1150 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_SPDT_MSM SW1
+U 1 1 607C5C78
+P 800 1050
+F 0 "SW1" H 800 1335 50  0000 C CNN
+F 1 "SW_SPDT_MSM" H 800 1244 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 800 1050 50  0001 C CNN
+F 3 "~" H 800 1050 50  0001 C CNN
+	1    800  1050
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1000 1050 1150 1050
+Connection ~ 1150 1050
+Wire Wire Line
+	600  950  500  950 
+Wire Wire Line
+	500  950  500  650 
+Wire Wire Line
+	500  650  1150 650 
+Wire Wire Line
+	1150 750  1150 650 
+Connection ~ 1150 650 
+Wire Wire Line
+	1150 1350 600  1350
+Wire Wire Line
+	600  1350 600  1150
+Connection ~ 1150 1350
+Text GLabel 1300 1050 2    50   Input ~ 0
+MODE_CV
+Wire Wire Line
+	1300 1050 1150 1050
+$Comp
+L Switch:SW_SPST SW2
+U 1 1 607C8407
+P 1100 1800
+F 0 "SW2" H 1100 2035 50  0000 C CNN
+F 1 "SW_SPST" H 1100 1944 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 1100 1800 50  0001 C CNN
+F 3 "~" H 1100 1800 50  0001 C CNN
+	1    1100 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_SPST SW3
+U 1 1 607CB392
+P 1100 2200
+F 0 "SW3" H 1100 2435 50  0000 C CNN
+F 1 "SW_SPST" H 1100 2344 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 1100 2200 50  0001 C CNN
+F 3 "~" H 1100 2200 50  0001 C CNN
+	1    1100 2200
+	1    0    0    -1  
+$EndComp
+Text GLabel 1300 1800 2    50   Input ~ 0
+PUNCH
+Text GLabel 1300 2200 2    50   Input ~ 0
+LINEAR
+$Comp
+L power:Earth #PWR0103
+U 1 1 607CB753
+P 850 2250
+F 0 "#PWR0103" H 850 2000 50  0001 C CNN
+F 1 "Earth" H 850 2100 50  0001 C CNN
+F 2 "" H 850 2250 50  0001 C CNN
+F 3 "~" H 850 2250 50  0001 C CNN
+	1    850  2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	900  1800 850  1800
+Wire Wire Line
+	850  1800 850  2200
+Wire Wire Line
+	900  2200 850  2200
+Connection ~ 850  2200
+Wire Wire Line
+	850  2200 850  2250
+$Comp
+L Connector:AudioJack2 J1
+U 1 1 607CD186
+P 700 2800
+F 0 "J1" H 732 3125 50  0000 C CNN
+F 1 "AudioJack2" H 732 3034 50  0000 C CNN
+F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 700 2800 50  0001 C CNN
+F 3 "~" H 700 2800 50  0001 C CNN
+	1    700  2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 607CFAFE
+P 1150 2800
+F 0 "R4" H 1220 2846 50  0000 L CNN
+F 1 "10k" H 1220 2755 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 1080 2800 50  0001 C CNN
+F 3 "~" H 1150 2800 50  0001 C CNN
+	1    1150 2800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:Earth #PWR0104
+U 1 1 607CFE38
+P 950 3300
+F 0 "#PWR0104" H 950 3050 50  0001 C CNN
+F 1 "Earth" H 950 3150 50  0001 C CNN
+F 2 "" H 950 3300 50  0001 C CNN
+F 3 "~" H 950 3300 50  0001 C CNN
+	1    950  3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	950  2700 900  2700
+Wire Wire Line
+	900  2800 1000 2800
+$Comp
+L Diode:1N4148 D1
+U 1 1 607D142F
+P 1350 3000
+F 0 "D1" V 1304 3080 50  0000 L CNN
+F 1 "1N4148" V 1395 3080 50  0000 L CNN
+F 2 "Diode_SMD:D_0805_2012Metric" H 1350 2825 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 1350 3000 50  0001 C CNN
+	1    1350 3000
+	0    1    1    0   
+$EndComp
+$Comp
+L power:Earth #PWR0105
+U 1 1 607D49D1
+P 1350 3300
+F 0 "#PWR0105" H 1350 3050 50  0001 C CNN
+F 1 "Earth" H 1350 3150 50  0001 C CNN
+F 2 "" H 1350 3300 50  0001 C CNN
+F 3 "~" H 1350 3300 50  0001 C CNN
+	1    1350 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1350 2850 1350 2800
+Wire Wire Line
+	1350 2800 1300 2800
+Wire Wire Line
+	1350 2800 1550 2800
+Connection ~ 1350 2800
+$Comp
+L power:+5V #PWR0106
+U 1 1 607D67C0
+P 1850 2600
+F 0 "#PWR0106" H 1850 2450 50  0001 C CNN
+F 1 "+5V" H 1865 2773 50  0000 C CNN
+F 2 "" H 1850 2600 50  0001 C CNN
+F 3 "" H 1850 2600 50  0001 C CNN
+	1    1850 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R9
+U 1 1 607D798D
+P 1850 3150
+F 0 "R9" H 1920 3196 50  0000 L CNN
+F 1 "10k" H 1920 3105 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 1780 3150 50  0001 C CNN
+F 3 "~" H 1850 3150 50  0001 C CNN
+	1    1850 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0107
+U 1 1 607D7E48
+P 1850 3300
+F 0 "#PWR0107" H 1850 3050 50  0001 C CNN
+F 1 "Earth" H 1850 3150 50  0001 C CNN
+F 2 "" H 1850 3300 50  0001 C CNN
+F 3 "~" H 1850 3300 50  0001 C CNN
+	1    1850 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1350 3150 1350 3300
+Wire Wire Line
+	950  2700 950  3300
+Wire Wire Line
+	1850 3000 2200 3000
+Text GLabel 2250 3000 2    50   Input ~ 0
+GATE
+$Comp
+L Device:R R5
+U 1 1 607E8961
+P 1150 4000
+F 0 "R5" H 1220 4046 50  0000 L CNN
+F 1 "10k" H 1220 3955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 1080 4000 50  0001 C CNN
+F 3 "~" H 1150 4000 50  0001 C CNN
+	1    1150 4000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:Earth #PWR0108
+U 1 1 607E8967
+P 950 4500
+F 0 "#PWR0108" H 950 4250 50  0001 C CNN
+F 1 "Earth" H 950 4350 50  0001 C CNN
+F 2 "" H 950 4500 50  0001 C CNN
+F 3 "~" H 950 4500 50  0001 C CNN
+	1    950  4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	950  3900 900  3900
+Wire Wire Line
+	900  4000 1000 4000
+$Comp
+L Diode:1N4148 D2
+U 1 1 607E896F
+P 1350 4200
+F 0 "D2" V 1304 4280 50  0000 L CNN
+F 1 "1N4148" V 1395 4280 50  0000 L CNN
+F 2 "Diode_SMD:D_0805_2012Metric" H 1350 4025 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 1350 4200 50  0001 C CNN
+	1    1350 4200
+	0    1    1    0   
+$EndComp
+$Comp
+L power:Earth #PWR0109
+U 1 1 607E8975
+P 1350 4500
+F 0 "#PWR0109" H 1350 4250 50  0001 C CNN
+F 1 "Earth" H 1350 4350 50  0001 C CNN
+F 2 "" H 1350 4500 50  0001 C CNN
+F 3 "~" H 1350 4500 50  0001 C CNN
+	1    1350 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1350 4050 1350 4000
+Wire Wire Line
+	1350 4000 1300 4000
+Wire Wire Line
+	1350 4000 1550 4000
+Connection ~ 1350 4000
+$Comp
+L power:+5V #PWR0110
+U 1 1 607E8985
+P 1850 3800
+F 0 "#PWR0110" H 1850 3650 50  0001 C CNN
+F 1 "+5V" H 1865 3973 50  0000 C CNN
+F 2 "" H 1850 3800 50  0001 C CNN
+F 3 "" H 1850 3800 50  0001 C CNN
+	1    1850 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R10
+U 1 1 607E898B
+P 1850 4350
+F 0 "R10" H 1920 4396 50  0000 L CNN
+F 1 "10k" H 1920 4305 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 1780 4350 50  0001 C CNN
+F 3 "~" H 1850 4350 50  0001 C CNN
+	1    1850 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0111
+U 1 1 607E8991
+P 1850 4500
+F 0 "#PWR0111" H 1850 4250 50  0001 C CNN
+F 1 "Earth" H 1850 4350 50  0001 C CNN
+F 2 "" H 1850 4500 50  0001 C CNN
+F 3 "~" H 1850 4500 50  0001 C CNN
+	1    1850 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1350 4350 1350 4500
+Wire Wire Line
+	950  3900 950  4500
+Wire Wire Line
+	1850 4200 2200 4200
+Text GLabel 2250 4200 2    50   Input ~ 0
+TRIGGER
+$Comp
+L Connector:AudioJack2_SwitchT J2
+U 1 1 607EBDD6
+P 700 4000
+F 0 "J2" H 732 4325 50  0000 C CNN
+F 1 "AudioJack2_SwitchT" H 732 4234 50  0000 C CNN
+F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 700 4000 50  0001 C CNN
+F 3 "~" H 700 4000 50  0001 C CNN
+	1    700  4000
+	1    0    0    -1  
+$EndComp
+Text GLabel 1000 4100 2    50   Input ~ 0
+GATE
+Wire Wire Line
+	1000 4100 900  4100
+Text GLabel 950  5050 0    50   Input ~ 0
+ENV_OUT
+$Comp
+L Device:R R6
+U 1 1 607F5971
+P 1250 6000
+F 0 "R6" V 1043 6000 50  0000 C CNN
+F 1 "100k" V 1134 6000 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 1180 6000 50  0001 C CNN
+F 3 "~" H 1250 6000 50  0001 C CNN
+	1    1250 6000
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 607FA13C
+P 1250 5600
+F 0 "C1" V 998 5600 50  0000 C CNN
+F 1 "1n" V 1089 5600 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 1288 5450 50  0001 C CNN
+F 3 "~" H 1250 5600 50  0001 C CNN
+	1    1250 5600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1100 6000 950  6000
+$Comp
+L Connector:AudioJack2 J3
+U 1 1 608011D4
+P 2200 5150
+F 0 "J3" H 2020 5225 50  0000 R CNN
+F 1 "AudioJack2" H 2020 5134 50  0000 R CNN
+F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 2200 5150 50  0001 C CNN
+F 3 "~" H 2200 5150 50  0001 C CNN
+	1    2200 5150
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 608032FF
+P 1700 5150
+F 0 "R8" V 1493 5150 50  0000 C CNN
+F 1 "330" V 1584 5150 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 1630 5150 50  0001 C CNN
+F 3 "~" H 1700 5150 50  0001 C CNN
+	1    1700 5150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1850 5150 2000 5150
+Connection ~ 1850 5150
+$Comp
+L power:Earth #PWR0112
+U 1 1 60808E54
+P 1950 5200
+F 0 "#PWR0112" H 1950 4950 50  0001 C CNN
+F 1 "Earth" H 1950 5050 50  0001 C CNN
+F 2 "" H 1950 5200 50  0001 C CNN
+F 3 "~" H 1950 5200 50  0001 C CNN
+	1    1950 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1950 5200 1950 5050
+Wire Wire Line
+	1950 5050 2000 5050
+Wire Wire Line
+	950  5250 950  5600
+Wire Wire Line
+	1400 6000 1850 6000
+Wire Wire Line
+	1850 5150 1850 6000
+Wire Wire Line
+	1100 5600 950  5600
+Connection ~ 950  5600
+Wire Wire Line
+	950  5600 950  6000
+Wire Wire Line
+	1550 5150 1550 5600
+Wire Wire Line
+	1550 5600 1400 5600
+Connection ~ 1550 5150
+Text GLabel 600  7800 1    50   Input ~ 0
+ENV_OUT
+$Comp
+L Device:R R7
+U 1 1 60819168
+P 1250 8600
+F 0 "R7" V 1043 8600 50  0000 C CNN
+F 1 "100k" V 1134 8600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 1180 8600 50  0001 C CNN
+F 3 "~" H 1250 8600 50  0001 C CNN
+	1    1250 8600
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 6081916E
+P 1250 8200
+F 0 "C2" V 998 8200 50  0000 C CNN
+F 1 "1n" V 1089 8200 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 1288 8050 50  0001 C CNN
+F 3 "~" H 1250 8200 50  0001 C CNN
+	1    1250 8200
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:AudioJack2 J4
+U 1 1 60819175
+P 2500 7750
+F 0 "J4" H 2320 7825 50  0000 R CNN
+F 1 "AudioJack2" H 2320 7734 50  0000 R CNN
+F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 2500 7750 50  0001 C CNN
+F 3 "~" H 2500 7750 50  0001 C CNN
+	1    2500 7750
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R R12
+U 1 1 6081917B
+P 2000 7750
+F 0 "R12" V 1793 7750 50  0000 C CNN
+F 1 "330" V 1884 7750 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 1930 7750 50  0001 C CNN
+F 3 "~" H 2000 7750 50  0001 C CNN
+	1    2000 7750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2150 7750 2300 7750
+$Comp
+L power:Earth #PWR0113
+U 1 1 60819183
+P 2250 7800
+F 0 "#PWR0113" H 2250 7550 50  0001 C CNN
+F 1 "Earth" H 2250 7650 50  0001 C CNN
+F 2 "" H 2250 7800 50  0001 C CNN
+F 3 "~" H 2250 7800 50  0001 C CNN
+	1    2250 7800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2250 7800 2250 7650
+Wire Wire Line
+	2250 7650 2300 7650
+$Comp
+L Device:R R1
+U 1 1 6081A6AB
+P 800 7850
+F 0 "R1" V 593 7850 50  0000 C CNN
+F 1 "100k" V 684 7850 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 730 7850 50  0001 C CNN
+F 3 "~" H 800 7850 50  0001 C CNN
+	1    800  7850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	600  7800 600  7850
+Wire Wire Line
+	600  7850 650  7850
+$Comp
+L power:Earth #PWR0114
+U 1 1 60825C09
+P 800 7450
+F 0 "#PWR0114" H 800 7200 50  0001 C CNN
+F 1 "Earth" H 800 7300 50  0001 C CNN
+F 2 "" H 800 7450 50  0001 C CNN
+F 3 "~" H 800 7450 50  0001 C CNN
+	1    800  7450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	800  7450 950  7450
+Wire Wire Line
+	950  7450 950  7650
+Wire Wire Line
+	950  7850 950  8200
+Wire Wire Line
+	950  8200 1100 8200
+Connection ~ 950  7850
+Wire Wire Line
+	950  8200 950  8600
+Wire Wire Line
+	950  8600 1100 8600
+Connection ~ 950  8200
+Wire Wire Line
+	1400 8200 1550 8200
+Wire Wire Line
+	1550 8200 1550 7750
+Wire Wire Line
+	1550 7750 1850 7750
+Connection ~ 1550 7750
+Wire Wire Line
+	2150 8600 2150 7750
+Wire Wire Line
+	1400 8600 2150 8600
+Connection ~ 2150 7750
+Text Notes 2150 5350 0    50   ~ 0
+Out
+Text Notes 2400 8050 0    50   ~ 0
+Inverted\nOut
+$Comp
+L power:+5V #PWR0115
+U 1 1 60838205
+P 2350 950
+F 0 "#PWR0115" H 2350 800 50  0001 C CNN
+F 1 "+5V" H 2365 1123 50  0000 C CNN
+F 2 "" H 2350 950 50  0001 C CNN
+F 3 "" H 2350 950 50  0001 C CNN
+	1    2350 950 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 950  2350 950 
+$Comp
+L power:Earth #PWR0116
+U 1 1 6083A40A
+P 2700 1950
+F 0 "#PWR0116" H 2700 1700 50  0001 C CNN
+F 1 "Earth" H 2700 1800 50  0001 C CNN
+F 2 "" H 2700 1950 50  0001 C CNN
+F 3 "~" H 2700 1950 50  0001 C CNN
+	1    2700 1950
+	1    0    0    -1  
+$EndComp
+Text GLabel 2150 1350 0    50   Input ~ 0
+MODE_CV
+Text GLabel 2150 1250 0    50   Input ~ 0
+PUNCH
+Text GLabel 2150 1450 0    50   Input ~ 0
+LINEAR
+Text GLabel 2150 1550 0    50   Input ~ 0
+GATE
+Text GLabel 2150 1650 0    50   Input ~ 0
+TRIGGER
+Text GLabel 3250 1750 2    50   Input ~ 0
+ENV_OUT
+Entry Wire Line
+	3650 1250 3750 1150
+Entry Wire Line
+	3650 1350 3750 1250
+Entry Wire Line
+	3650 1450 3750 1350
+Entry Wire Line
+	3650 1550 3750 1450
+Entry Wire Line
+	3650 1650 3750 1550
+Wire Wire Line
+	3650 1250 3250 1250
+Wire Wire Line
+	3650 1350 3250 1350
+Wire Wire Line
+	3650 1450 3250 1450
+Wire Wire Line
+	3650 1550 3250 1550
+Wire Wire Line
+	3650 1650 3250 1650
+Entry Wire Line
+	3650 2050 3750 1950
+Wire Wire Line
+	3650 2050 2150 2050
+Wire Wire Line
+	2150 2050 2150 1750
+Text Label 3350 1250 0    50   ~ 0
+ATTACK
+Text Label 3350 1350 0    50   ~ 0
+LEVEL
+Text Label 3350 1450 0    50   ~ 0
+DECAY
+Text Label 3350 1550 0    50   ~ 0
+SUSTAIN
+Text Label 3350 1650 0    50   ~ 0
+RELEASE
+Text Label 3350 2050 0    50   ~ 0
+TIME
+$Comp
+L Connector:AudioJack2 J5
+U 1 1 6085EE4A
+P 4500 1100
+F 0 "J5" H 4532 1425 50  0000 C CNN
+F 1 "AudioJack2" H 4532 1334 50  0000 C CNN
+F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 4500 1100 50  0001 C CNN
+F 3 "~" H 4500 1100 50  0001 C CNN
+	1    4500 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0117
+U 1 1 6085FF64
+P 4750 1150
+F 0 "#PWR0117" H 4750 900 50  0001 C CNN
+F 1 "Earth" H 4750 1000 50  0001 C CNN
+F 2 "" H 4750 1150 50  0001 C CNN
+F 3 "~" H 4750 1150 50  0001 C CNN
+	1    4750 1150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 1150 4750 1000
+Wire Wire Line
+	4750 1000 4700 1000
+$Comp
+L Device:R R16
+U 1 1 60867CC0
+P 5400 1100
+F 0 "R16" V 5193 1100 50  0000 C CNN
+F 1 "200k" V 5284 1100 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5330 1100 50  0001 C CNN
+F 3 "~" H 5400 1100 50  0001 C CNN
+	1    5400 1100
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_POT RV2
+U 1 1 6086A33B
+P 4950 1600
+F 0 "RV2" V 4743 1600 50  0000 C CNN
+F 1 "10k" V 4834 1600 50  0000 C CNN
+F 2 "Potentiometer_THT:Potentiometer_Bourns_PTA3043_Single_Slide" H 4950 1600 50  0001 C CNN
+F 3 "~" H 4950 1600 50  0001 C CNN
+	1    4950 1600
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR0119
+U 1 1 6086BB5D
+P 4750 1550
+F 0 "#PWR0119" H 4750 1400 50  0001 C CNN
+F 1 "+5V" H 4765 1723 50  0000 C CNN
+F 2 "" H 4750 1550 50  0001 C CNN
+F 3 "" H 4750 1550 50  0001 C CNN
+	1    4750 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 1550 4750 1600
+Wire Wire Line
+	4750 1600 4800 1600
+$Comp
+L power:Earth #PWR0120
+U 1 1 6086E298
+P 5100 1650
+F 0 "#PWR0120" H 5100 1400 50  0001 C CNN
+F 1 "Earth" H 5100 1500 50  0001 C CNN
+F 2 "" H 5100 1650 50  0001 C CNN
+F 3 "~" H 5100 1650 50  0001 C CNN
+	1    5100 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 1650 5100 1600
+$Comp
+L Device:R R17
+U 1 1 6087169C
+P 5400 1800
+F 0 "R17" V 5193 1800 50  0000 C CNN
+F 1 "100k" V 5284 1800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5330 1800 50  0001 C CNN
+F 3 "~" H 5400 1800 50  0001 C CNN
+	1    5400 1800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4950 1750 4950 1800
+Wire Wire Line
+	4950 1800 5250 1800
+Wire Wire Line
+	5550 1100 5750 1100
+Wire Wire Line
+	5550 1800 5550 1600
+Connection ~ 5550 1100
+$Comp
+L power:Earth #PWR0121
+U 1 1 6087D42F
+P 5700 1350
+F 0 "#PWR0121" H 5700 1100 50  0001 C CNN
+F 1 "Earth" H 5700 1200 50  0001 C CNN
+F 2 "" H 5700 1350 50  0001 C CNN
+F 3 "~" H 5700 1350 50  0001 C CNN
+	1    5700 1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 1300 5700 1300
+Wire Wire Line
+	5700 1300 5700 1350
+$Comp
+L Diode:1N4148 D7
+U 1 1 6088013D
+P 6050 1600
+F 0 "D7" H 6050 1817 50  0000 C CNN
+F 1 "1N4148" H 6050 1726 50  0000 C CNN
+F 2 "Diode_SMD:D_0805_2012Metric" H 6050 1425 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 6050 1600 50  0001 C CNN
+	1    6050 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 1200 6350 1600
+Wire Wire Line
+	6350 1600 6200 1600
+Wire Wire Line
+	5900 1600 5550 1600
+Connection ~ 5550 1600
+Wire Wire Line
+	5550 1600 5550 1100
+$Comp
+L Device:R R28
+U 1 1 6088937A
+P 6050 1900
+F 0 "R28" V 5843 1900 50  0000 C CNN
+F 1 "100k" V 5934 1900 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5980 1900 50  0001 C CNN
+F 3 "~" H 6050 1900 50  0001 C CNN
+	1    6050 1900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5900 1900 5550 1900
+Wire Wire Line
+	5550 1900 5550 1800
+Connection ~ 5550 1800
+$Comp
+L Diode:1N4148 D13
+U 1 1 6088F674
+P 6500 1200
+F 0 "D13" H 6500 1417 50  0000 C CNN
+F 1 "1N4148" H 6500 1326 50  0000 C CNN
+F 2 "Diode_SMD:D_0805_2012Metric" H 6500 1025 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 6500 1200 50  0001 C CNN
+	1    6500 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 1200 6650 1900
+Wire Wire Line
+	6200 1900 6650 1900
+$Comp
+L Device:R R34
+U 1 1 608951AB
+P 6800 1200
+F 0 "R34" V 6593 1200 50  0000 C CNN
+F 1 "100k" V 6684 1200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6730 1200 50  0001 C CNN
+F 3 "~" H 6800 1200 50  0001 C CNN
+	1    6800 1200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6950 1200 7050 1200
+Wire Wire Line
+	7050 1200 7050 1250
+$Comp
+L power:Earth #PWR0122
+U 1 1 608A34C6
+P 7000 1050
+F 0 "#PWR0122" H 7000 800 50  0001 C CNN
+F 1 "Earth" H 7000 900 50  0001 C CNN
+F 2 "" H 7000 1050 50  0001 C CNN
+F 3 "~" H 7000 1050 50  0001 C CNN
+	1    7000 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 1050 7000 1050
+$Comp
+L Device:R R40
+U 1 1 608A800F
+P 7350 1550
+F 0 "R40" V 7143 1550 50  0000 C CNN
+F 1 "100k" V 7234 1550 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 7280 1550 50  0001 C CNN
+F 3 "~" H 7350 1550 50  0001 C CNN
+	1    7350 1550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7650 1150 7650 1550
+Wire Wire Line
+	7650 1550 7500 1550
+Wire Wire Line
+	7200 1550 6950 1550
+Wire Wire Line
+	6950 1550 6950 1200
+Connection ~ 6950 1200
+$Comp
+L Device:R R46
+U 1 1 608AE85D
+P 7800 1150
+F 0 "R46" V 7593 1150 50  0000 C CNN
+F 1 "4k7" V 7684 1150 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 7730 1150 50  0001 C CNN
+F 3 "~" H 7800 1150 50  0001 C CNN
+	1    7800 1150
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 608B0E23
+P 7950 1300
+F 0 "C3" H 7835 1254 50  0000 R CNN
+F 1 "100n" H 7835 1345 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 7988 1150 50  0001 C CNN
+F 3 "~" H 7950 1300 50  0001 C CNN
+	1    7950 1300
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:Earth #PWR0123
+U 1 1 608B24D8
+P 7950 1450
+F 0 "#PWR0123" H 7950 1200 50  0001 C CNN
+F 1 "Earth" H 7950 1300 50  0001 C CNN
+F 2 "" H 7950 1450 50  0001 C CNN
+F 3 "~" H 7950 1450 50  0001 C CNN
+	1    7950 1450
+	1    0    0    -1  
+$EndComp
+Connection ~ 7950 1150
+Text Label 8100 1150 0    50   ~ 0
+TIME
+Entry Wire Line
+	8600 1050 8500 1150
+Wire Wire Line
+	7950 1150 8500 1150
+$Comp
+L Connector:AudioJack2 J6
+U 1 1 608E9B7E
+P 4500 2350
+F 0 "J6" H 4532 2675 50  0000 C CNN
+F 1 "AudioJack2" H 4532 2584 50  0000 C CNN
+F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 4500 2350 50  0001 C CNN
+F 3 "~" H 4500 2350 50  0001 C CNN
+	1    4500 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0124
+U 1 1 608E9B84
+P 4750 2400
+F 0 "#PWR0124" H 4750 2150 50  0001 C CNN
+F 1 "Earth" H 4750 2250 50  0001 C CNN
+F 2 "" H 4750 2400 50  0001 C CNN
+F 3 "~" H 4750 2400 50  0001 C CNN
+	1    4750 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 2400 4750 2250
+Wire Wire Line
+	4750 2250 4700 2250
+$Comp
+L Device:R R18
+U 1 1 608E9B9A
+P 5400 2350
+F 0 "R18" V 5193 2350 50  0000 C CNN
+F 1 "200k" V 5284 2350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5330 2350 50  0001 C CNN
+F 3 "~" H 5400 2350 50  0001 C CNN
+	1    5400 2350
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_POT RV4
+U 1 1 608E9BA3
+P 4950 2850
+F 0 "RV4" V 4743 2850 50  0000 C CNN
+F 1 "10k" V 4834 2850 50  0000 C CNN
+F 2 "Potentiometer_THT:Potentiometer_Bourns_PTA3043_Single_Slide" H 4950 2850 50  0001 C CNN
+F 3 "~" H 4950 2850 50  0001 C CNN
+	1    4950 2850
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR0126
+U 1 1 608E9BA9
+P 4750 2800
+F 0 "#PWR0126" H 4750 2650 50  0001 C CNN
+F 1 "+5V" H 4765 2973 50  0000 C CNN
+F 2 "" H 4750 2800 50  0001 C CNN
+F 3 "" H 4750 2800 50  0001 C CNN
+	1    4750 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 2800 4750 2850
+Wire Wire Line
+	4750 2850 4800 2850
+$Comp
+L power:Earth #PWR0127
+U 1 1 608E9BB1
+P 5100 2900
+F 0 "#PWR0127" H 5100 2650 50  0001 C CNN
+F 1 "Earth" H 5100 2750 50  0001 C CNN
+F 2 "" H 5100 2900 50  0001 C CNN
+F 3 "~" H 5100 2900 50  0001 C CNN
+	1    5100 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 2900 5100 2850
+$Comp
+L Device:R R19
+U 1 1 608E9BB8
+P 5400 3050
+F 0 "R19" V 5193 3050 50  0000 C CNN
+F 1 "100k" V 5284 3050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5330 3050 50  0001 C CNN
+F 3 "~" H 5400 3050 50  0001 C CNN
+	1    5400 3050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4950 3000 4950 3050
+Wire Wire Line
+	4950 3050 5250 3050
+Wire Wire Line
+	5550 2350 5750 2350
+Wire Wire Line
+	5550 3050 5550 2850
+Connection ~ 5550 2350
+$Comp
+L power:Earth #PWR0128
+U 1 1 608E9BC9
+P 5700 2600
+F 0 "#PWR0128" H 5700 2350 50  0001 C CNN
+F 1 "Earth" H 5700 2450 50  0001 C CNN
+F 2 "" H 5700 2600 50  0001 C CNN
+F 3 "~" H 5700 2600 50  0001 C CNN
+	1    5700 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 2550 5700 2550
+Wire Wire Line
+	5700 2550 5700 2600
+$Comp
+L Diode:1N4148 D8
+U 1 1 608E9BD1
+P 6050 2850
+F 0 "D8" H 6050 3067 50  0000 C CNN
+F 1 "1N4148" H 6050 2976 50  0000 C CNN
+F 2 "Diode_SMD:D_0805_2012Metric" H 6050 2675 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 6050 2850 50  0001 C CNN
+	1    6050 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 2450 6350 2850
+Wire Wire Line
+	6350 2850 6200 2850
+Wire Wire Line
+	5900 2850 5550 2850
+Connection ~ 5550 2850
+Wire Wire Line
+	5550 2850 5550 2350
+$Comp
+L Device:R R29
+U 1 1 608E9BDC
+P 6050 3150
+F 0 "R29" V 5843 3150 50  0000 C CNN
+F 1 "100k" V 5934 3150 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5980 3150 50  0001 C CNN
+F 3 "~" H 6050 3150 50  0001 C CNN
+	1    6050 3150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5900 3150 5550 3150
+Wire Wire Line
+	5550 3150 5550 3050
+Connection ~ 5550 3050
+$Comp
+L Diode:1N4148 D14
+U 1 1 608E9BE5
+P 6500 2450
+F 0 "D14" H 6500 2667 50  0000 C CNN
+F 1 "1N4148" H 6500 2576 50  0000 C CNN
+F 2 "Diode_SMD:D_0805_2012Metric" H 6500 2275 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 6500 2450 50  0001 C CNN
+	1    6500 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 2450 6650 3150
+Wire Wire Line
+	6200 3150 6650 3150
+$Comp
+L Device:R R35
+U 1 1 608E9BED
+P 6800 2450
+F 0 "R35" V 6593 2450 50  0000 C CNN
+F 1 "100k" V 6684 2450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6730 2450 50  0001 C CNN
+F 3 "~" H 6800 2450 50  0001 C CNN
+	1    6800 2450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6950 2450 7050 2450
+Wire Wire Line
+	7050 2450 7050 2500
+$Comp
+L power:Earth #PWR0129
+U 1 1 608E9BFB
+P 7000 2300
+F 0 "#PWR0129" H 7000 2050 50  0001 C CNN
+F 1 "Earth" H 7000 2150 50  0001 C CNN
+F 2 "" H 7000 2300 50  0001 C CNN
+F 3 "~" H 7000 2300 50  0001 C CNN
+	1    7000 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 2300 7000 2300
+$Comp
+L Device:R R41
+U 1 1 608E9C02
+P 7350 2800
+F 0 "R41" V 7143 2800 50  0000 C CNN
+F 1 "100k" V 7234 2800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 7280 2800 50  0001 C CNN
+F 3 "~" H 7350 2800 50  0001 C CNN
+	1    7350 2800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7650 2400 7650 2800
+Wire Wire Line
+	7650 2800 7500 2800
+Wire Wire Line
+	7200 2800 6950 2800
+Wire Wire Line
+	6950 2800 6950 2450
+Connection ~ 6950 2450
+$Comp
+L Device:R R47
+U 1 1 608E9C0D
+P 7800 2400
+F 0 "R47" V 7593 2400 50  0000 C CNN
+F 1 "4k7" V 7684 2400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 7730 2400 50  0001 C CNN
+F 3 "~" H 7800 2400 50  0001 C CNN
+	1    7800 2400
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C4
+U 1 1 608E9C13
+P 7950 2550
+F 0 "C4" H 7835 2504 50  0000 R CNN
+F 1 "100n" H 7835 2595 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 7988 2400 50  0001 C CNN
+F 3 "~" H 7950 2550 50  0001 C CNN
+	1    7950 2550
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:Earth #PWR0130
+U 1 1 608E9C19
+P 7950 2700
+F 0 "#PWR0130" H 7950 2450 50  0001 C CNN
+F 1 "Earth" H 7950 2550 50  0001 C CNN
+F 2 "" H 7950 2700 50  0001 C CNN
+F 3 "~" H 7950 2700 50  0001 C CNN
+	1    7950 2700
+	1    0    0    -1  
+$EndComp
+Connection ~ 7950 2400
+Text Label 8100 2400 0    50   ~ 0
+ATTACK
+Entry Wire Line
+	8600 2300 8500 2400
+Wire Wire Line
+	7950 2400 8500 2400
+$Comp
+L Connector:AudioJack2 J7
+U 1 1 608FFF87
+P 4500 3550
+F 0 "J7" H 4532 3875 50  0000 C CNN
+F 1 "AudioJack2" H 4532 3784 50  0000 C CNN
+F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 4500 3550 50  0001 C CNN
+F 3 "~" H 4500 3550 50  0001 C CNN
+	1    4500 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0131
+U 1 1 608FFF8D
+P 4750 3600
+F 0 "#PWR0131" H 4750 3350 50  0001 C CNN
+F 1 "Earth" H 4750 3450 50  0001 C CNN
+F 2 "" H 4750 3600 50  0001 C CNN
+F 3 "~" H 4750 3600 50  0001 C CNN
+	1    4750 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 3600 4750 3450
+Wire Wire Line
+	4750 3450 4700 3450
+$Comp
+L Device:R R20
+U 1 1 608FFFA3
+P 5400 3550
+F 0 "R20" V 5193 3550 50  0000 C CNN
+F 1 "200k" V 5284 3550 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5330 3550 50  0001 C CNN
+F 3 "~" H 5400 3550 50  0001 C CNN
+	1    5400 3550
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_POT RV6
+U 1 1 608FFFAC
+P 4950 4050
+F 0 "RV6" V 4743 4050 50  0000 C CNN
+F 1 "10k" V 4834 4050 50  0000 C CNN
+F 2 "Potentiometer_THT:Potentiometer_Bourns_PTA3043_Single_Slide" H 4950 4050 50  0001 C CNN
+F 3 "~" H 4950 4050 50  0001 C CNN
+	1    4950 4050
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR0133
+U 1 1 608FFFB2
+P 4750 4000
+F 0 "#PWR0133" H 4750 3850 50  0001 C CNN
+F 1 "+5V" H 4765 4173 50  0000 C CNN
+F 2 "" H 4750 4000 50  0001 C CNN
+F 3 "" H 4750 4000 50  0001 C CNN
+	1    4750 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 4000 4750 4050
+Wire Wire Line
+	4750 4050 4800 4050
+$Comp
+L power:Earth #PWR0134
+U 1 1 608FFFBA
+P 5100 4100
+F 0 "#PWR0134" H 5100 3850 50  0001 C CNN
+F 1 "Earth" H 5100 3950 50  0001 C CNN
+F 2 "" H 5100 4100 50  0001 C CNN
+F 3 "~" H 5100 4100 50  0001 C CNN
+	1    5100 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 4100 5100 4050
+$Comp
+L Device:R R21
+U 1 1 608FFFC1
+P 5400 4250
+F 0 "R21" V 5193 4250 50  0000 C CNN
+F 1 "100k" V 5284 4250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5330 4250 50  0001 C CNN
+F 3 "~" H 5400 4250 50  0001 C CNN
+	1    5400 4250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4950 4200 4950 4250
+Wire Wire Line
+	4950 4250 5250 4250
+Wire Wire Line
+	5550 3550 5750 3550
+Wire Wire Line
+	5550 4250 5550 4050
+Connection ~ 5550 3550
+$Comp
+L power:Earth #PWR0135
+U 1 1 608FFFD2
+P 5700 3800
+F 0 "#PWR0135" H 5700 3550 50  0001 C CNN
+F 1 "Earth" H 5700 3650 50  0001 C CNN
+F 2 "" H 5700 3800 50  0001 C CNN
+F 3 "~" H 5700 3800 50  0001 C CNN
+	1    5700 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 3750 5700 3750
+Wire Wire Line
+	5700 3750 5700 3800
+$Comp
+L Diode:1N4148 D9
+U 1 1 608FFFDA
+P 6050 4050
+F 0 "D9" H 6050 4267 50  0000 C CNN
+F 1 "1N4148" H 6050 4176 50  0000 C CNN
+F 2 "Diode_SMD:D_0805_2012Metric" H 6050 3875 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 6050 4050 50  0001 C CNN
+	1    6050 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 3650 6350 4050
+Wire Wire Line
+	6350 4050 6200 4050
+Wire Wire Line
+	5900 4050 5550 4050
+Connection ~ 5550 4050
+Wire Wire Line
+	5550 4050 5550 3550
+$Comp
+L Device:R R30
+U 1 1 608FFFE5
+P 6050 4350
+F 0 "R30" V 5843 4350 50  0000 C CNN
+F 1 "100k" V 5934 4350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5980 4350 50  0001 C CNN
+F 3 "~" H 6050 4350 50  0001 C CNN
+	1    6050 4350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5900 4350 5550 4350
+Wire Wire Line
+	5550 4350 5550 4250
+Connection ~ 5550 4250
+$Comp
+L Diode:1N4148 D15
+U 1 1 608FFFEE
+P 6500 3650
+F 0 "D15" H 6500 3867 50  0000 C CNN
+F 1 "1N4148" H 6500 3776 50  0000 C CNN
+F 2 "Diode_SMD:D_0805_2012Metric" H 6500 3475 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 6500 3650 50  0001 C CNN
+	1    6500 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 3650 6650 4350
+Wire Wire Line
+	6200 4350 6650 4350
+$Comp
+L Device:R R36
+U 1 1 608FFFF6
+P 6800 3650
+F 0 "R36" V 6593 3650 50  0000 C CNN
+F 1 "100k" V 6684 3650 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6730 3650 50  0001 C CNN
+F 3 "~" H 6800 3650 50  0001 C CNN
+	1    6800 3650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6950 3650 7050 3650
+Wire Wire Line
+	7050 3650 7050 3700
+$Comp
+L power:Earth #PWR0136
+U 1 1 60900004
+P 7000 3500
+F 0 "#PWR0136" H 7000 3250 50  0001 C CNN
+F 1 "Earth" H 7000 3350 50  0001 C CNN
+F 2 "" H 7000 3500 50  0001 C CNN
+F 3 "~" H 7000 3500 50  0001 C CNN
+	1    7000 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 3500 7000 3500
+$Comp
+L Device:R R42
+U 1 1 6090000B
+P 7350 4000
+F 0 "R42" V 7143 4000 50  0000 C CNN
+F 1 "100k" V 7234 4000 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 7280 4000 50  0001 C CNN
+F 3 "~" H 7350 4000 50  0001 C CNN
+	1    7350 4000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7650 3600 7650 4000
+Wire Wire Line
+	7650 4000 7500 4000
+Wire Wire Line
+	7200 4000 6950 4000
+Wire Wire Line
+	6950 4000 6950 3650
+Connection ~ 6950 3650
+$Comp
+L Device:R R48
+U 1 1 60900016
+P 7800 3600
+F 0 "R48" V 7593 3600 50  0000 C CNN
+F 1 "4k7" V 7684 3600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 7730 3600 50  0001 C CNN
+F 3 "~" H 7800 3600 50  0001 C CNN
+	1    7800 3600
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C5
+U 1 1 6090001C
+P 7950 3750
+F 0 "C5" H 7835 3704 50  0000 R CNN
+F 1 "100n" H 7835 3795 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 7988 3600 50  0001 C CNN
+F 3 "~" H 7950 3750 50  0001 C CNN
+	1    7950 3750
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:Earth #PWR0137
+U 1 1 60900022
+P 7950 3900
+F 0 "#PWR0137" H 7950 3650 50  0001 C CNN
+F 1 "Earth" H 7950 3750 50  0001 C CNN
+F 2 "" H 7950 3900 50  0001 C CNN
+F 3 "~" H 7950 3900 50  0001 C CNN
+	1    7950 3900
+	1    0    0    -1  
+$EndComp
+Connection ~ 7950 3600
+Text Label 8100 3600 0    50   ~ 0
+LEVEL
+Entry Wire Line
+	8600 3500 8500 3600
+Wire Wire Line
+	7950 3600 8500 3600
+$Comp
+L Connector:AudioJack2 J8
+U 1 1 609144F3
+P 4500 4750
+F 0 "J8" H 4532 5075 50  0000 C CNN
+F 1 "AudioJack2" H 4532 4984 50  0000 C CNN
+F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 4500 4750 50  0001 C CNN
+F 3 "~" H 4500 4750 50  0001 C CNN
+	1    4500 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0138
+U 1 1 609144F9
+P 4750 4800
+F 0 "#PWR0138" H 4750 4550 50  0001 C CNN
+F 1 "Earth" H 4750 4650 50  0001 C CNN
+F 2 "" H 4750 4800 50  0001 C CNN
+F 3 "~" H 4750 4800 50  0001 C CNN
+	1    4750 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 4800 4750 4650
+Wire Wire Line
+	4750 4650 4700 4650
+$Comp
+L Device:R R22
+U 1 1 6091450F
+P 5400 4750
+F 0 "R22" V 5193 4750 50  0000 C CNN
+F 1 "200k" V 5284 4750 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5330 4750 50  0001 C CNN
+F 3 "~" H 5400 4750 50  0001 C CNN
+	1    5400 4750
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_POT RV8
+U 1 1 60914518
+P 4950 5250
+F 0 "RV8" V 4743 5250 50  0000 C CNN
+F 1 "10k" V 4834 5250 50  0000 C CNN
+F 2 "Potentiometer_THT:Potentiometer_Bourns_PTA3043_Single_Slide" H 4950 5250 50  0001 C CNN
+F 3 "~" H 4950 5250 50  0001 C CNN
+	1    4950 5250
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR0140
+U 1 1 6091451E
+P 4750 5200
+F 0 "#PWR0140" H 4750 5050 50  0001 C CNN
+F 1 "+5V" H 4765 5373 50  0000 C CNN
+F 2 "" H 4750 5200 50  0001 C CNN
+F 3 "" H 4750 5200 50  0001 C CNN
+	1    4750 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 5200 4750 5250
+Wire Wire Line
+	4750 5250 4800 5250
+$Comp
+L power:Earth #PWR0141
+U 1 1 60914526
+P 5100 5300
+F 0 "#PWR0141" H 5100 5050 50  0001 C CNN
+F 1 "Earth" H 5100 5150 50  0001 C CNN
+F 2 "" H 5100 5300 50  0001 C CNN
+F 3 "~" H 5100 5300 50  0001 C CNN
+	1    5100 5300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 5300 5100 5250
+$Comp
+L Device:R R23
+U 1 1 6091452D
+P 5400 5450
+F 0 "R23" V 5193 5450 50  0000 C CNN
+F 1 "100k" V 5284 5450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5330 5450 50  0001 C CNN
+F 3 "~" H 5400 5450 50  0001 C CNN
+	1    5400 5450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4950 5400 4950 5450
+Wire Wire Line
+	4950 5450 5250 5450
+Wire Wire Line
+	5550 4750 5750 4750
+Wire Wire Line
+	5550 5450 5550 5250
+Connection ~ 5550 4750
+$Comp
+L power:Earth #PWR0142
+U 1 1 6091453E
+P 5700 5000
+F 0 "#PWR0142" H 5700 4750 50  0001 C CNN
+F 1 "Earth" H 5700 4850 50  0001 C CNN
+F 2 "" H 5700 5000 50  0001 C CNN
+F 3 "~" H 5700 5000 50  0001 C CNN
+	1    5700 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 4950 5700 4950
+Wire Wire Line
+	5700 4950 5700 5000
+$Comp
+L Diode:1N4148 D10
+U 1 1 60914546
+P 6050 5250
+F 0 "D10" H 6050 5467 50  0000 C CNN
+F 1 "1N4148" H 6050 5376 50  0000 C CNN
+F 2 "Diode_SMD:D_0805_2012Metric" H 6050 5075 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 6050 5250 50  0001 C CNN
+	1    6050 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 4850 6350 5250
+Wire Wire Line
+	6350 5250 6200 5250
+Wire Wire Line
+	5900 5250 5550 5250
+Connection ~ 5550 5250
+Wire Wire Line
+	5550 5250 5550 4750
+$Comp
+L Device:R R31
+U 1 1 60914551
+P 6050 5550
+F 0 "R31" V 5843 5550 50  0000 C CNN
+F 1 "100k" V 5934 5550 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5980 5550 50  0001 C CNN
+F 3 "~" H 6050 5550 50  0001 C CNN
+	1    6050 5550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5900 5550 5550 5550
+Wire Wire Line
+	5550 5550 5550 5450
+Connection ~ 5550 5450
+$Comp
+L Diode:1N4148 D16
+U 1 1 6091455A
+P 6500 4850
+F 0 "D16" H 6500 5067 50  0000 C CNN
+F 1 "1N4148" H 6500 4976 50  0000 C CNN
+F 2 "Diode_SMD:D_0805_2012Metric" H 6500 4675 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 6500 4850 50  0001 C CNN
+	1    6500 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 4850 6650 5550
+Wire Wire Line
+	6200 5550 6650 5550
+$Comp
+L Device:R R37
+U 1 1 60914562
+P 6800 4850
+F 0 "R37" V 6593 4850 50  0000 C CNN
+F 1 "100k" V 6684 4850 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6730 4850 50  0001 C CNN
+F 3 "~" H 6800 4850 50  0001 C CNN
+	1    6800 4850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6950 4850 7050 4850
+Wire Wire Line
+	7050 4850 7050 4900
+$Comp
+L power:Earth #PWR0143
+U 1 1 60914570
+P 7000 4700
+F 0 "#PWR0143" H 7000 4450 50  0001 C CNN
+F 1 "Earth" H 7000 4550 50  0001 C CNN
+F 2 "" H 7000 4700 50  0001 C CNN
+F 3 "~" H 7000 4700 50  0001 C CNN
+	1    7000 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 4700 7000 4700
+$Comp
+L Device:R R43
+U 1 1 60914577
+P 7350 5200
+F 0 "R43" V 7143 5200 50  0000 C CNN
+F 1 "100k" V 7234 5200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 7280 5200 50  0001 C CNN
+F 3 "~" H 7350 5200 50  0001 C CNN
+	1    7350 5200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7650 4800 7650 5200
+Wire Wire Line
+	7650 5200 7500 5200
+Wire Wire Line
+	7200 5200 6950 5200
+Wire Wire Line
+	6950 5200 6950 4850
+Connection ~ 6950 4850
+$Comp
+L Device:R R49
+U 1 1 60914582
+P 7800 4800
+F 0 "R49" V 7593 4800 50  0000 C CNN
+F 1 "4k7" V 7684 4800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 7730 4800 50  0001 C CNN
+F 3 "~" H 7800 4800 50  0001 C CNN
+	1    7800 4800
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C6
+U 1 1 60914588
+P 7950 4950
+F 0 "C6" H 7835 4904 50  0000 R CNN
+F 1 "100n" H 7835 4995 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 7988 4800 50  0001 C CNN
+F 3 "~" H 7950 4950 50  0001 C CNN
+	1    7950 4950
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:Earth #PWR0144
+U 1 1 6091458E
+P 7950 5100
+F 0 "#PWR0144" H 7950 4850 50  0001 C CNN
+F 1 "Earth" H 7950 4950 50  0001 C CNN
+F 2 "" H 7950 5100 50  0001 C CNN
+F 3 "~" H 7950 5100 50  0001 C CNN
+	1    7950 5100
+	1    0    0    -1  
+$EndComp
+Connection ~ 7950 4800
+Text Label 8100 4800 0    50   ~ 0
+DECAY
+Entry Wire Line
+	8600 4700 8500 4800
+Wire Wire Line
+	7950 4800 8500 4800
+$Comp
+L Connector:AudioJack2 J9
+U 1 1 609283CD
+P 4500 6000
+F 0 "J9" H 4532 6325 50  0000 C CNN
+F 1 "AudioJack2" H 4532 6234 50  0000 C CNN
+F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 4500 6000 50  0001 C CNN
+F 3 "~" H 4500 6000 50  0001 C CNN
+	1    4500 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0145
+U 1 1 609283D3
+P 4750 6050
+F 0 "#PWR0145" H 4750 5800 50  0001 C CNN
+F 1 "Earth" H 4750 5900 50  0001 C CNN
+F 2 "" H 4750 6050 50  0001 C CNN
+F 3 "~" H 4750 6050 50  0001 C CNN
+	1    4750 6050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 6050 4750 5900
+Wire Wire Line
+	4750 5900 4700 5900
+$Comp
+L Device:R R24
+U 1 1 609283E9
+P 5400 6000
+F 0 "R24" V 5193 6000 50  0000 C CNN
+F 1 "200k" V 5284 6000 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5330 6000 50  0001 C CNN
+F 3 "~" H 5400 6000 50  0001 C CNN
+	1    5400 6000
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_POT RV10
+U 1 1 609283F2
+P 4950 6500
+F 0 "RV10" V 4743 6500 50  0000 C CNN
+F 1 "10k" V 4834 6500 50  0000 C CNN
+F 2 "Potentiometer_THT:Potentiometer_Bourns_PTA3043_Single_Slide" H 4950 6500 50  0001 C CNN
+F 3 "~" H 4950 6500 50  0001 C CNN
+	1    4950 6500
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR0147
+U 1 1 609283F8
+P 4750 6450
+F 0 "#PWR0147" H 4750 6300 50  0001 C CNN
+F 1 "+5V" H 4765 6623 50  0000 C CNN
+F 2 "" H 4750 6450 50  0001 C CNN
+F 3 "" H 4750 6450 50  0001 C CNN
+	1    4750 6450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 6450 4750 6500
+Wire Wire Line
+	4750 6500 4800 6500
+$Comp
+L power:Earth #PWR0148
+U 1 1 60928400
+P 5100 6550
+F 0 "#PWR0148" H 5100 6300 50  0001 C CNN
+F 1 "Earth" H 5100 6400 50  0001 C CNN
+F 2 "" H 5100 6550 50  0001 C CNN
+F 3 "~" H 5100 6550 50  0001 C CNN
+	1    5100 6550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 6550 5100 6500
+$Comp
+L Device:R R25
+U 1 1 60928407
+P 5400 6700
+F 0 "R25" V 5193 6700 50  0000 C CNN
+F 1 "100k" V 5284 6700 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5330 6700 50  0001 C CNN
+F 3 "~" H 5400 6700 50  0001 C CNN
+	1    5400 6700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4950 6650 4950 6700
+Wire Wire Line
+	4950 6700 5250 6700
+Wire Wire Line
+	5550 6000 5750 6000
+Wire Wire Line
+	5550 6700 5550 6500
+Connection ~ 5550 6000
+$Comp
+L power:Earth #PWR0149
+U 1 1 60928418
+P 5700 6250
+F 0 "#PWR0149" H 5700 6000 50  0001 C CNN
+F 1 "Earth" H 5700 6100 50  0001 C CNN
+F 2 "" H 5700 6250 50  0001 C CNN
+F 3 "~" H 5700 6250 50  0001 C CNN
+	1    5700 6250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 6200 5700 6200
+Wire Wire Line
+	5700 6200 5700 6250
+$Comp
+L Diode:1N4148 D11
+U 1 1 60928420
+P 6050 6500
+F 0 "D11" H 6050 6717 50  0000 C CNN
+F 1 "1N4148" H 6050 6626 50  0000 C CNN
+F 2 "Diode_SMD:D_0805_2012Metric" H 6050 6325 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 6050 6500 50  0001 C CNN
+	1    6050 6500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 6100 6350 6500
+Wire Wire Line
+	6350 6500 6200 6500
+Wire Wire Line
+	5900 6500 5550 6500
+Connection ~ 5550 6500
+Wire Wire Line
+	5550 6500 5550 6000
+$Comp
+L Device:R R32
+U 1 1 6092842B
+P 6050 6800
+F 0 "R32" V 5843 6800 50  0000 C CNN
+F 1 "100k" V 5934 6800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5980 6800 50  0001 C CNN
+F 3 "~" H 6050 6800 50  0001 C CNN
+	1    6050 6800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5900 6800 5550 6800
+Wire Wire Line
+	5550 6800 5550 6700
+Connection ~ 5550 6700
+$Comp
+L Diode:1N4148 D17
+U 1 1 60928434
+P 6500 6100
+F 0 "D17" H 6500 6317 50  0000 C CNN
+F 1 "1N4148" H 6500 6226 50  0000 C CNN
+F 2 "Diode_SMD:D_0805_2012Metric" H 6500 5925 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 6500 6100 50  0001 C CNN
+	1    6500 6100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 6100 6650 6800
+Wire Wire Line
+	6200 6800 6650 6800
+$Comp
+L Device:R R38
+U 1 1 6092843C
+P 6800 6100
+F 0 "R38" V 6593 6100 50  0000 C CNN
+F 1 "100k" V 6684 6100 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6730 6100 50  0001 C CNN
+F 3 "~" H 6800 6100 50  0001 C CNN
+	1    6800 6100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6950 6100 7050 6100
+Wire Wire Line
+	7050 6100 7050 6150
+$Comp
+L power:Earth #PWR0150
+U 1 1 6092844A
+P 7000 5950
+F 0 "#PWR0150" H 7000 5700 50  0001 C CNN
+F 1 "Earth" H 7000 5800 50  0001 C CNN
+F 2 "" H 7000 5950 50  0001 C CNN
+F 3 "~" H 7000 5950 50  0001 C CNN
+	1    7000 5950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 5950 7000 5950
+$Comp
+L Device:R R44
+U 1 1 60928451
+P 7350 6450
+F 0 "R44" V 7143 6450 50  0000 C CNN
+F 1 "100k" V 7234 6450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 7280 6450 50  0001 C CNN
+F 3 "~" H 7350 6450 50  0001 C CNN
+	1    7350 6450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7650 6050 7650 6450
+Wire Wire Line
+	7650 6450 7500 6450
+Wire Wire Line
+	7200 6450 6950 6450
+Wire Wire Line
+	6950 6450 6950 6100
+Connection ~ 6950 6100
+$Comp
+L Device:R R50
+U 1 1 6092845C
+P 7800 6050
+F 0 "R50" V 7593 6050 50  0000 C CNN
+F 1 "4k7" V 7684 6050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 7730 6050 50  0001 C CNN
+F 3 "~" H 7800 6050 50  0001 C CNN
+	1    7800 6050
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C7
+U 1 1 60928462
+P 7950 6200
+F 0 "C7" H 7835 6154 50  0000 R CNN
+F 1 "100n" H 7835 6245 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 7988 6050 50  0001 C CNN
+F 3 "~" H 7950 6200 50  0001 C CNN
+	1    7950 6200
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:Earth #PWR0151
+U 1 1 60928468
+P 7950 6350
+F 0 "#PWR0151" H 7950 6100 50  0001 C CNN
+F 1 "Earth" H 7950 6200 50  0001 C CNN
+F 2 "" H 7950 6350 50  0001 C CNN
+F 3 "~" H 7950 6350 50  0001 C CNN
+	1    7950 6350
+	1    0    0    -1  
+$EndComp
+Connection ~ 7950 6050
+Text Label 8100 6050 0    50   ~ 0
+SUSTAIN
+Entry Wire Line
+	8600 5950 8500 6050
+Wire Wire Line
+	7950 6050 8500 6050
+$Comp
+L Connector:AudioJack2 J10
+U 1 1 6095A229
+P 4500 7250
+F 0 "J10" H 4532 7575 50  0000 C CNN
+F 1 "AudioJack2" H 4532 7484 50  0000 C CNN
+F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 4500 7250 50  0001 C CNN
+F 3 "~" H 4500 7250 50  0001 C CNN
+	1    4500 7250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0152
+U 1 1 6095A22F
+P 4750 7300
+F 0 "#PWR0152" H 4750 7050 50  0001 C CNN
+F 1 "Earth" H 4750 7150 50  0001 C CNN
+F 2 "" H 4750 7300 50  0001 C CNN
+F 3 "~" H 4750 7300 50  0001 C CNN
+	1    4750 7300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 7300 4750 7150
+Wire Wire Line
+	4750 7150 4700 7150
+$Comp
+L Device:R R26
+U 1 1 6095A245
+P 5400 7250
+F 0 "R26" V 5193 7250 50  0000 C CNN
+F 1 "200k" V 5284 7250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5330 7250 50  0001 C CNN
+F 3 "~" H 5400 7250 50  0001 C CNN
+	1    5400 7250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_POT RV12
+U 1 1 6095A24E
+P 4950 7750
+F 0 "RV12" V 4743 7750 50  0000 C CNN
+F 1 "10k" V 4834 7750 50  0000 C CNN
+F 2 "Potentiometer_THT:Potentiometer_Bourns_PTA3043_Single_Slide" H 4950 7750 50  0001 C CNN
+F 3 "~" H 4950 7750 50  0001 C CNN
+	1    4950 7750
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR0154
+U 1 1 6095A254
+P 4750 7700
+F 0 "#PWR0154" H 4750 7550 50  0001 C CNN
+F 1 "+5V" H 4765 7873 50  0000 C CNN
+F 2 "" H 4750 7700 50  0001 C CNN
+F 3 "" H 4750 7700 50  0001 C CNN
+	1    4750 7700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 7700 4750 7750
+Wire Wire Line
+	4750 7750 4800 7750
+$Comp
+L power:Earth #PWR0155
+U 1 1 6095A25C
+P 5100 7800
+F 0 "#PWR0155" H 5100 7550 50  0001 C CNN
+F 1 "Earth" H 5100 7650 50  0001 C CNN
+F 2 "" H 5100 7800 50  0001 C CNN
+F 3 "~" H 5100 7800 50  0001 C CNN
+	1    5100 7800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 7800 5100 7750
+$Comp
+L Device:R R27
+U 1 1 6095A263
+P 5400 7950
+F 0 "R27" V 5193 7950 50  0000 C CNN
+F 1 "100k" V 5284 7950 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5330 7950 50  0001 C CNN
+F 3 "~" H 5400 7950 50  0001 C CNN
+	1    5400 7950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4950 7900 4950 7950
+Wire Wire Line
+	4950 7950 5250 7950
+Wire Wire Line
+	5550 7250 5750 7250
+Wire Wire Line
+	5550 7950 5550 7750
+Connection ~ 5550 7250
+$Comp
+L power:Earth #PWR0156
+U 1 1 6095A274
+P 5700 7500
+F 0 "#PWR0156" H 5700 7250 50  0001 C CNN
+F 1 "Earth" H 5700 7350 50  0001 C CNN
+F 2 "" H 5700 7500 50  0001 C CNN
+F 3 "~" H 5700 7500 50  0001 C CNN
+	1    5700 7500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 7450 5700 7450
+Wire Wire Line
+	5700 7450 5700 7500
+$Comp
+L Diode:1N4148 D12
+U 1 1 6095A27C
+P 6050 7750
+F 0 "D12" H 6050 7967 50  0000 C CNN
+F 1 "1N4148" H 6050 7876 50  0000 C CNN
+F 2 "Diode_SMD:D_0805_2012Metric" H 6050 7575 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 6050 7750 50  0001 C CNN
+	1    6050 7750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 7350 6350 7750
+Wire Wire Line
+	6350 7750 6200 7750
+Wire Wire Line
+	5900 7750 5550 7750
+Connection ~ 5550 7750
+Wire Wire Line
+	5550 7750 5550 7250
+$Comp
+L Device:R R33
+U 1 1 6095A287
+P 6050 8050
+F 0 "R33" V 5843 8050 50  0000 C CNN
+F 1 "100k" V 5934 8050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5980 8050 50  0001 C CNN
+F 3 "~" H 6050 8050 50  0001 C CNN
+	1    6050 8050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5900 8050 5550 8050
+Wire Wire Line
+	5550 8050 5550 7950
+Connection ~ 5550 7950
+$Comp
+L Diode:1N4148 D18
+U 1 1 6095A290
+P 6500 7350
+F 0 "D18" H 6500 7567 50  0000 C CNN
+F 1 "1N4148" H 6500 7476 50  0000 C CNN
+F 2 "Diode_SMD:D_0805_2012Metric" H 6500 7175 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 6500 7350 50  0001 C CNN
+	1    6500 7350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 7350 6650 8050
+Wire Wire Line
+	6200 8050 6650 8050
+$Comp
+L Device:R R39
+U 1 1 6095A298
+P 6800 7350
+F 0 "R39" V 6593 7350 50  0000 C CNN
+F 1 "100k" V 6684 7350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6730 7350 50  0001 C CNN
+F 3 "~" H 6800 7350 50  0001 C CNN
+	1    6800 7350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6950 7350 7050 7350
+Wire Wire Line
+	7050 7350 7050 7400
+$Comp
+L power:Earth #PWR0157
+U 1 1 6095A2A6
+P 7000 7200
+F 0 "#PWR0157" H 7000 6950 50  0001 C CNN
+F 1 "Earth" H 7000 7050 50  0001 C CNN
+F 2 "" H 7000 7200 50  0001 C CNN
+F 3 "~" H 7000 7200 50  0001 C CNN
+	1    7000 7200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 7200 7000 7200
+$Comp
+L Device:R R45
+U 1 1 6095A2AD
+P 7350 7700
+F 0 "R45" V 7143 7700 50  0000 C CNN
+F 1 "100k" V 7234 7700 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 7280 7700 50  0001 C CNN
+F 3 "~" H 7350 7700 50  0001 C CNN
+	1    7350 7700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7650 7300 7650 7700
+Wire Wire Line
+	7650 7700 7500 7700
+Wire Wire Line
+	7200 7700 6950 7700
+Wire Wire Line
+	6950 7700 6950 7350
+Connection ~ 6950 7350
+$Comp
+L Device:R R51
+U 1 1 6095A2B8
+P 7800 7300
+F 0 "R51" V 7593 7300 50  0000 C CNN
+F 1 "4k7" V 7684 7300 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 7730 7300 50  0001 C CNN
+F 3 "~" H 7800 7300 50  0001 C CNN
+	1    7800 7300
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C8
+U 1 1 6095A2BE
+P 7950 7450
+F 0 "C8" H 7835 7404 50  0000 R CNN
+F 1 "100n" H 7835 7495 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 7988 7300 50  0001 C CNN
+F 3 "~" H 7950 7450 50  0001 C CNN
+	1    7950 7450
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:Earth #PWR0158
+U 1 1 6095A2C4
+P 7950 7600
+F 0 "#PWR0158" H 7950 7350 50  0001 C CNN
+F 1 "Earth" H 7950 7450 50  0001 C CNN
+F 2 "" H 7950 7600 50  0001 C CNN
+F 3 "~" H 7950 7600 50  0001 C CNN
+	1    7950 7600
+	1    0    0    -1  
+$EndComp
+Connection ~ 7950 7300
+Text Label 8100 7300 0    50   ~ 0
+RELEASE
+Entry Wire Line
+	8600 7200 8500 7300
+Wire Wire Line
+	7950 7300 8500 7300
+Wire Bus Line
+	3750 700  8600 700 
+$Comp
+L Amplifier_Operational:TL074 U5
+U 1 1 6095A29E
+P 7350 7300
+F 0 "U5" H 7350 7667 50  0000 C CNN
+F 1 "TL074" H 7350 7576 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 7300 7400 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 7400 7500 50  0001 C CNN
+	1    7350 7300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:TL074 U5
+U 4 1 6095A26B
+P 6050 6100
+F 0 "U5" H 6050 5733 50  0000 C CNN
+F 1 "TL074" H 6050 5824 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 6000 6200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6100 6300 50  0001 C CNN
+	4    6050 6100
+	1    0    0    1   
+$EndComp
+$Comp
+L Amplifier_Operational:TL074 U5
+U 3 1 60928442
+P 7350 6050
+F 0 "U5" H 7350 6417 50  0000 C CNN
+F 1 "TL074" H 7350 6326 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 7300 6150 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 7400 6250 50  0001 C CNN
+	3    7350 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:TL074 U5
+U 2 1 6092840F
+P 6050 7350
+F 0 "U5" H 6050 6983 50  0000 C CNN
+F 1 "TL074" H 6050 7074 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 6000 7450 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6100 7550 50  0001 C CNN
+	2    6050 7350
+	1    0    0    1   
+$EndComp
+$Comp
+L Amplifier_Operational:TL074 U4
+U 3 1 60914568
+P 7350 1150
+F 0 "U4" H 7350 1517 50  0000 C CNN
+F 1 "TL074" H 7350 1426 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 7300 1250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 7400 1350 50  0001 C CNN
+	3    7350 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:TL074 U4
+U 2 1 60914535
+P 6050 3650
+F 0 "U4" H 6050 3283 50  0000 C CNN
+F 1 "TL074" H 6050 3374 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 6000 3750 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6100 3850 50  0001 C CNN
+	2    6050 3650
+	1    0    0    1   
+$EndComp
+$Comp
+L Amplifier_Operational:TL074 U3
+U 3 1 608FFFFC
+P 7350 2400
+F 0 "U3" H 7350 2767 50  0000 C CNN
+F 1 "TL074" H 7350 2676 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 7300 2500 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 7400 2600 50  0001 C CNN
+	3    7350 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:TL074 U3
+U 1 1 608FFFC9
+P 7350 4800
+F 0 "U3" H 7350 4433 50  0000 C CNN
+F 1 "TL074" H 7350 4524 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 7300 4900 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 7400 5000 50  0001 C CNN
+	1    7350 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:TL074 U3
+U 2 1 608E9BF3
+P 6050 4850
+F 0 "U3" H 6050 5217 50  0000 C CNN
+F 1 "TL074" H 6050 5126 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 6000 4950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6100 5050 50  0001 C CNN
+	2    6050 4850
+	1    0    0    1   
+$EndComp
+$Comp
+L Amplifier_Operational:TL074 U3
+U 4 1 608E9BC0
+P 6050 2450
+F 0 "U3" H 6050 2083 50  0000 C CNN
+F 1 "TL074" H 6050 2174 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 6000 2550 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6100 2650 50  0001 C CNN
+	4    6050 2450
+	1    0    0    1   
+$EndComp
+$Comp
+L Amplifier_Operational:TL074 U4
+U 1 1 6089C62E
+P 7350 3600
+F 0 "U4" H 7350 3967 50  0000 C CNN
+F 1 "TL074" H 7350 3876 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 7300 3700 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 7400 3800 50  0001 C CNN
+	1    7350 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:TL074 U4
+U 4 1 608749F7
+P 6050 1200
+F 0 "U4" H 6050 833 50  0000 C CNN
+F 1 "TL074" H 6050 924 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 6000 1300 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6100 1400 50  0001 C CNN
+	4    6050 1200
+	1    0    0    1   
+$EndComp
+$Comp
+L VCADSR:ENVGEN8C U2
+U 1 1 608344FE
+P 2650 1400
+F 0 "U2" H 2700 2031 50  0000 C CNN
+F 1 "ENVGEN8" H 2700 1940 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket_LongPads" H 2700 1350 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 2700 1350 50  0001 C CNN
+	1    2650 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:TL074 U1
+U 1 1 607F2496
+P 1250 5150
+F 0 "U1" H 1250 5517 50  0000 C CNN
+F 1 "TL074" H 1250 5426 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 1200 5250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 1300 5350 50  0001 C CNN
+	1    1250 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:TL074 U1
+U 3 1 60819162
+P 1250 7750
+F 0 "U1" H 1250 8117 50  0000 C CNN
+F 1 "TL074" H 1250 8026 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 1200 7850 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 1300 7950 50  0001 C CNN
+	3    1250 7750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:TL074 U1
+U 5 1 6099B1FA
+P 9550 1350
+F 0 "U1" H 9508 1396 50  0000 L CNN
+F 1 "TL074" H 9508 1305 50  0000 L CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 9500 1450 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 9600 1550 50  0001 C CNN
+	5    9550 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:TL074 U3
+U 5 1 6099E103
+P 9950 1350
+F 0 "U3" H 9908 1396 50  0000 L CNN
+F 1 "TL074" H 9908 1305 50  0000 L CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 9900 1450 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 10000 1550 50  0001 C CNN
+	5    9950 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:TL074 U4
+U 5 1 609A1896
+P 10350 1350
+F 0 "U4" H 10308 1396 50  0000 L CNN
+F 1 "TL074" H 10308 1305 50  0000 L CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 10300 1450 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 10400 1550 50  0001 C CNN
+	5    10350 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:TL074 U1
+U 2 1 609B6072
+P 2150 6650
+F 0 "U1" H 2150 6283 50  0000 C CNN
+F 1 "TL074" H 2150 6374 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 2100 6750 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 2200 6850 50  0001 C CNN
+	2    2150 6650
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:LED D3
+U 1 1 60A2518A
+P 2450 6300
+F 0 "D3" H 2443 6045 50  0000 C CNN
+F 1 "LED" H 2443 6136 50  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm" H 2450 6300 50  0001 C CNN
+F 3 "~" H 2450 6300 50  0001 C CNN
+	1    2450 6300
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R13
+U 1 1 60A3AAB1
+P 2150 8750
+F 0 "R13" V 1943 8750 50  0000 C CNN
+F 1 "4.7k" V 2034 8750 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 2080 8750 50  0001 C CNN
+F 3 "~" H 2150 8750 50  0001 C CNN
+	1    2150 8750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D4
+U 1 1 60A3AAB7
+P 2800 8900
+F 0 "D4" H 2793 9117 50  0000 C CNN
+F 1 "LED" H 2793 9026 50  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm" H 2800 8900 50  0001 C CNN
+F 3 "~" H 2800 8900 50  0001 C CNN
+	1    2800 8900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:TL074 U5
+U 5 1 60A7038E
+P 10750 1350
+F 0 "U5" H 10708 1396 50  0000 L CNN
+F 1 "TL074" H 10708 1305 50  0000 L CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 10700 1450 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 10800 1550 50  0001 C CNN
+	5    10750 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR0159
+U 1 1 60A86A4A
+P 9450 850
+F 0 "#PWR0159" H 9450 700 50  0001 C CNN
+F 1 "+12V" H 9465 1023 50  0000 C CNN
+F 2 "" H 9450 850 50  0001 C CNN
+F 3 "" H 9450 850 50  0001 C CNN
+	1    9450 850 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR0160
+U 1 1 60A87570
+P 9850 850
+F 0 "#PWR0160" H 9850 700 50  0001 C CNN
+F 1 "+12V" H 9865 1023 50  0000 C CNN
+F 2 "" H 9850 850 50  0001 C CNN
+F 3 "" H 9850 850 50  0001 C CNN
+	1    9850 850 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR0161
+U 1 1 60A97F1A
+P 10250 850
+F 0 "#PWR0161" H 10250 700 50  0001 C CNN
+F 1 "+12V" H 10265 1023 50  0000 C CNN
+F 2 "" H 10250 850 50  0001 C CNN
+F 3 "" H 10250 850 50  0001 C CNN
+	1    10250 850 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR0162
+U 1 1 60AA8BFB
+P 10650 850
+F 0 "#PWR0162" H 10650 700 50  0001 C CNN
+F 1 "+12V" H 10665 1023 50  0000 C CNN
+F 2 "" H 10650 850 50  0001 C CNN
+F 3 "" H 10650 850 50  0001 C CNN
+	1    10650 850 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-12V #PWR0163
+U 1 1 60ABC15B
+P 9450 1900
+F 0 "#PWR0163" H 9450 2000 50  0001 C CNN
+F 1 "-12V" H 9465 2073 50  0000 C CNN
+F 2 "" H 9450 1900 50  0001 C CNN
+F 3 "" H 9450 1900 50  0001 C CNN
+	1    9450 1900
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:-12V #PWR0164
+U 1 1 60ABCAB0
+P 9850 1900
+F 0 "#PWR0164" H 9850 2000 50  0001 C CNN
+F 1 "-12V" H 9865 2073 50  0000 C CNN
+F 2 "" H 9850 1900 50  0001 C CNN
+F 3 "" H 9850 1900 50  0001 C CNN
+	1    9850 1900
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:-12V #PWR0165
+U 1 1 60ADDEBA
+P 10250 1900
+F 0 "#PWR0165" H 10250 2000 50  0001 C CNN
+F 1 "-12V" H 10265 2073 50  0000 C CNN
+F 2 "" H 10250 1900 50  0001 C CNN
+F 3 "" H 10250 1900 50  0001 C CNN
+	1    10250 1900
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:-12V #PWR0166
+U 1 1 60AEE8F1
+P 10650 1900
+F 0 "#PWR0166" H 10650 2000 50  0001 C CNN
+F 1 "-12V" H 10665 2073 50  0000 C CNN
+F 2 "" H 10650 1900 50  0001 C CNN
+F 3 "" H 10650 1900 50  0001 C CNN
+	1    10650 1900
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C C19
+U 1 1 60B05200
+P 10850 900
+F 0 "C19" V 10598 900 50  0000 C CNN
+F 1 "100n" V 10689 900 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 10888 750 50  0001 C CNN
+F 3 "~" H 10850 900 50  0001 C CNN
+	1    10850 900 
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C16
+U 1 1 60B07C32
+P 10450 1000
+F 0 "C16" V 10198 1000 50  0000 C CNN
+F 1 "100n" V 10289 1000 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 10488 850 50  0001 C CNN
+F 3 "~" H 10450 1000 50  0001 C CNN
+	1    10450 1000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10650 850  10650 900 
+Wire Wire Line
+	10700 900  10650 900 
+Connection ~ 10650 900 
+Wire Wire Line
+	10650 900  10650 1050
+Wire Wire Line
+	10250 850  10250 1000
+Wire Wire Line
+	10300 1000 10250 1000
+Connection ~ 10250 1000
+Wire Wire Line
+	10250 1000 10250 1050
+$Comp
+L power:Earth #PWR0167
+U 1 1 60B63A00
+P 11000 1000
+F 0 "#PWR0167" H 11000 750 50  0001 C CNN
+F 1 "Earth" H 11000 850 50  0001 C CNN
+F 2 "" H 11000 1000 50  0001 C CNN
+F 3 "~" H 11000 1000 50  0001 C CNN
+	1    11000 1000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11000 900  11000 1000
+Wire Wire Line
+	11000 1000 10600 1000
+Connection ~ 11000 1000
+$Comp
+L Device:C C17
+U 1 1 60B8AF2F
+P 10450 1700
+F 0 "C17" V 10198 1700 50  0000 C CNN
+F 1 "100n" V 10289 1700 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 10488 1550 50  0001 C CNN
+F 3 "~" H 10450 1700 50  0001 C CNN
+	1    10450 1700
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C20
+U 1 1 60B9ECA0
+P 10850 1800
+F 0 "C20" V 10598 1800 50  0000 C CNN
+F 1 "100n" V 10689 1800 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 10888 1650 50  0001 C CNN
+F 3 "~" H 10850 1800 50  0001 C CNN
+	1    10850 1800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10650 1650 10650 1800
+Wire Wire Line
+	10250 1650 10250 1700
+Wire Wire Line
+	10300 1700 10250 1700
+Connection ~ 10250 1700
+Wire Wire Line
+	10250 1700 10250 1900
+Wire Wire Line
+	10700 1800 10650 1800
+Connection ~ 10650 1800
+Wire Wire Line
+	10650 1800 10650 1900
+$Comp
+L power:Earth #PWR0168
+U 1 1 60BFCDCB
+P 11000 1800
+F 0 "#PWR0168" H 11000 1550 50  0001 C CNN
+F 1 "Earth" H 11000 1650 50  0001 C CNN
+F 2 "" H 11000 1800 50  0001 C CNN
+F 3 "~" H 11000 1800 50  0001 C CNN
+	1    11000 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10600 1700 11000 1700
+Wire Wire Line
+	11000 1700 11000 1800
+Connection ~ 11000 1800
+$Comp
+L Device:C C15
+U 1 1 60C22FF6
+P 9650 1700
+F 0 "C15" V 9398 1700 50  0000 C CNN
+F 1 "100n" V 9489 1700 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 9688 1550 50  0001 C CNN
+F 3 "~" H 9650 1700 50  0001 C CNN
+	1    9650 1700
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C10
+U 1 1 60C35F5B
+P 9250 1800
+F 0 "C10" V 8998 1800 50  0000 C CNN
+F 1 "100n" V 9089 1800 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 9288 1650 50  0001 C CNN
+F 3 "~" H 9250 1800 50  0001 C CNN
+	1    9250 1800
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C9
+U 1 1 60C4E27B
+P 9250 900
+F 0 "C9" V 8998 900 50  0000 C CNN
+F 1 "100n" V 9089 900 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 9288 750 50  0001 C CNN
+F 3 "~" H 9250 900 50  0001 C CNN
+	1    9250 900 
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C14
+U 1 1 60C4E281
+P 9650 1000
+F 0 "C14" V 9398 1000 50  0000 C CNN
+F 1 "100n" V 9489 1000 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 9688 850 50  0001 C CNN
+F 3 "~" H 9650 1000 50  0001 C CNN
+	1    9650 1000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9850 850  9850 1000
+Wire Wire Line
+	9800 1000 9850 1000
+Connection ~ 9850 1000
+Wire Wire Line
+	9850 1000 9850 1050
+Wire Wire Line
+	9450 850  9450 900 
+Wire Wire Line
+	9400 900  9450 900 
+Connection ~ 9450 900 
+Wire Wire Line
+	9450 900  9450 1050
+Wire Wire Line
+	9450 1650 9450 1800
+Wire Wire Line
+	9850 1650 9850 1700
+Wire Wire Line
+	9800 1700 9850 1700
+Connection ~ 9850 1700
+Wire Wire Line
+	9850 1700 9850 1900
+Wire Wire Line
+	9400 1800 9450 1800
+Connection ~ 9450 1800
+Wire Wire Line
+	9450 1800 9450 1900
+$Comp
+L power:Earth #PWR0169
+U 1 1 60D1605D
+P 9050 1000
+F 0 "#PWR0169" H 9050 750 50  0001 C CNN
+F 1 "Earth" H 9050 850 50  0001 C CNN
+F 2 "" H 9050 1000 50  0001 C CNN
+F 3 "~" H 9050 1000 50  0001 C CNN
+	1    9050 1000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9500 1000 9050 1000
+Wire Wire Line
+	9100 900  9050 900 
+Wire Wire Line
+	9050 900  9050 1000
+Connection ~ 9050 1000
+$Comp
+L power:Earth #PWR0170
+U 1 1 60D54480
+P 9050 1850
+F 0 "#PWR0170" H 9050 1600 50  0001 C CNN
+F 1 "Earth" H 9050 1700 50  0001 C CNN
+F 2 "" H 9050 1850 50  0001 C CNN
+F 3 "~" H 9050 1850 50  0001 C CNN
+	1    9050 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9500 1700 9050 1700
+Wire Wire Line
+	9050 1700 9050 1800
+Wire Wire Line
+	9100 1800 9050 1800
+Connection ~ 9050 1800
+Wire Wire Line
+	9050 1800 9050 1850
+$Comp
+L Connector_Generic:Conn_02x05_Odd_Even J11
+U 1 1 60D94D0E
+P 10450 2750
+F 0 "J11" H 10500 3167 50  0000 C CNN
+F 1 "Conn_02x05_Odd_Even" H 10500 3076 50  0000 C CNN
+F 2 "Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical" H 10450 2750 50  0001 C CNN
+F 3 "~" H 10450 2750 50  0001 C CNN
+	1    10450 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0171
+U 1 1 60D99183
+P 10050 2750
+F 0 "#PWR0171" H 10050 2500 50  0001 C CNN
+F 1 "Earth" H 10050 2600 50  0001 C CNN
+F 2 "" H 10050 2750 50  0001 C CNN
+F 3 "~" H 10050 2750 50  0001 C CNN
+	1    10050 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10250 2650 10050 2650
+Wire Wire Line
+	10050 2650 10050 2750
+Wire Wire Line
+	10250 2750 10050 2750
+Connection ~ 10050 2750
+Wire Wire Line
+	10250 2850 10250 2750
+Connection ~ 10250 2750
+Wire Wire Line
+	10750 2850 10750 2750
+Wire Wire Line
+	10750 2750 10750 2650
+Connection ~ 10750 2750
+$Comp
+L power:-12V #PWR0172
+U 1 1 60E370B6
+P 9550 2500
+F 0 "#PWR0172" H 9550 2600 50  0001 C CNN
+F 1 "-12V" H 9565 2673 50  0000 C CNN
+F 2 "" H 9550 2500 50  0001 C CNN
+F 3 "" H 9550 2500 50  0001 C CNN
+	1    9550 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10250 2550 10000 2550
+Wire Wire Line
+	9550 2550 9550 2500
+Wire Wire Line
+	10750 2550 10250 2550
+Connection ~ 10250 2550
+Wire Wire Line
+	10750 2750 10250 2750
+Wire Wire Line
+	10750 2650 10250 2650
+Connection ~ 10750 2650
+Connection ~ 10250 2650
+Wire Wire Line
+	10750 2850 10250 2850
+Connection ~ 10750 2850
+Connection ~ 10250 2850
+$Comp
+L power:+12V #PWR0173
+U 1 1 60EC232F
+P 9550 2950
+F 0 "#PWR0173" H 9550 2800 50  0001 C CNN
+F 1 "+12V" H 9565 3123 50  0000 C CNN
+F 2 "" H 9550 2950 50  0001 C CNN
+F 3 "" H 9550 2950 50  0001 C CNN
+	1    9550 2950
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	10250 2950 10000 2950
+Wire Wire Line
+	10250 2950 10750 2950
+Connection ~ 10250 2950
+$Comp
+L Device:CP C11
+U 1 1 60EF2F25
+P 9350 2550
+F 0 "C11" V 9605 2550 50  0000 C CNN
+F 1 "10u" V 9514 2550 50  0000 C CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 9388 2400 50  0001 C CNN
+F 3 "~" H 9350 2550 50  0001 C CNN
+	1    9350 2550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9550 2550 9500 2550
+$Comp
+L Device:CP C12
+U 1 1 60F0C16B
+P 9350 2950
+F 0 "C12" V 9605 2950 50  0000 C CNN
+F 1 "10u" V 9514 2950 50  0000 C CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 9388 2800 50  0001 C CNN
+F 3 "~" H 9350 2950 50  0001 C CNN
+	1    9350 2950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9550 2950 9500 2950
+$Comp
+L Regulator_Linear:L78L05_TO92 U6
+U 1 1 60F5430D
+P 10050 3550
+F 0 "U6" H 10050 3792 50  0000 C CNN
+F 1 "L78L05_TO92" H 10050 3701 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 10050 3775 50  0001 C CIN
+F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/15/55/e5/aa/23/5b/43/fd/CD00000446.pdf/files/CD00000446.pdf/jcr:content/translations/en.CD00000446.pdf" H 10050 3500 50  0001 C CNN
+	1    10050 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR0174
+U 1 1 60F5810C
+P 9550 3400
+F 0 "#PWR0174" H 9550 3250 50  0001 C CNN
+F 1 "+12V" H 9565 3573 50  0000 C CNN
+F 2 "" H 9550 3400 50  0001 C CNN
+F 3 "" H 9550 3400 50  0001 C CNN
+	1    9550 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9750 3550 9550 3550
+Wire Wire Line
+	9550 3550 9550 3400
+$Comp
+L Device:C C13
+U 1 1 60F7200A
+P 9550 3800
+F 0 "C13" H 9665 3846 50  0000 L CNN
+F 1 "100n" H 9665 3755 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 9588 3650 50  0001 C CNN
+F 3 "~" H 9550 3800 50  0001 C CNN
+	1    9550 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9550 3550 9550 3650
+Connection ~ 9550 3550
+$Comp
+L Device:C C18
+U 1 1 60F8B5E0
+P 10450 3800
+F 0 "C18" H 10565 3846 50  0000 L CNN
+F 1 "100n" H 10565 3755 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 10488 3650 50  0001 C CNN
+F 3 "~" H 10450 3800 50  0001 C CNN
+	1    10450 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10350 3550 10450 3550
+Wire Wire Line
+	10450 3550 10450 3650
+Wire Wire Line
+	10450 3950 10050 3950
+Wire Wire Line
+	10050 3850 10050 3950
+Connection ~ 10050 3950
+Wire Wire Line
+	10050 3950 9550 3950
+$Comp
+L power:Earth #PWR0175
+U 1 1 60FECA1A
+P 10050 3950
+F 0 "#PWR0175" H 10050 3700 50  0001 C CNN
+F 1 "Earth" H 10050 3800 50  0001 C CNN
+F 2 "" H 10050 3950 50  0001 C CNN
+F 3 "~" H 10050 3950 50  0001 C CNN
+	1    10050 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C21
+U 1 1 60FEE20F
+P 10900 3800
+F 0 "C21" V 11155 3800 50  0000 C CNN
+F 1 "10u" V 11064 3800 50  0000 C CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 10938 3650 50  0001 C CNN
+F 3 "~" H 10900 3800 50  0001 C CNN
+	1    10900 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10900 3650 10900 3550
+Wire Wire Line
+	10900 3550 10450 3550
+Connection ~ 10450 3550
+Wire Wire Line
+	10900 3950 10450 3950
+Connection ~ 10450 3950
+$Comp
+L power:+5V #PWR0176
+U 1 1 61038BC8
+P 10900 3400
+F 0 "#PWR0176" H 10900 3250 50  0001 C CNN
+F 1 "+5V" H 10915 3573 50  0000 C CNN
+F 2 "" H 10900 3400 50  0001 C CNN
+F 3 "" H 10900 3400 50  0001 C CNN
+	1    10900 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10900 3400 10900 3550
+Connection ~ 10900 3550
+$Comp
+L power:Earth #PWR0177
+U 1 1 61056193
+P 9200 2950
+F 0 "#PWR0177" H 9200 2700 50  0001 C CNN
+F 1 "Earth" H 9200 2800 50  0001 C CNN
+F 2 "" H 9200 2950 50  0001 C CNN
+F 3 "~" H 9200 2950 50  0001 C CNN
+	1    9200 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9200 2550 9200 2950
+Connection ~ 9200 2950
+Connection ~ 2150 8600
+Wire Wire Line
+	2150 8900 2150 9100
+$Comp
+L Amplifier_Operational:TL074 U1
+U 4 1 609A68C9
+P 2450 9200
+F 0 "U1" H 2450 8833 50  0000 C CNN
+F 1 "TL074" H 2450 8924 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 2400 9300 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 2500 9400 50  0001 C CNN
+	4    2450 9200
+	1    0    0    1   
+$EndComp
+$Comp
+L power:Earth #PWR0178
+U 1 1 61111E13
+P 2100 9350
+F 0 "#PWR0178" H 2100 9100 50  0001 C CNN
+F 1 "Earth" H 2100 9200 50  0001 C CNN
+F 2 "" H 2100 9350 50  0001 C CNN
+F 3 "~" H 2100 9350 50  0001 C CNN
+	1    2100 9350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2150 9300 2100 9300
+Wire Wire Line
+	2100 9300 2100 9350
+Wire Wire Line
+	2950 8900 2950 9200
+Wire Wire Line
+	2950 9200 2750 9200
+Wire Wire Line
+	2650 8900 2150 8900
+Connection ~ 2150 8900
+$Comp
+L Device:R R11
+U 1 1 611D13FD
+P 1850 6150
+F 0 "R11" V 1643 6150 50  0000 C CNN
+F 1 "4.7k" V 1734 6150 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 1780 6150 50  0001 C CNN
+F 3 "~" H 1850 6150 50  0001 C CNN
+	1    1850 6150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 6300 1850 6550
+$Comp
+L power:Earth #PWR0179
+U 1 1 6121C1E3
+P 1800 6800
+F 0 "#PWR0179" H 1800 6550 50  0001 C CNN
+F 1 "Earth" H 1800 6650 50  0001 C CNN
+F 2 "" H 1800 6800 50  0001 C CNN
+F 3 "~" H 1800 6800 50  0001 C CNN
+	1    1800 6800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 6750 1800 6750
+Wire Wire Line
+	1800 6750 1800 6800
+Wire Wire Line
+	2600 6300 2600 6650
+Wire Wire Line
+	2600 6650 2450 6650
+Wire Wire Line
+	2300 6300 1850 6300
+Connection ~ 1850 6300
+Wire Wire Line
+	2650 2800 2200 2800
+Wire Wire Line
+	2200 2800 2200 3000
+Connection ~ 2200 3000
+Wire Wire Line
+	2200 3000 2250 3000
+Wire Wire Line
+	2650 4000 2200 4000
+Wire Wire Line
+	2200 4000 2200 4200
+Connection ~ 2200 4200
+Wire Wire Line
+	2200 4200 2250 4200
+$Comp
+L power:+5V #PWR0180
+U 1 1 61356A24
+P 2950 3800
+F 0 "#PWR0180" H 2950 3650 50  0001 C CNN
+F 1 "+5V" H 2965 3973 50  0000 C CNN
+F 2 "" H 2950 3800 50  0001 C CNN
+F 3 "" H 2950 3800 50  0001 C CNN
+	1    2950 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0181
+U 1 1 61370D3A
+P 2950 2600
+F 0 "#PWR0181" H 2950 2450 50  0001 C CNN
+F 1 "+5V" H 2965 2773 50  0000 C CNN
+F 2 "" H 2950 2600 50  0001 C CNN
+F 3 "" H 2950 2600 50  0001 C CNN
+	1    2950 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R14
+U 1 1 6138B81B
+P 2950 3150
+F 0 "R14" V 2743 3150 50  0000 C CNN
+F 1 "4.7k" V 2834 3150 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 2880 3150 50  0001 C CNN
+F 3 "~" H 2950 3150 50  0001 C CNN
+	1    2950 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R15
+U 1 1 613A58BC
+P 2950 4350
+F 0 "R15" V 2743 4350 50  0000 C CNN
+F 1 "4.7k" V 2834 4350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 2880 4350 50  0001 C CNN
+F 3 "~" H 2950 4350 50  0001 C CNN
+	1    2950 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0182
+U 1 1 613BFB9E
+P 3250 4500
+F 0 "#PWR0182" H 3250 4250 50  0001 C CNN
+F 1 "Earth" H 3250 4350 50  0001 C CNN
+F 2 "" H 3250 4500 50  0001 C CNN
+F 3 "~" H 3250 4500 50  0001 C CNN
+	1    3250 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0183
+U 1 1 613D9EC4
+P 3250 3300
+F 0 "#PWR0183" H 3250 3050 50  0001 C CNN
+F 1 "Earth" H 3250 3150 50  0001 C CNN
+F 2 "" H 3250 3300 50  0001 C CNN
+F 3 "~" H 3250 3300 50  0001 C CNN
+	1    3250 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D6
+U 1 1 613F5785
+P 3100 4500
+F 0 "D6" H 3093 4717 50  0000 C CNN
+F 1 "LED" H 3093 4626 50  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm" H 3100 4500 50  0001 C CNN
+F 3 "~" H 3100 4500 50  0001 C CNN
+	1    3100 4500
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D5
+U 1 1 61410D86
+P 3100 3300
+F 0 "D5" H 3093 3517 50  0000 C CNN
+F 1 "LED" H 3093 3426 50  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm" H 3100 3300 50  0001 C CNN
+F 3 "~" H 3100 3300 50  0001 C CNN
+	1    3100 3300
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4700 1100 5250 1100
+Wire Wire Line
+	4700 2350 5250 2350
+Wire Wire Line
+	4700 3550 5250 3550
+Wire Wire Line
+	4700 4750 5250 4750
+Wire Wire Line
+	4700 6000 5250 6000
+Wire Wire Line
+	4700 7250 5250 7250
+Connection ~ 6350 3650
+Connection ~ 6350 4850
+Connection ~ 7650 2400
+Connection ~ 7650 4800
+Connection ~ 7650 6050
+Connection ~ 7650 7300
+Connection ~ 6350 7350
+Connection ~ 6350 6100
+Connection ~ 7650 1150
+Connection ~ 7650 3600
+$Comp
+L Device:D_Schottky D19
+U 1 1 6106198B
+P 9850 2550
+F 0 "D19" H 9850 2333 50  0000 C CNN
+F 1 "D_Schottky" H 9850 2424 50  0000 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 9850 2550 50  0001 C CNN
+F 3 "~" H 9850 2550 50  0001 C CNN
+	1    9850 2550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:D_Schottky D20
+U 1 1 61063178
+P 9850 2950
+F 0 "D20" H 9850 2733 50  0000 C CNN
+F 1 "D_Schottky" H 9850 2824 50  0000 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 9850 2950 50  0001 C CNN
+F 3 "~" H 9850 2950 50  0001 C CNN
+	1    9850 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9700 2950 9550 2950
+Connection ~ 9550 2950
+Wire Wire Line
+	9700 2550 9550 2550
+Connection ~ 9550 2550
+Text GLabel 5550 2600 0    50   Input ~ 0
+_ATTACK
+Text GLabel 5550 1300 0    50   Input ~ 0
+_TIME
+Text GLabel 5550 3850 0    50   Input ~ 0
+_LEVEL
+Text GLabel 5550 5050 0    50   Input ~ 0
+_DECAY
+Text GLabel 5550 6300 0    50   Input ~ 0
+_SUSTAIN
+Text GLabel 5550 7500 0    50   Input ~ 0
+_RELEASE
+$Comp
+L Transistor_BJT:MMBTA42 Q1
+U 1 1 61B85F24
+P 1750 2800
+F 0 "Q1" H 1940 2846 50  0000 L CNN
+F 1 "MMBT3904" H 1940 2755 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 1950 2725 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/MMBTA42LT1-D.PDF" H 1750 2800 50  0001 L CNN
+	1    1750 2800
+	1    0    0    -1  
+$EndComp
+Connection ~ 1850 3000
+$Comp
+L Transistor_BJT:MMBTA42 Q3
+U 1 1 61BFD0F7
+P 2850 2800
+F 0 "Q3" H 3040 2846 50  0000 L CNN
+F 1 "MMBT3904" H 3040 2755 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 3050 2725 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/MMBTA42LT1-D.PDF" H 2850 2800 50  0001 L CNN
+	1    2850 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:MMBTA42 Q4
+U 1 1 61C14CC0
+P 2850 4000
+F 0 "Q4" H 3040 4046 50  0000 L CNN
+F 1 "MMBT3904" H 3040 3955 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 3050 3925 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/MMBTA42LT1-D.PDF" H 2850 4000 50  0001 L CNN
+	1    2850 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:MMBTA42 Q2
+U 1 1 61C2CAE2
+P 1750 4000
+F 0 "Q2" H 1940 4046 50  0000 L CNN
+F 1 "MMBT3904" H 1940 3955 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 1950 3925 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/MMBTA42LT1-D.PDF" H 1750 4000 50  0001 L CNN
+	1    1750 4000
+	1    0    0    -1  
+$EndComp
+Wire Bus Line
+	3750 700  3750 1950
+Wire Bus Line
+	8600 700  8600 7200
+$EndSCHEMATC

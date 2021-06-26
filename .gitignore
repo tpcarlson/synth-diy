@@ -41,3 +41,6 @@ logic/main.pro
 logic/mini-board.pro
 logic/panel.pro
 lpg/lpg-board.pro
+vcadsr/vcadsr-cache.lib
+vcadsr/vcadsr-panel.pro
+vcadsr/vcadsr-board.pro
