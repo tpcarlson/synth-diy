@@ -22,6 +22,7 @@ Finally, I'm an amateur when it comes to PCB and schematic design. The schematic
 - [Through](through/) - 4hp dual-use 1:1 connector block, or passive multiple
 - [Turing Machine Panels](turing-machine-panels/) - Panels for the [Turing Machine](https://github.com/TomWhitwell/TuringMachine), and [Volts](https://github.com/TomWhitwell/Volts) and [Pulses](https://github.com/TomWhitwell/Turing-Pulse-Expander) expanders
 - [VCA](VCA/) - 6hp Dual VCA, based on the [ElectricDruid LM13700 VCA](https://electricdruid.net/design-a-eurorack-vintage-vca-with-the-lm13700/)
+- [VCADSR](vcadsr/) - 16hp, Voltage controlled ADSR, ased on the [ElectricDruid EnvGen8 chip](https://electricdruid.net/product/envgen8/)
 - [VCDO](VCDO/) - 10hp, Wavetable VCDO using the ElectricDruid [Wavetable chip](https://electricdruid.net/product/vcdo-wavetable-oscillator/)
 - [YARM+](yarmplus/) - 4hp Ring Modulator, based on the René Schmitz [YARM+](https://www.schmitzbits.de/vca.html) design
 - [YASH](yash/) - 5hp Sample and Hold based on the René Schmitz [YASH](https://www.schmitzbits.de/sah.html) design, with some modifications
