@@ -24,9 +24,9 @@ Nope, works nicely! If I were to add anything, perhaps indicator LEDs for the tw
 
 Sorry, no. Things go out of stock so frequently it'd be a lot of work to keep these up to date. Everything in this project is easy to source though (Other than the MC1496P), so you should not have any trouble.
 
-##### Can I buy PCBs or a kit?
+##### Other resources
 
-Send me an email (twigathy+synth@gmail.com)...
+- [Assembly Instructions](ASSEMBLY.md)
 
 <img src="images/yarmplus-logic.png" alt="yarmplus-logic" style="zoom:25%;" />
 

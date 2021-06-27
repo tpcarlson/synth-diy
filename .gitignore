@@ -44,3 +44,4 @@ lpg/lpg-board.pro
 vcadsr/vcadsr-cache.lib
 vcadsr/vcadsr-panel.pro
 vcadsr/vcadsr-board.pro
+yarmplus/yarmplus-logic.pro
