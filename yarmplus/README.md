@@ -27,6 +27,7 @@ Sorry, no. Things go out of stock so frequently it'd be a lot of work to keep th
 ##### Other resources
 
 - [Assembly Instructions](ASSEMBLY.md)
+- [Interactive BOM](ibom.html) - To use this, save the 'raw' view to your computer and open it in a web browser
 
 <img src="images/yarmplus-logic.png" alt="yarmplus-logic" style="zoom:25%;" />
 
