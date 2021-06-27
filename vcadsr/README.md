@@ -31,6 +31,6 @@ Sorry, no. Things go out of stock so frequently it'd be a lot of work to keep th
 ##### Other resources
 
 - [Assembly instructions](ASSEMBLY.md)
-- [Interactive BOM](ibom.html) - This includes pre-soldered SMT parts as well as the through-hole parts
+- [Interactive BOM](ibom.html) - This includes pre-soldered SMT parts as well as the through-hole parts. To use this, save the 'raw' view to your computer and open it in a web browser
 
 ![](images/vcadsr.png)
