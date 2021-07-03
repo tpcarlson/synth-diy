@@ -30,7 +30,7 @@ Send me an email (twigathy+synth@gmail.com)...
 
 ##### Other Resources
 
-- [BOM](bom.html)
+- [BOM](ibom.html)
 - Build Guide (TBC)
 
 (Add some rendered images of the panel and back of PCB(s).)
