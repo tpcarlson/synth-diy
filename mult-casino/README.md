@@ -31,6 +31,7 @@ Send me an email (twigathy+synth@gmail.com)...
 ##### Other Resources
 
 - [BOM](ibom.html)
-- Build Guide (TBC)
+- [Build Guide](ASSEMBLY.md)
 
 (Add some rendered images of the panel and back of PCB(s).)
+
