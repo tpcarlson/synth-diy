@@ -13,6 +13,7 @@ Finally, I'm an amateur when it comes to PCB and schematic design. The schematic
 
 ##### Projects
 
+- [DrumFiend](drumfiend/) - 8hp, 19 channel triggers-to-MIDI converter
 - [LPG](lpg/) - 4hp Low Pass Gate with a vacrtrol at its core, based on the [LPG & CV Tools](https://modularsynth.wordpress.com/module-diy-lpgatt/) module
 - [Mix](mix/) - 3hp, 4-to-1 mixer based on the [CGS04 DC Mixer](https://elby-designs.com/webtek/cgs/cgs04/cgs04_mix.html)
 - [Multimult](multimult/) - 8hp, 6-way Buffered Multiple
