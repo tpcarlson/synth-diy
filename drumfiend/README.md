@@ -32,7 +32,7 @@ Send me an email (twigathy+synth@gmail.com)...
 
 ##### Other resources
 
-- [BOM](BOM.md)
+- [BOM](bom/ibom.html) - Please note, J20 (Bottom-right most jack) should be a PJ366ST, NOT a mono Thonkiconn.
 - [Assembly guide](ASSEMBLY.md)
 - [Software (Teensy sketch)](drumfiend.ino)
 
