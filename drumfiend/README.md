@@ -16,7 +16,7 @@ This one's all me! The basic MIDI-out (ie. two resistors) was taken from the exc
 
 You will need a Teensy 3.2 (Or, untested but should work, Teensy-LC), and a Stereo Thonkiconn to build the module.
 
-Most of the parts are SMT. Any transistor of the proper type ought to work, I picked the parts that I did based purely on what was available at JLCPCB.
+Most of the parts are SMT. Any transistor of the proper type ought to work, I picked the parts that I did based purely on what was available for assembly at JLCPCB.
 
 ##### Are there any problems with the design?
 
@@ -34,6 +34,7 @@ Send me an email (twigathy+synth@gmail.com)...
 
 - [BOM](BOM.md)
 - [Assembly guide](ASSEMBLY.md)
+- [Software (Teensy sketch)](drumfiend.ino)
 
 ![drumfiend](images/drumfiend.png)
 
