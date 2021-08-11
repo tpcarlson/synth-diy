@@ -35,5 +35,5 @@ Send me an email (twigathy+synth@gmail.com)...
 - [BOM](BOM.md)
 - [Assembly guide](ASSEMBLY.md)
 
-![logic-front](images/drumfiend.PNG)
+![drumfiend](images/drumfiend.png)
 
