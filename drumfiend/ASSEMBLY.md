@@ -123,7 +123,7 @@ At this point you'll be faced with a bunch of pads to solder! I found it easiest
 
 When soldering the components on the front board, be careful not to touch the small SMT parts with your soldering iron.
 
-For the LEDs in particle, it's also worth flipping the whole thing over and checking that the LED is flush with the front panel before soldering.
+For the LEDs in particular, it's also worth flipping the whole thing over and checking that the LED is flush with the front panel before soldering.
 
 <img src="images/24-sockets-and-leds.jpg"/>
 
