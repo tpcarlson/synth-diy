@@ -2317,8 +2317,6 @@ F 3 "~" H 12600 4400 50  0001 C CNN
 	1    12600 4400
 	1    0    0    -1  
 $EndComp
-Text Notes 14100 5050 0    50   ~ 0
-Figure out which jacks go where
 Wire Wire Line
 	7650 5500 7750 5500
 Connection ~ 7750 5500
@@ -2704,39 +2702,39 @@ Connection ~ 10350 7100
 $Comp
 L Device:Jumper JP1
 U 1 1 6326F1A8
-P 11550 7100
-F 0 "JP1" H 11550 7364 50  0000 C CNN
-F 1 "Jumper" H 11550 7273 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 11550 7100 50  0001 C CNN
-F 3 "~" H 11550 7100 50  0001 C CNN
-	1    11550 7100
+P 12350 7150
+F 0 "JP1" H 12350 7414 50  0000 C CNN
+F 1 "Jumper" H 12350 7323 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 12350 7150 50  0001 C CNN
+F 3 "~" H 12350 7150 50  0001 C CNN
+	1    12350 7150
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:Jumper JP2
 U 1 1 63271078
-P 11550 7450
-F 0 "JP2" H 11550 7714 50  0000 C CNN
-F 1 "Jumper" H 11550 7623 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 11550 7450 50  0001 C CNN
-F 3 "~" H 11550 7450 50  0001 C CNN
-	1    11550 7450
+P 12350 7500
+F 0 "JP2" H 12350 7764 50  0000 C CNN
+F 1 "Jumper" H 12350 7673 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 12350 7500 50  0001 C CNN
+F 3 "~" H 12350 7500 50  0001 C CNN
+	1    12350 7500
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+12V #PWR0138
 U 1 1 6328FCE5
-P 11250 7100
-F 0 "#PWR0138" H 11250 6950 50  0001 C CNN
-F 1 "+12V" H 11265 7273 50  0000 C CNN
-F 2 "" H 11250 7100 50  0001 C CNN
-F 3 "" H 11250 7100 50  0001 C CNN
-	1    11250 7100
+P 12050 7150
+F 0 "#PWR0138" H 12050 7000 50  0001 C CNN
+F 1 "+12V" H 12065 7323 50  0000 C CNN
+F 2 "" H 12050 7150 50  0001 C CNN
+F 3 "" H 12050 7150 50  0001 C CNN
+	1    12050 7150
 	1    0    0    -1  
 $EndComp
-Text Label 11850 7100 0    50   ~ 0
+Text Label 12650 7150 0    50   ~ 0
 ARDUINO_POWER_12v
-Text Label 11850 7450 0    50   ~ 0
+Text Label 12650 7500 0    50   ~ 0
 ARDUINO_POWER_5v
 Connection ~ 9950 2900
 Wire Wire Line
@@ -2913,13 +2911,13 @@ F 3 "~" H 4950 9100 50  0001 C CNN
 $EndComp
 Text Label 13800 3300 0    50   ~ 0
 CH1A
-Text Label 13750 4000 0    50   ~ 0
-CH1B
-Text Label 13750 4700 0    50   ~ 0
-CH2A
 Text Label 13600 5400 0    50   ~ 0
-CH2B
+CH1B
+Text Label 13750 4000 0    50   ~ 0
+CH2A
 Text Label 13550 6100 0    50   ~ 0
+CH2B
+Text Label 13650 4700 0    50   ~ 0
 CH3A
 Text Label 13500 6800 0    50   ~ 0
 CH3B
@@ -3094,7 +3092,7 @@ Wire Wire Line
 	10650 7750 11150 7750
 Text Label 11150 7750 0    50   ~ 0
 5V_POWER_CONNECTOR
-Text Label 11250 7450 2    50   ~ 0
+Text Label 12050 7500 2    50   ~ 0
 5V_POWER_CONNECTOR
 Wire Wire Line
 	9600 7600 9850 7600
