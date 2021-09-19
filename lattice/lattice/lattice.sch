@@ -2399,17 +2399,6 @@ EXT_MIDI_IN_PIN_4
 Text Label 12150 5250 0    50   ~ 0
 EXT_MIDI_IN_PIN_5
 $Comp
-L Connector_Generic:Conn_02x05_Counter_Clockwise J16
-U 1 1 620B268B
-P 11850 5350
-F 0 "J16" H 11900 5767 50  0000 C CNN
-F 1 "Conn_02x05_Counter_Clockwise" H 11900 5676 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical" H 11850 5350 50  0001 C CNN
-F 3 "~" H 11850 5350 50  0001 C CNN
-	1    11850 5350
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:+5V #PWR0161
 U 1 1 620D3E7A
 P 12400 6000
@@ -2445,15 +2434,7 @@ $EndComp
 Wire Wire Line
 	11650 5150 11650 5250
 Wire Wire Line
-	11650 5250 11650 5350
-Connection ~ 11650 5250
-Wire Wire Line
-	11650 5350 11650 5450
-Connection ~ 11650 5350
-Wire Wire Line
 	11650 5450 11650 5550
-Connection ~ 11650 5450
-Connection ~ 11650 5550
 $Comp
 L Reference_Voltage:LM4040LP-5 U6
 U 1 1 622B6710
@@ -2517,7 +2498,6 @@ Wire Wire Line
 	11250 9300 11550 9300
 Text Label 9250 3650 2    70   ~ 0
 IN_MIDI
-NoConn ~ 12150 5350
 $Comp
 L Transistor_BJT:BC548 Q1
 U 1 1 626FB708
@@ -3099,4 +3079,37 @@ Wire Wire Line
 Wire Wire Line
 	10350 7600 9850 7600
 Connection ~ 9850 7600
+Wire Wire Line
+	11650 5250 11550 5250
+Wire Wire Line
+	11550 5250 11550 5450
+Wire Wire Line
+	11550 5450 11650 5450
+$Comp
+L power:+5V #PWR0137
+U 1 1 615A568E
+P 11450 5350
+F 0 "#PWR0137" H 11450 5200 50  0001 C CNN
+F 1 "+5V" H 11465 5523 50  0000 C CNN
+F 2 "" H 11450 5350 50  0001 C CNN
+F 3 "" H 11450 5350 50  0001 C CNN
+	1    11450 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x05_Odd_Even J16
+U 1 1 615E4142
+P 11850 5350
+F 0 "J16" H 11900 5767 50  0000 C CNN
+F 1 "Conn_02x05_Odd_Even" H 11900 5676 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical" H 11850 5350 50  0001 C CNN
+F 3 "~" H 11850 5350 50  0001 C CNN
+	1    11850 5350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11450 5350 11650 5350
+Connection ~ 11650 5250
+Connection ~ 11650 5450
+Connection ~ 11650 5550
 $EndSCHEMATC
