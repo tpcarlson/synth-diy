@@ -2,7 +2,7 @@
 
 This is the bill of materials for the Logic module. I have broken it up into SMT and Through-hole parts, as you'll probably want to solder all of the SMT parts first or have them pre-soldered.
 
-The BOM is also available as a collated CSV.
+For full kits and assembled boards the SMT parts will already be soldered, and you can just use the list of through-hole parts.
 
 ##### SMT Parts
 
@@ -31,7 +31,7 @@ The BOM is also available as a collated CSV.
 | IC Socket                           | 2.54mm, 14 pins                | 1        |
 | IC                                  | CD4xxx                         | 1        |
 
-Depending on which logical operation you want to perform, you will need a different logic chip!
+Depending on which logical operation you want to perform, you will need a different logic chip:
 
 | Logical Operation | IC   |
 | ----------------- | ---- |
