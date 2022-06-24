@@ -6,7 +6,7 @@ A 19-channel trigger-to-MIDI processor. Send it triggers, and it'll send out MID
 
 ##### How much power does it use?
 
-As measured by the Joranalogue Test 3, around 40 mA. The 5v and 12v rails are unused. As LED start to light up, power use goes up a little bit - in the very worst case with all 20 LEDs lit, probably around 50mA.
+As measured by the Joranalogue Test 3, around 40 mA on +12v. The 5v and -12v rails are unused. As LED start to light up, power use goes up a little bit - in the very worst case with all 20 LEDs lit, probably around 50mA.
 
 ##### Where does the design come from?
 
@@ -14,7 +14,7 @@ This one's all me! The basic MIDI-out (ie. two resistors) was taken from the exc
 
 ##### Are there any rare/weird parts used?
 
-You will need a Teensy 3.2 (Or, untested but should work, Teensy-LC), and a Stereo Thonkiconn to build the module.
+You will need a Teensy4.0 and a Stereo Thonkiconn to build the module.
 
 Most of the parts are SMT. Any transistor of the proper type ought to work, I picked the parts that I did based purely on what was available for assembly at JLCPCB.
 
@@ -28,13 +28,12 @@ Sorry, no. Things go out of stock so frequently it'd be a lot of work to keep th
 
 ##### Can I buy PCBs or a kit?
 
-Send me an email (twigathy+synth@gmail.com)...
+Yes! DrumFiend is available at (...Details TBC).
 
 ##### Other resources
 
 - [BOM](https://raw.githubusercontent.com/tpcarlson/synth-diy/main/drumfiend/bom/ibom.html) - Please note, J20 (Bottom-right most jack) should be a PJ366ST, NOT a mono Thonkiconn. "Save Page As..." and then open locally to view the IBOM.
 - [Assembly guide](ASSEMBLY.md)
-- [Software (Teensy sketch)](drumfiend.ino)
+- [Firmware guide](FIRMWARE.md)
 
 ![drumfiend](images/drumfiend.png)
-
