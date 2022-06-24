@@ -132,7 +132,7 @@ For the LEDs in particular, it's worth flipping the whole thing over and checkin
 
 At this point you'll be faced with a lot of pads to solder! I found it easiest to solder a row at a time, snipping LED legs as I went.
 
-When soldering the components on the front board, be careful not to touch the small SMT parts with your soldering iron.
+When soldering the components on the front board, be careful not to touch the small SMT parts with your soldering iron or the male headers.
 
 <img src="images/24-sockets-and-leds.jpg"/>
 
