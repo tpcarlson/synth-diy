@@ -1,0 +1,24 @@
+{
+"midi_channel": 10
+"drums": [
+	{"input":1,"note":36,"description":"Kick"},
+	{"input":2,"note":48,"description":"Kick (Colour)"},
+	{"input":3,"note":37,"description":"Snare"},
+	{"input":4,"note":65,"description":"Snare (Colour)"},
+	{"input":5,"note":67,"description":"Snare 2"},
+	{"input":6,"note":69,"description":"Snare 2 (Colour)"},
+	{"input":7,"note":39,"description":"High Tom"},
+	{"input":8,"note":51,"description":"High Tom (Colour)"},
+	{"input":9,"note":40,"description":"Low Tom"},
+	{"input":10,"note":52,"description":"Low Tom (Colour)"},
+	{"input":11,"note":41,"description":"Cymbol"},
+	{"input":12,"note":53,"description":"Cymbol (Colour)"},
+	{"input":13,"note":43,"description":"Closed Hat"},
+	{"input":14,"note":55,"description":"Closed Hat (Colour)"},
+	{"input":15,"note":44,"description":"Open Hat"},
+	{"input":16,"note":56,"description":"Open Hat (Colour)"},
+	{"input":17,"note":45,"description":"FM Drum"},
+	{"input":18,"note":57,"description":"FM Drum (Colour)"},
+	{"input":19,"note":42,"description":"Cowbell"},
+]
+}
