@@ -1,4 +1,4 @@
-# DrumFiend Firmware
+# DrumFiend - Firmware
 
 ##### Requirements
 
@@ -10,7 +10,7 @@ To program the DrumFiend firmware you will need:
 
 - The Teensy Loader application ([Available from PJRC](https://www.pjrc.com/teensy/loader_win10.html))
 
-- Firmware.zip in this repository ([firmware/drumfiend/firmware.zip]())
+- Firmware.zip in this repository ([firmware/drumfiend/firmware.zip](firmware/drumfiend/firmware.zip))
 
 - The CircuitPython HEX file for Teensy 4.0 ([Teensy 4.0 Download](https://circuitpython.org/board/teensy40/))
 
@@ -40,4 +40,4 @@ That's it, the DrumFiend firmware is now on your Teensy.
 
 ##### Firmware hacking
 
-If the configuration file (config.txt) isn't enough and you want to change DrumFiend's code yourself, try installing the Mu editor. Adafruit has an excellent guide to walk through this [Installing the Mu Editor (adafruit.com)](https://learn.adafruit.com/welcome-to-circuitpython/installing-mu-editor)
+If the configuration file (config.txt) isn't enough and you want to change DrumFiend's code, try installing the Mu editor first as it does allow for some debugging workflows. Adafruit has an excellent guide to walk through this [Installing the Mu Editor (adafruit.com)](https://learn.adafruit.com/welcome-to-circuitpython/installing-mu-editor). When modifying the firmware, start with code.py and go from there.

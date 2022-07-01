@@ -32,8 +32,10 @@ Yes! DrumFiend is available at (...Details TBC).
 
 ##### Other resources
 
-- [BOM](https://raw.githubusercontent.com/tpcarlson/synth-diy/main/drumfiend/bom/ibom.html) - Please note, J20 (Bottom-right most jack) should be a PJ366ST, NOT a mono Thonkiconn. "Save Page As..." and then open locally to view the IBOM.
+- [Interactive BOM](https://raw.githubusercontent.com/tpcarlson/synth-diy/main/drumfiend/bom/ibom.html) - Please note, J20 (Bottom-right most jack) should be a PJ366ST, NOT a mono Thonkiconn. "Save Page As..." and then open locally to view the IBOM.
+- [Kit BOM](BOM.md)
 - [Assembly guide](ASSEMBLY.md)
 - [Firmware guide](FIRMWARE.md)
+- [Manual](MANUAL.md)
 
 ![drumfiend](images/drumfiend.png)
