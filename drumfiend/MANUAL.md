@@ -8,13 +8,19 @@ Trigger inputs are 'high' above about 2.5v, and 'low' below 2.4v.
 
 DrumFiend is not clocked - you are free to send triggers at any time, and at almost any rate that you like, all the way up into low audio rates. Different drum machines react differently to really fast MIDI notes, it's worth experimenting...
 
+## Switching between MIDI-TRS versions
+
+To switch between MIDI-A and MIDI-B versions, follow the silkscreen on the back of the module. For example, this module is set up for MIDI-A.
+
+<img src="images/drumfiend-midi.png" title="" alt="" width="320">
+
 ## Customising the drum map
 
 *Disconnect the DrumFiend module from your modular synth before modifying the firmware and configuration on the Teensy!*
 
 Plug the Teensy into your computer. If programmed with the CircuitPython and DrumFiend software, a removable disk should appear with the label "CIRCUITPY".
 
-<img src="images/firmware-1.png" title="" alt="" width="317">
+<img src="images/firmware-1.png" title="" alt="" width="320">
 
 Inside this drive, look for the config.txt. You can open this in any text editor - notepad on Windows is fine, as is TextEdit on Mac.
 
