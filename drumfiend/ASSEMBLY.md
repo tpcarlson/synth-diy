@@ -160,4 +160,4 @@ Connect the MIDI output to your drum machine. To do this you'll need a TRS to MI
 
 ###### Firmware tweaks
 
-The software for DrumFiend is written with the DrumBrute Impact in mind. This means that the default configuration works on MIDI channel 10, and notes 36 through to 57. For the DrumBrute Impact, the left and right inputs per row match up with the "normal" and "colour" versions of drum sounds. If you want to change which notes the DrumFiend puts out for a given input, see [FIRMWARE.md](FIRMWARE.md).
+The software for DrumFiend is written with the DrumBrute Impact in mind. This means that the default configuration works on MIDI channel 10, and notes 36 through to 57. For the DrumBrute Impact, the left and right inputs per row match up with the "normal" and "colour" versions of drum sounds. If you want to change which notes the DrumFiend puts out for a given input, see [MANUAL.md](MANUAL.md).
