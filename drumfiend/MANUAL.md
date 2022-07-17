@@ -14,7 +14,7 @@ To switch between MIDI-A and MIDI-B versions, follow the silkscreen on the back 
 
 <img src="images/drumfiend-midi.png" title="" alt="" width="320">
 
-## Customising the drum map
+## Configuring DrumFiend
 
 *Disconnect the DrumFiend module from your modular synth before modifying the firmware and configuration on the Teensy!*
 
@@ -45,3 +45,21 @@ For example, to change the first input of DrumFiend to output MIDI note 42:
 ```
 
 Make sure to keep the quotes, commas, and brackets in the right place! The description field is only used for debugging purposes, but you may find it useful to fill in details about which drum the MIDI note corresponds to.
+
+###### Using DrumFiend with a polysynth
+
+As DrumFiend outputs MIDI notes, it's also possible to use it with a polysynth. To do this you will need to:
+
+- Feed DrumFiend gates instead of triggers
+
+- Set `"midi_note_off": 1` in the configuration file
+
+An example MIDI mapping for a polysynth is included in the `configs` directory of the firmware. 
+
+Just because DrumFiend can handle 19 triggers or gates at once does not necessarily mean your polysynth will! Check the manual for your syntheiszer to see how many notes of polyphony (Or paraphony) are supported.
+
+Setting `"midi_note_off": 0` will cause notes to be held rather than released when the gate input is low. This can be useful if you wish to sustain notes for longer than the gate period.
+
+###### Resetting DrumFiend's configuration
+
+Copy one of the configuration files from the `configs` directory of the firmware, renaming to config.txt. CircuitPython should pick up the file change and restart with the new configuration file.

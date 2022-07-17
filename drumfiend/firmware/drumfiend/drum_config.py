@@ -17,7 +17,7 @@ class DrumConfig(Drummer):
                     pin = pinLookup[configLine.get("input")]
                     description = configLine.get("description", "")
                     drumList.append(drum.Drum(note=note, pin=pin, description=description))
-                return drumList, config.get("midi_channel")
+                return drumList, config.get("midi_channel"), config.get("midi_note_off")
         except OSError as error:
             print(error)
             print("Could not read configuration file - missing config.txt?")
