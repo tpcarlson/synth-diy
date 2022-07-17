@@ -35,3 +35,4 @@ Finally, I'm an amateur when it comes to PCB and schematic design. Many of the s
 Some projects are available as kits from Thonk!
 
 - [Divergent Waves - Logic (Full Kit)](https://www.thonk.co.uk/shop/divergent-waves-logic/)
+- [Divergent Waves – DrumFiend (Full Kit)](https://www.thonk.co.uk/shop/divergent-waves-drumfiend/)
