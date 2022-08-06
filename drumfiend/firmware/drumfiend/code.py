@@ -35,10 +35,18 @@ while True:
     for d in drums:
         tempValue = d.hardwarePin.value
         if tempValue is True and d.value is False:
-            midi_io.send(NoteOn(d.note))
+            if isinstance (d.note, list):
+                for note in d.note:
+                    midi_io.send(NoteOn(note))
+            else:
+                midi_io.send(NoteOn(d.note))
             lastMidi = currentTime
         if tempValue is False and d.value is True and midi_note_off is True:
-            midi_io.send(NoteOff(d.note))
+            if isinstance (d.note, list):
+                for note in d.note:
+                    midi_io.send(NoteOff(note))
+            else:
+                midi_io.send(NoteOff(d.note))
             lastMidi = currentTime
         d.value = tempValue
     # When currentTime overflows this'll break,

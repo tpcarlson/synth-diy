@@ -60,6 +60,14 @@ Just because DrumFiend can handle 19 triggers or gates at once does not necessar
 
 Setting `"midi_note_off": 0` will cause notes to be held rather than released when the gate input is low. This can be useful if you wish to sustain notes for longer than the gate period.
 
+###### Playing multiple notes from a single trigger
+
+As well as the ability to play single notes (Drums or keys on a synth), DrumFiend may also play chords.
+
+Configure DrumFiend's inputs like this:
+
+`{"input":1,"note":[48,50,52],"description":"Chord"},`
+
 ###### Resetting DrumFiend's configuration
 
 Copy one of the configuration files from the `configs` directory of the firmware, renaming to config.txt. CircuitPython should pick up the file change and restart with the new configuration file.
