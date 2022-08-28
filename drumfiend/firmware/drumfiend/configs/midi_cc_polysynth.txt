@@ -1,0 +1,25 @@
+{
+"midi_channel": 1
+"midi_note_off": 1
+"drums": [
+	{"input":1,"description":"Resonance 0%","controlChange":{127:0}},
+	{"input":2,"description":"Resonance 25%","controlChange":{127:25}},
+	{"input":3,"description":"Resonance 50%","controlChange":{127:50}},
+	{"input":4,"description":"Resonance 100%","controlChange":{127:100}},
+	{"input":5,"note":52,"description":"Many CC changes","controlChange":{127:100, 32:40}},
+	{"input":6,"note":52,"description":"E"},
+	{"input":7,"note":53,"description":"F"},
+	{"input":8,"note":54,"description":"F#/Gb"},
+	{"input":9,"note":55,"description":"G"},
+	{"input":10,"note":56,"description":"G#/Ab"},
+	{"input":11,"note":57,"description":"A"},
+	{"input":12,"note":58,"description":"A#/Bb"},
+	{"input":13,"note":59,"description":"B"},
+	{"input":14,"note":59,"description":"C"},
+	{"input":15,"note":60,"description":"C"},
+	{"input":16,"note":61,"description":"C#/Db"},
+	{"input":17,"note":62,"description":"D"},
+	{"input":18,"note":63,"description":"D#/Eb"},
+	{"input":19,"note":64,"description":"E"},
+]
+}

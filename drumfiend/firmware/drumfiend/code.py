@@ -8,6 +8,7 @@ import drum_config
 from adafruit_midi.note_on import NoteOn
 from adafruit_midi.note_off import NoteOff
 from adafruit_midi.program_change import ProgramChange
+from adafruit_midi.control_change import ControlChange
 
 drummer = drum_config.DrumConfig()
 drumConfig = drummer.drumList()
@@ -19,10 +20,10 @@ midi_note_off = True if drumConfig[2] == 1 else False
 midiuart = busio.UART(board.TX, board.RX, baudrate=31250)
 midi_io = adafruit_midi.MIDI(midi_out=midiuart, out_channel=midi_channel-1)
 
-print("Pin assignments:")
+print("Pin Assignments:")
 for d in drums:
-    print("Pin " + str(d.pin) + " -> MIDI Note: " + str(d.note) + " (" + d.description + "), MIDI PC: " + str(d.programChange))
-print("MIDI channel: " + str(midi_channel))
+    print("Pin " + str(d.pin) + " -> MIDI Note: " + str(d.note) + " (" + d.description + "), MIDI PC: " + str(d.programChange) + ", MIDI CC: " + str(d.controlChange))
+print("MIDI Channel: " + str(midi_channel))
 print("MIDI NoteOff: " + str(midi_note_off))
 led = digitalio.DigitalInOut(board.D11)
 led.direction = digitalio.Direction.OUTPUT
@@ -36,9 +37,14 @@ while True:
     for d in drums:
         tempValue = d.hardwarePin.value
         if tempValue is True and d.value is False:
-            # MIDI Program change. Sent this before the MIDI notes!
+            # MIDI Program change. Send this before the MIDI notes!
             if d.programChange is not None:
                 midi_io.send(ProgramChange(d.programChange))
+            # MIDI Control Change (CC).
+            if d.controlChange is not None:
+                for ccEntry in d.controlChange:
+                    if ccEntry is not None:
+                        midi_io.send(ControlChange(ccEntry, d.controlChange[ccEntry]))
 
             # MIDI notes:
             for note in d.note:

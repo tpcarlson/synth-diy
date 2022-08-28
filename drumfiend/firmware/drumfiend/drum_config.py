@@ -18,9 +18,10 @@ class DrumConfig(Drummer):
                     if not isinstance (note, list):
                         note = [note]
                     programChange = configLine.get("programChange")
+                    controlChange = configLine.get("controlChange")
                     pin = pinLookup[configLine.get("input")]
                     description = configLine.get("description", "")
-                    drumList.append(drum.Drum(note=note, programChange=programChange, pin=pin, description=description))
+                    drumList.append(drum.Drum(note=note, programChange=programChange, controlChange=controlChange, pin=pin, description=description))
                 return drumList, config.get("midi_channel"), config.get("midi_note_off")
         except OSError as error:
             print(error)
