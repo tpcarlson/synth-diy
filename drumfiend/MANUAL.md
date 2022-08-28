@@ -68,6 +68,16 @@ Configure DrumFiend's inputs like this:
 
 `{"input":1,"note":[48,50,52],"description":"Chord"},`
 
+###### MIDI Program Change
+
+DrumFiend also supports MIDI Program Change messages. These are usually used to swap between presets on a synthesizer.
+
+Configure DrumFiend's inputs like this:
+
+`{"input":1,"programChange":42,"description":"My wonderful preset"},`
+
+You may also specify both a MIDI Program Change and notes in the same configuration line, however it depends on the device DrumFiend is connected to as to how well this will work!
+
 ###### Resetting DrumFiend's configuration
 
 Copy one of the configuration files from the `configs` directory of the firmware, renaming to config.txt. CircuitPython should pick up the file change and restart with the new configuration file.
