@@ -6,7 +6,7 @@
 	{"input":2,"description":"Resonance 25%","controlChange":{127:25}},
 	{"input":3,"description":"Resonance 50%","controlChange":{127:50}},
 	{"input":4,"description":"Resonance 100%","controlChange":{127:100}},
-	{"input":5,"note":52,"description":"Many CC changes","controlChange":{127:100, 32:40}},
+	{"input":5,"description":"Many CC changes","controlChange":{127:100, 32:40}},
 	{"input":6,"note":52,"description":"E"},
 	{"input":7,"note":53,"description":"F"},
 	{"input":8,"note":54,"description":"F#/Gb"},
