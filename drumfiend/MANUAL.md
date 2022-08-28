@@ -78,6 +78,23 @@ Configure DrumFiend's inputs like this:
 
 You may also specify both a MIDI Program Change and notes in the same configuration line, however it depends on the device DrumFiend is connected to as to how well this will work!
 
+###### MIDI Control Change
+
+Control Change MIDI messages are also supported, with some limitations. As DrumFiend doesn't know the strength of triggers or gates, the MIDI CC values for a given pin are fixed. However, there's nothing stopping you from assigning multiple different trigger inputs to the same MIDI CC.
+
+Configure DrumFiend's inputs like this:
+
+    {"input":1,"description":"Resonance 0%","controlChange":{127:0}},
+    {"input":2,"description":"Resonance 25%","controlChange":{127:25}},
+    {"input":3,"description":"Resonance 50%","controlChange":{127:50}},
+    {"input":4,"description":"Resonance 100%","controlChange":{127:100}},
+
+The configuration format is MIDI CC _Parameter_ first, and MIDI CC _value_ second.
+
+Or, if you wish to assign multiple MIDI CC values to a single trigger:
+
+    {"input":5,"description":"Many CC changes","controlChange":{127:100, 32:40}},
+
 ###### Resetting DrumFiend's configuration
 
 Copy one of the configuration files from the `configs` directory of the firmware, renaming to config.txt. CircuitPython should pick up the file change and restart with the new configuration file.
