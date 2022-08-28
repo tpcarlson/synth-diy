@@ -1,8 +1,9 @@
 import digitalio
 
 class Drum:
-    def __init__(self, note, pin, description):
+    def __init__(self, note, programChange, pin, description):
         self.note = note
+        self.programChange = programChange
         self.pin = pin
         self.description = description
         self.value = False

@@ -7,6 +7,7 @@ import drum_config
 
 from adafruit_midi.note_on import NoteOn
 from adafruit_midi.note_off import NoteOff
+from adafruit_midi.program_change import ProgramChange
 
 drummer = drum_config.DrumConfig()
 drumConfig = drummer.drumList()
@@ -20,7 +21,7 @@ midi_io = adafruit_midi.MIDI(midi_out=midiuart, out_channel=midi_channel-1)
 
 print("Pin assignments:")
 for d in drums:
-    print("Pin " + str(d.pin) + " -> MIDI " + str(d.note) + " (" + d.description + ")")
+    print("Pin " + str(d.pin) + " -> MIDI Note: " + str(d.note) + " (" + d.description + "), MIDI PC: " + str(d.programChange))
 print("MIDI channel: " + str(midi_channel))
 print("MIDI NoteOff: " + str(midi_note_off))
 led = digitalio.DigitalInOut(board.D11)
@@ -35,18 +36,21 @@ while True:
     for d in drums:
         tempValue = d.hardwarePin.value
         if tempValue is True and d.value is False:
-            if isinstance (d.note, list):
-                for note in d.note:
+            # MIDI Program change. Sent this before the MIDI notes!
+            if d.programChange is not None:
+                midi_io.send(ProgramChange(d.programChange))
+
+            # MIDI notes:
+            for note in d.note:
+                if note is not None:
                     midi_io.send(NoteOn(note))
-            else:
-                midi_io.send(NoteOn(d.note))
+
             lastMidi = currentTime
         if tempValue is False and d.value is True and midi_note_off is True:
-            if isinstance (d.note, list):
-                for note in d.note:
+            for note in d.note:
+                if note is not None:
                     midi_io.send(NoteOff(note))
-            else:
-                midi_io.send(NoteOff(d.note))
+
             lastMidi = currentTime
         d.value = tempValue
     # When currentTime overflows this'll break,
