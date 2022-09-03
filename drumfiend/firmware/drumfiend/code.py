@@ -9,6 +9,9 @@ from adafruit_midi.note_on import NoteOn
 from adafruit_midi.note_off import NoteOff
 from adafruit_midi.program_change import ProgramChange
 from adafruit_midi.control_change import ControlChange
+from adafruit_midi.start import Start
+from adafruit_midi.stop import Stop
+from adafruit_midi.timing_clock import TimingClock
 
 drummer = drum_config.DrumConfig()
 drumConfig = drummer.drumList()
@@ -22,7 +25,7 @@ midi_io = adafruit_midi.MIDI(midi_out=midiuart, out_channel=midi_channel-1)
 
 print("Pin Assignments:")
 for d in drums:
-    print("Pin " + str(d.pin) + " -> MIDI Note: " + str(d.note) + " (" + d.description + "), MIDI PC: " + str(d.programChange) + ", MIDI CC: " + str(d.controlChange))
+    print("Pin " + str(d.pin) + " (" + d.description + ") -> MIDI Note: " + str(d.note) + ", MIDI PC: " + str(d.programChange) + ", MIDI CC: " + str(d.controlChange) + ", MIDI Start/Stop: " + str(d.startStop) + ", MIDI Clock: " + str(d.clock))
 print("MIDI Channel: " + str(midi_channel))
 print("MIDI NoteOff: " + str(midi_note_off))
 led = digitalio.DigitalInOut(board.D11)
@@ -45,6 +48,16 @@ while True:
                 for ccEntry in d.controlChange:
                     if ccEntry is not None:
                         midi_io.send(ControlChange(ccEntry, d.controlChange[ccEntry]))
+            # MIDI Start/stop messages.
+            if d.startStop is not None:
+                if d.startStop.lower() == "start":
+                    midi_io.send(Start())
+                elif d.startStop.lower() == "stop":
+                    midi_io.send(Stop())
+
+            # MIDI Clock
+            if d.clock is not None:
+                midi_io.send(TimingClock())
 
             # MIDI notes:
             for note in d.note:

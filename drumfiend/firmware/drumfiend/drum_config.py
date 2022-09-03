@@ -12,7 +12,6 @@ class DrumConfig(Drummer):
                 config = json.load(infile)
                 drumList = []
                 for configLine in config.get("drums"):
-                    # Not inlined for readability...
                     note = configLine.get("note")
                     # Convert single notes to a list (Makes code.py a little cleaner)
                     if not isinstance (note, list):
@@ -21,7 +20,9 @@ class DrumConfig(Drummer):
                     controlChange = configLine.get("controlChange")
                     pin = pinLookup[configLine.get("input")]
                     description = configLine.get("description", "")
-                    drumList.append(drum.Drum(note=note, programChange=programChange, controlChange=controlChange, pin=pin, description=description))
+                    startStop = configLine.get("startStop")
+                    clock = configLine.get("clock")
+                    drumList.append(drum.Drum(note=note, programChange=programChange, controlChange=controlChange, startStop=startStop, clock=clock, pin=pin, description=description))
                 return drumList, config.get("midi_channel"), config.get("midi_note_off")
         except OSError as error:
             print(error)

@@ -95,6 +95,23 @@ Or, if you wish to assign multiple MIDI CC values to a single trigger:
 
     {"input":5,"description":"Many CC changes","controlChange":{127:100, 32:40}},
 
+###### MIDI Clock
+
+DrumFiend may also act as a pass-through clock to send MIDI Clock instructions for synchronisation and clocking. As DrumFiend doesn't attempt to interpolate clocks, or act as a clock multiplier, you will need to provide a fast clock to its inputs to use this feature. Usually this is 24ppqn, but it depends on the device.
+
+To enable MIDI Clock functionality for one of DrumFiend's inputs:
+
+    {"input":7,"description":"TimingClock", "clock":1},
+
+###### MIDI Start/Stop
+
+MIDI Start/Stop messages may also be sent. This should be done alongside the MIDI Clock for most devices, with the device listening to MIDI Clock for sync.
+
+To configure an input for MIDI start/stop, configure DrumFiend's inputs like this:
+
+    {"input":5,"description":"MIDI Start", "startStop":"start"},
+    {"input":6,"description":"MIDI Stop", "startStop":"stop"},
+
 ###### Resetting DrumFiend's configuration
 
 Copy one of the configuration files from the `configs` directory of the firmware, renaming to config.txt. CircuitPython should pick up the file change and restart with the new configuration file.
