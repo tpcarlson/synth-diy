@@ -6,9 +6,11 @@ PCB version 1.0: Green solder mask, no central fader potentiometer, Teensy 3.2
 
 PCB version 1.1: Green solder mask, central fader potentiometer, Teensy 3.2/4.0
 
-PCB version 1.2+: Green solder mask, central fader potentiometer, Raspberry Pi Pico
+PCB version 1.2: Green solder mask, central fader potentiometer, Raspberry Pi Pico
 
-Kits include PCB version 1.2+
+PCB version 1.3: Green solder mask, central fader potentiometer, Raspberry Pi Pico and corrected LED polarity.
+
+Kits include PCB version 1.3+
 
 ##### Getting ready
 
@@ -38,7 +40,7 @@ To keep the pins straight while soldering, place the Female headers across the M
 
 ![](images/3-pi.jpg)
 
-Remove the Female headers and plug the Raspberry Pi Pico into  your computer. Flash it with the Dice firmware (XXX: Add link to firmware guide), and then set the Raspeberry Pi Pico aside for now.
+Remove the Female headers and plug the Raspberry Pi Pico into  your computer and find the removable drive for the Pico. Download the D6 UF2 firmware, then copy it to the removable drive. After a brief delay the Pico should restart - the firmware is now installed. Set the Raspeberry Pi Pico aside for now.
 
 ###### Digital Audio Potentiometers
 
@@ -90,7 +92,9 @@ Place but *do not solder* all of the buttons, the 7-segment LED display, the fad
 
 Buttons all need to have their flat edge lined up with the silkscreen on the board.
 
-LEDs should be placed with the long leg to the left hand side of the PCB, and the green LEDs should be placed to the left of the red LEDs in the bottom section.
+LEDs should be placed with the long leg to the left hand side of the PCB, and the green LEDs should be placed to the left of the red LEDs in the bottom section. For PCB versions 1.3 onwards, this means the long leg should go into the round hole.
+
+If you're not sure about the LEDs, leave them unsoldered for now - you may power up the board with them in place but not soldered to double check the polarity prior to soldering.
 
 ![](images/11-front.jpg)
 
@@ -132,6 +136,8 @@ With the Raspberry Pi Pico programmed and the module assembled, it's time to cal
 
 With the power plugged in, plug a cable into the first dice output of the module and into something that can measure voltages. This can be another module (Mordax Data for example), or your multimeter. Dice is normalled to 5v at its input, so we can use this to calibrate it without any other voltage sources. 
 
+Activate the first output by pressing the corresponding button.
+
 Turn the *right* most trimmer potentiometer until the measured voltage reads 5v.
 
-Repeat this with the second dice output and trimmer potentiometer second from the right and so on until all channels have been calibrated.
+Repeat this with the second dice output, button, and trimmer potentiometer second from the right and so on until all channels have been calibrated.
