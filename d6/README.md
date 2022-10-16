@@ -36,4 +36,4 @@ Sorry, no. Things go out of stock so frequently it'd be a lot of work to keep th
 
 - [Manual](MANUAL.md)
 
-<img src="file:///D:/synth-diy/d6/images/panel.jpg" title="" alt="multmult-panel" width="247">
+<img src="images/panel.jpg" title="" alt="Dice panel" width="247">
