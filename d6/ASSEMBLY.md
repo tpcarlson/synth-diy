@@ -40,7 +40,11 @@ To keep the pins straight while soldering, place the Female headers across the M
 
 ![](images/3-pi.jpg)
 
-Remove the Female headers and plug the Raspberry Pi Pico into  your computer and find the removable drive for the Pico. Download the D6 UF2 firmware, then copy it to the removable drive. After a brief delay the Pico should restart - the firmware is now installed. Set the Raspeberry Pi Pico aside for now.
+Remove the Female headers and plug the Raspberry Pi Pico into  your computer and find the removable drive for the Pico. Download and unzip the D6 UF2 firmware, then copy it to the removable drive. After a brief delay the Pico should restart - the firmware is now installed. Set the Raspeberry Pi Pico aside for now.
+
+If your Raspberry Pi Pico previously had another firmware installed, hold down the "BOOTSEL" button while plugging it in to get the removable drive back again.
+
+The latest firmware is [version 1.0](firmware/Dice-1.0.zip).
 
 ###### Digital Audio Potentiometers
 
@@ -60,7 +64,7 @@ Once you are happy with your soldering, remove the stickers from the regulators.
 
 ![](images/6-regulators.jpg)
 
-Flip the board over to the reverse once again, and add the capacitors. These are all the same value, but they need to be placed with the negative end (Coloured white) matching up with the silkscreen on the PCB.
+Flip the board over to the back side once again, and add the capacitors. These are all the same value, but they need to be placed with the negative end (Coloured white) matching up with the silkscreen on the PCB.
 
 Add the power socket next. It's best to solder one pin of this before flipping the board over and checking that it's sitting level before soldering the rest to make it a little easier to correct mistakes. The key for the header should be pointing downwards, towards where the Raspberry Pi Pico will be installed.
 
@@ -92,7 +96,7 @@ Place but *do not solder* all of the buttons, the 7-segment LED display, the fad
 
 Buttons all need to have their flat edge lined up with the silkscreen on the board.
 
-LEDs should be placed with the long leg to the left hand side of the PCB, and the green LEDs should be placed to the left of the red LEDs in the bottom section. For PCB versions 1.3 onwards, this means the long leg should go into the round hole.
+LEDs should be placed with the long leg to the left hand side of the PCB, and the green LEDs should be placed to the left of the red LEDs in the bottom section. For PCB versions 1.3 onwards, this means the long leg should go into the <u>round</u> hole.
 
 If you're not sure about the LEDs, leave them unsoldered for now - you may power up the board with them in place but not soldered to double check the polarity prior to soldering.
 
@@ -122,7 +126,7 @@ Next, go through and solder the rest of the LEDs. There are 16 LEDs to solder, w
 
 ###### Slide potentiometer
 
-Last but not least, solder the slide potentiometer. To keep it flat against the PCB, add in a piece of scrap cardboard between the top of the potentiometer and the back of the front panel. Solder the back parts, and you're done!
+Last but not least, solder the slide potentiometer. To keep it flat against the PCB, add in a piece of scrap cardboard between the top of the potentiometer and the back of the front panel. Solder the pins at the back, and you're done!
 
 ![](images/14-pot.jpg)
 
@@ -138,6 +142,6 @@ With the power plugged in, plug a cable into the first dice output of the module
 
 Activate the first output by pressing the corresponding button.
 
-Turn the *right* most trimmer potentiometer until the measured voltage reads 5v.
+Flip the module over and turn the *right* most trimmer potentiometer until the measured voltage reads 5v.
 
 Repeat this with the second dice output, button, and trimmer potentiometer second from the right and so on until all channels have been calibrated.
