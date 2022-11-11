@@ -26,7 +26,7 @@ Sorry, no. Things go out of stock so frequently it'd be a lot of work to keep th
 
 ##### Can I buy PCBs or a kit?
 
-(Details TBC)
+Available as a [DIY Kit](https://www.thonk.co.uk/shop/divergent-waves-dice/) from Thonk
 
 ##### Other resouces:
 

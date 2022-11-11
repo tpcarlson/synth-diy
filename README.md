@@ -36,3 +36,4 @@ Some projects are available as kits from Thonk!
 
 - [Divergent Waves - Logic (Full Kit)](https://www.thonk.co.uk/shop/divergent-waves-logic/)
 - [Divergent Waves – DrumFiend (Full Kit)](https://www.thonk.co.uk/shop/divergent-waves-drumfiend/)
+- [Divergent Waves - Dice (Full Kit)](https://www.thonk.co.uk/shop/divergent-waves-dice/)
