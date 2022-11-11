@@ -1,6 +1,6 @@
 # Dice - Manual
 
-TODO: Add diagrams for some of the sections
+Check out the [Divergent Waves Dice Demo](https://www.youtube.com/watch?v=M2XgcmQ6p9Y) for a quick overview of everything!
 
 ##### The basics
 
