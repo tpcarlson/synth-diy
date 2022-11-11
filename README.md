@@ -14,6 +14,7 @@ Finally, I'm an amateur when it comes to PCB and schematic design. Many of the s
 
 ##### Projects
 
+- [Dice](d6/) - 16hp, clickless signal router
 - [DrumFiend](drumfiend/) - 8hp, 19 channel triggers-to-MIDI converter
 - [Kinky Lynx](kinky-lynx/) - 8hp CV swiss army knife, a clone of the Mutable Instruments [Kinks](https://mutable-instruments.net/modules/kinks/) and [Links](https://mutable-instruments.net/modules/links/) modules behind a single panel
 - [LPG](lpg/) - 4hp Low Pass Gate with a vacrtrol at its core, based on the [LPG & CV Tools](https://modularsynth.wordpress.com/module-diy-lpgatt/) module
