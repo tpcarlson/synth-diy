@@ -1,0 +1,25 @@
+{
+"midi_channel": 10
+"midi_note_off": 0
+"drums": [
+	{"input":1,"note":36,"description":"Kick"},
+	{"input":2,"note":58,"description":"Multi"},
+	{"input":3,"note":48,"description":"Drum 1"},
+	{"input":4,"note":41,"description":"Drum 2"},
+	{"input":5,"note":40,"description":"Snare"},
+	{"input":6,"note":39,"description":"Clap"},
+	{"input":7,"note":49,"description":"Closed hat 1"},
+	{"input":8,"note":51,"description":"Open hat 1"},
+	{"input":9,"note":42,"description":"Closed hat 2"},
+	{"input":10,"note":44,"description":"Open hat 2"},
+	{"input":11,"note":41,"description":"Unused"},
+	{"input":12,"note":53,"description":"Unused"},
+	{"input":13,"note":43,"description":"Unused"},
+	{"input":14,"note":55,"description":"Unused"},
+	{"input":15,"note":44,"description":"Unused"},
+	{"input":16,"note":56,"description":"Unused"},
+	{"input":17,"note":45,"description":"Unused"},
+	{"input":18,"note":57,"description":"Unused"},
+	{"input":19,"note":42,"description":"Unused"},
+]
+}
