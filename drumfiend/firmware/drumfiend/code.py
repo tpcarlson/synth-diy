@@ -25,7 +25,7 @@ midi_io = adafruit_midi.MIDI(midi_out=midiuart, out_channel=midi_channel-1)
 
 print("Pin Assignments:")
 for d in drums:
-    print("Pin " + str(d.pin) + " (" + d.description + ") -> MIDI Note: " + str(d.note) + ", MIDI PC: " + str(d.programChange) + ", MIDI CC: " + str(d.controlChange) + ", MIDI Start/Stop: " + str(d.startStop) + ", MIDI Clock: " + str(d.clock))
+    print("Pin " + str(d.pin) + " (" + d.description + ") -> MIDI Note: " + str(d.note) + ", Arp mode: " + str(d.arpMode) + ", MIDI PC: " + str(d.programChange) + ", MIDI CC: " + str(d.controlChange) + ", MIDI Start/Stop: " + str(d.startStop) + ", MIDI Clock: " + str(d.clock))
 print("MIDI Channel: " + str(midi_channel))
 print("MIDI NoteOff: " + str(midi_note_off))
 led = digitalio.DigitalInOut(board.D11)
@@ -59,16 +59,31 @@ while True:
             if d.clock is not None:
                 midi_io.send(TimingClock())
 
+            # MIDI notes in arp mode:
+            if d.arpMode == 1:
+                # Arp mode sends the current note and increments, outside of arp mode this isn't required
+                if d.note is not None:
+                    midi_io.send(NoteOn(d.note[d.currentNote]))
+                d.currentNote = (d.currentNote + 1) % len(d.note)
+            else:
             # MIDI notes:
-            for note in d.note:
-                if note is not None:
-                    midi_io.send(NoteOn(note))
+                for note in d.note:
+                    if note is not None:
+                        midi_io.send(NoteOn(note))
 
             lastMidi = currentTime
         if tempValue is False and d.value is True and midi_note_off is True:
-            for note in d.note:
-                if note is not None:
-                    midi_io.send(NoteOff(note))
+            if d.arpMode == 1:
+                arpNoteOffIndex = 0
+                for note in d.note:
+                    # MIDI NoteOff in arp mode shouldn't interrupt other played notes, just the last-played note
+                    if note is not None and arpNoteOffIndex != d.currentNote:
+                        midi_io.send(NoteOff(note))
+                    arpNoteOffIndex = arpNoteOffIndex + 1
+            else:
+                for note in d.note:
+                    if note is not None:
+                        midi_io.send(NoteOff(note))
 
             lastMidi = currentTime
         d.value = tempValue

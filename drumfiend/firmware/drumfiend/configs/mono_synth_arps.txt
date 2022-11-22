@@ -1,0 +1,25 @@
+{
+"midi_channel": 1
+"midi_note_off": 1
+"drums": [
+	{"input":1,"note":[48,52,55],"arpMode":1,"description":"C major arpeggio"},
+	{"input":2,"note":[48,51,55],"arpMode":1,"description":"C minor arpeggio"},
+	{"input":3,"note":50,"description":"D"},
+	{"input":4,"note":51,"description":"D#/Eb"},
+	{"input":5,"note":52,"description":"E"},
+	{"input":6,"note":52,"description":"E"},
+	{"input":7,"note":53,"description":"F"},
+	{"input":8,"note":54,"description":"F#/Gb"},
+	{"input":9,"note":55,"description":"G"},
+	{"input":10,"note":56,"description":"G#/Ab"},
+	{"input":11,"note":57,"description":"A"},
+	{"input":12,"note":58,"description":"A#/Bb"},
+	{"input":13,"note":59,"description":"B"},
+	{"input":14,"note":59,"description":"C"},
+	{"input":15,"note":60,"description":"C"},
+	{"input":16,"note":61,"description":"C#/Db"},
+	{"input":17,"note":62,"description":"D"},
+	{"input":18,"note":63,"description":"D#/Eb"},
+	{"input":19,"note":64,"description":"E"},
+]
+}

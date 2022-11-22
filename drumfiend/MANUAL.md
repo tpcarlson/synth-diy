@@ -68,6 +68,16 @@ Configure DrumFiend's inputs like this:
 
 `{"input":1,"note":[48,50,52],"description":"Chord"},`
 
+###### Playing arpeggios from a single trigger
+
+Similar to playing chords, you can play arpeggios from a single trigger.
+
+Configure DrumFiend's inputs like this:
+
+`{"input":1,"note":[48,50,52],"arpMode":1,"description":"Arp"}`
+
+DrumFiend will cycle through the notes in the arp one by one. DrumFiend has no internal clock - send more triggers to advance the played note. As with playing single or multiple notes, send a gate rather than a trigger to hold each note of the arpeggio as it is played.
+
 ###### MIDI Program Change
 
 DrumFiend also supports MIDI Program Change messages. These are usually used to swap between presets on a synthesizer.
