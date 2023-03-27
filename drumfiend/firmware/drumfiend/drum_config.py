@@ -1,6 +1,9 @@
 import drum
 import board
 import json
+import time
+import digitalio
+import board
 
 from drummer import Drummer
 
@@ -28,6 +31,31 @@ class DrumConfig(Drummer):
         except OSError as error:
             print(error)
             print("Could not read configuration file - missing config.txt?")
+            self.sosLed()
         except ValueError as error:
             print(error)
             print("Invalid JSON syntax. Check the config.txt for mistakes")
+            self.sosLed()
+
+    def sosLed(self):
+        led = digitalio.DigitalInOut(board.D11)
+        led.direction = digitalio.Direction.OUTPUT
+        while(True):
+            # S
+            self.blinkLetter(3, 0.1, led)
+            time.sleep(0.25)
+            # O
+            self.blinkLetter(3, 0.25, led)
+            time.sleep(0.1)
+            # S
+            self.blinkLetter(3, 0.1, led)
+            time.sleep(0.25)
+            # Gap between repeats
+            time.sleep(0.5)
+
+    def blinkLetter(self, repeats, delay, led):
+        for i in range(repeats):
+            led.value = True
+            time.sleep(delay)
+            led.value = False
+            time.sleep(delay)
