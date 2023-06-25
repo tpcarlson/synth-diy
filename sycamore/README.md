@@ -12,7 +12,7 @@ Sycamore is a looping quantized sequencer with up to 64 steps, and up to 100 sca
 
 ##### Where does the design come from?
 
-The original panel design and concept came from the Mutable Instruments [cancelled projects]([Cancelled projects - Mutable Instruments Documentation](https://pichenettes.github.io/mutable-instruments-documentation/trivia_and_history/cancelled_projects/)) page, and I made some tweaks to get the CV inputs and knob layout to align a little better.
+The original panel design and concept came from the Mutable Instruments [cancelled projects](https://pichenettes.github.io/mutable-instruments-documentation/trivia_and_history/cancelled_projects/) page, and I made some tweaks to get the CV inputs and knob layout to align a little better.
 
 Sycamore also has a few tricks up its sleeve to make it a little more playable, including shuffling the notes in the scale, and changing the harmony or note lag of the second 1v/oct output.
 
