@@ -28,18 +28,19 @@ For full kits the SMT parts will already be soldered and are omitted, with the e
 
 ##### Other parts
 
-| Type                  | Value               | Quantity |
-| --------------------- | ------------------- | -------- |
-| Screws                |                     | 4        |
-| Power cable           | Eurorack            | 1        |
-| Jack washers          |                     | 10       |
-| Jack nuts             |                     | 10       |
-| Potentiometer washers |                     | 4        |
-| Potentiometer nuts    |                     | 4        |
-| Encoder washers       |                     | 1        |
-| Encoder nuts          |                     | 1        |
-| Potentiometer knobs   | D shaft, Rogan 1PS  | 4        |
-| Encoder knob          | Sifam 12mm, D shaft | 1        |
+| Type                  | Value                                          | Quantity |
+| --------------------- | ---------------------------------------------- | -------- |
+| Screws                |                                                | 4        |
+| Power cable           | Eurorack                                       | 1        |
+| Jack washers          |                                                | 10       |
+| Jack nuts             |                                                | 10       |
+| Potentiometer washers |                                                | 4        |
+| Potentiometer nuts    |                                                | 4        |
+| Encoder washers       |                                                | 1        |
+| Encoder nuts          |                                                | 1        |
+| Potentiometer knobs   | D shaft, Rogan 1PS                             | 4        |
+| Encoder knob          | Sifam 12mm, D shaft                            | 1        |
+| LED light pipes       | PLP1-313 (aliexpress, seek better alternative) | 3        |
 
 ##### Customisation
 

@@ -38,4 +38,6 @@ Sorry, no. Things go out of stock so frequently it'd be a lot of work to keep th
 
 [Firmware guide](FIRMWARE.md)
 
+[Assembly guide](ASSEMBLY.md)
+
 ![multmult-panel](images/panel.png)
