@@ -36,4 +36,6 @@ Sorry, no. Things go out of stock so frequently it'd be a lot of work to keep th
 
 [Kit BOM](BOM.md)
 
+[Firmware guide](FIRMWARE.md)
+
 ![multmult-panel](images/panel.png)
