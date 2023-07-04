@@ -26,13 +26,11 @@ Take a look through the bill of materials and make sure you have all the parts. 
 
 ###### Preparing the Pico
 
-First, solder the male headers to the Pico. To hold everything in place, use a couple of female headers that you can place the male headers into temporarily.
+First, solder the male headers to the Pico. To hold everything in place, use a couple of 
 
-<img src="images/2-teensy.jpg"/>
+<img title="" src="images/2-pico.jpg" alt="pi pico headers">Now you can solder the male headers to the Pico. Remove the female headers once you're done and the Pico is good to go.
 
-Now you can solder the male headers to the Pico. Remove the female headers once you're done and the Pico is good to go.
-
-<img src="images/3-teensy.jpg"/>
+<img title="" src="images/3-pico.jpg" alt="soldered pico">
 
 If you are building this from your own parts, cut down some female headers to size (2 sets of 20 pins) to match the Pico, you'll use these a bit later. Kits will have these headers cut to size already.
 
@@ -42,7 +40,9 @@ Connect the Pico to your computer and program it with the firmware. See the [FIR
 
 The mode LEDs are first to solder. On the back of the LED is a long vertical line, this indicates the 5V side, which is on the left hand side of the module. [This page](https://lighthouseleds.com/blog/polarity-guide-of-0402-0603-0805-1206-and-most-all-smd-leds.html) has a good set of pictures for common LED indicators in case yours are different.
 
-(TODO: photo of the 5V/vertical line)
+![](images/4-led.jpg)
+
+The vertical line on the LEDs (The anode) should be on the left hand side of the PCB.
 
 You can decide how exactly to solder the LEDs. Either a hot air gun and paste or a soldering iron will work. A hotplate will not work as there are already parts on the other side.
 
@@ -50,15 +50,23 @@ To solder with a soldering iron, first add a little bit of solder to one of the 
 
 If you're going to use a soldering iron, make sure not to hold the iron on the solder joints for too long to avoid damaging the LEDs.
 
+Here you can see an in-progress shot from soldering with hot air and paste where I added a little too much of the paste Your soldering should look much cleaner than this!
+
+![](images/5-led.jpg)
+
 ##### Rear components (Pico, power)
 
 Now solder the rear components. Start with the power connector. This should be placed respecting the silkscreen, with the notch pointed towards the bottom of the PCB. Solder one or two pins then check that the power connector is sitting flush with the PCB before soldering the rest of the pins.
 
-(TODO: photo of the power connector)
+![](images/6-power.jpg)
 
-Slot the Rasperry Pi Pico with its soldered male headers from the first step into the 20-pin female headers. Insert into the PCB with the USB port on the Rasperry Pi Pico pointing upwards. As with the power connector, solder a couple of pins and make sure the headers are flush with the PCB before soldering the rest of the pins.
+Slot the Rasperry Pi Pico with its soldered male headers from the first step into the 20-pin female headers. Insert into the PCB with the USB port on the Rasperry Pi Pico pointing upwards. As with the power connector, solder a couple of pins and make sure the headers are flush with the PCB before soldering the rest.
 
-(TODO: photo of the pi pico)
+![](images/8-even-more-pico.jpg)
+
+![](images/7-pico.jpg)
+
+![](images/9-more-pico.jpg) 
 
 ##### 7-segment display headers
 
@@ -66,7 +74,7 @@ You may skip this step if you prefer your 7-segment displays to sit under the pa
 
 Insert the 7-segment displays' pins into the SIL sockets and set them aside for now.
 
-(TODO: photo of the leg elongators)
+![](images/10-7seg.jpg)
 
 ##### Front panel parts (Pots, jacks, buttons, and light pipes)
 
@@ -82,19 +90,23 @@ Gather up the remaining front panel parts and add them to the PCB. It's best to 
 
 - Add the round button to the top-right of the PCB. Make sure the flat edge of the button is pointing upwards, as indicated by the silkscreen on the PCB
 
-- Finally, add a bolt to the Rotary Encoder. Try and get it as level as you can with the four potentiometers - you're aiming to get the top of the bolt and the top of the boxy section of the potentiometers to the same height. If it's off by a little then that's OK! Once you're happy, add a washer on top of the bolt
+- Finally, add a nut to the Rotary Encoder. Try and get it as level as you can with the four potentiometers - you're aiming to get the top of the nut and the top of the boxy section of the potentiometers to the same height. If it's off by a little then that's OK! Once you're happy, add a washer on top of the bolt
 
-(TODO: photo of a stuffed PCB)
+![](images/11-stuffed-pcb.jpg)
+
+![](images/12-washer.jpg)
 
 ##### 7-segment displays & Light pipes
 
 Insert the 7-segment displays with their SIL sockets into the cutout at the top of the panel. They should fit side by side, with the decimal points at the bottom.
 
-This is a press fit, and owing to the tolerances of the panel and the 7-segment displays, these can be quite tight. If you find that the 7-segment displays just won't fit inside the panel and, with a file or some sandpaper, remove a bit of the offending PCB panel material. This stuff really isn't good to breathe in, so please do make sure you do this outside!
+This is a press fit, and owing to the tolerances of the panel and the 7-segment displays, can be quite tight. If you find that the 7-segment displays just won't fit inside the panel, with a file or some sandpaper, remove a bit of the offending PCB panel material. This stuff really isn't good to breathe in, so please do make sure you do this outside!
 
 Light pipes are another press-fit item, just press them firmly into the panel from behind.
 
-(TODO: Photo of the press-fit parts)
+![](images/14-press-fit.jpg)
+
+![](images/13-press-fit.jpg)
 
 ##### Securing front panel parts
 
@@ -102,31 +114,35 @@ Thread the panel carefully over the front panel components. The 7-segment displa
 
 Secure the front panel to the PCB by adding:
 
-- Another bolt to the rotary encoder
+- Another nut to the rotary encoder
 
-- Wasers and then bolts to the potentiometers
+- Washers and then nut to the potentiometers
 
 - A couple of washers and nuts to the audio jacks
 
+I prefer to just secure two or four of the audio jacks at this point, if anything is wrong with the soldering then undoing all the nuts is a bit of a pain!
+
 At this point, it's worth testing the rotation of the potentiometers and encoder, and the action of the buttons to make sure everything feels correct.
+
+![](images/15-front-panel.jpg)
 
 ##### Soldering the front panel parts
 
-Very carefully flip the module over and start soldering the front panel parts. It's best to solder the parts that had nuts and bolts added first as these are the "glue" that'll hold everything else together. Especially for the Thonkiconn sockets, solder one pin and then make sure that they are totally flush to the main PCB before soldering the rest.
+Very carefully flip the module over and start soldering the front panel parts. It's best to solder the parts that had nuts and washers added first as these are the "glue" that'll hold everything else together. Especially for the Thonkiconn sockets, solder one pin and then make sure that they are totally flush to the main PCB before soldering the rest.
 
 Take particular care when soldering the center-most potentiometers - these are between the female headers for the Rasperry Pi Pico. Don't melt the headers!
 
 Solder the 7-segment displays and the round button at the top-right last.
 
-(TODO: rear shot with all the soldered parts)
+![](images/16-front-panel.jpg)
 
 ##### Finishing off the front panel
 
 Add D-shaft knobs to the four potentiometers, and a D-shaft knob to the encoder. Make sure the encoder can be pressed down to press it.
 
-If you're feeling confident at this point, add the rest of the washers and nuts to the Thonkiconn sockets. It can be helpful to leave this step to the end in case you need to take the module apart to debug it!
+If you're feeling confident at this point, add the rest of the washers and nuts to the Thonkiconn sockets. It can be helpful to leave this step to the end in case you need to take the module apart to fix up some soldering, though!
 
-(TODO: front shot with everything in place)
+![](images/17-done.jpg)
 
 ##### Adding the Rasperry Pi Pico
 
