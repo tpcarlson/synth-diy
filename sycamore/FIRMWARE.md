@@ -26,11 +26,11 @@ Unzip the firmware.zip somewhere on your computer, then copy the extracted files
 
 Once you're done, the disk's contents should look like this. You may be missing the boot_out.txt:
 
-(TODO: Add sycamore firmware screenshot)
+![](images/firmware.png)
 
-<img title="" src="images/firmware-2.png" alt="" width="147">
+That's it, the Sycamore firmware is now on your Pico. See [MANUAL.md](MANUAL.md) for how to use the module.
 
-That's it, the Sycamore firmware is now on your Pico.
+
 
 ##### Firmware hacking
 
