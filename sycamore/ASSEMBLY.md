@@ -20,7 +20,7 @@ First, gather together the tools you are going to use to assemble the module. At
 - Tubs to hold parts ready for soldering
 - Multi-meter for continuity testing
 
-<img src="images/1-tools.jpg" alt="tools"/>
+![parts](images/1-parts.jog)
 
 Take a look through the bill of materials and make sure you have all the parts. I like to organise mine by putting them into tupperware or take-away boxes - if you do too, just don't use them for food again afterwards.
 
