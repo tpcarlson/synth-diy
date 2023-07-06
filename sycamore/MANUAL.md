@@ -10,7 +10,7 @@ Sycamore is, at its heart, a looping sequencer with quantization. The loop can h
 
 Sycamore doesn't deal with transposition in the _usual_ way, but instead allows you to nudge notes along the scale, keeping everything in the same key.
 
-The data that Sycamore stores about the current sequence means that it is always possible to transition from one set of knob settings to another and back again and get back to your original sequence, even as the loop length changes. All 64 steps in the sequence are persisted through sequence, quantisation, loop length and offset modifications.
+The data that Sycamore stores about the current sequence means that it is always possible to transition from one set of knob settings to another and back again and get back to your original sequence, even as the loop length changes. All 64 steps in the sequence are persisted through sequence, quantization, loop length and offset modifications.
 
 ## Controls
 
@@ -43,11 +43,11 @@ Cutting range in half makes the notes look like this:
 | C0  | F#0 | C1  | F#1 | C2  |
 | --- | --- | --- | --- | --- |
 
-Try to think of the F#s here more like "C and a half". To understand more about why Sycamore breaks notes up like this, we will need to dive more deeply into scales and quantisation.
+Try to think of the F#s here more like "C and a half". To understand more about why Sycamore breaks notes up like this, we will need to dive more deeply into scales and quantization.
 
-## Scales and quantisation
+## Scales and quantization
 
-Sycamore doesn't actually store note values. Instead, Sycamore stores a number per step in the sequence which can then get modified by the range, offset and quantise controls.
+Sycamore doesn't actually store note values. Instead, Sycamore stores a number per step in the sequence which can then get modified by the range, offset and quantize controls.
 
 For example, taking another 5-step sequence, here is what the internals might look like.
 
@@ -55,7 +55,7 @@ For example, taking another 5-step sequence, here is what the internals might lo
 | --- | --- | --- | --- | --- |
 | C0  | D0  | E0  | C1  | G0  |
 
-Sycamore has a number of scales defined which can constrain the notes to be quantised to. For example, here's the C major scale with some note values:
+Sycamore has a number of scales defined which can constrain the notes to be quantized to. For example, here's the C major scale with some note values:
 
 | C   | 0   |
 | --- | --- |
@@ -74,7 +74,7 @@ As you can see the notes don't necessary have to line up perfectly with the valu
 | 0   | 10  | 20  | 60  | 35  |
 | C0  | D0  | E0  | C1  | G0  |
 
-Going back to the controls on the front panel, there are two ways to influence how quantisation works:
+Going back to the controls on the front panel, there are two ways to influence how quantization works:
 
 - Use the "Scale" encoder to choose one of the predefined scales, or a custom one if you have one defined. This defines the full set of notes to be used, for example the Major scale.
 
@@ -82,7 +82,7 @@ Going back to the controls on the front panel, there are two ways to influence h
 
 This is a bit clearer with an example! So, using C major again, let's go through what happens as the Quantize control changes.
 
-If the Quantize control is turned to the point where three notes are allowed, being in a major scale will restrict quantization to a major scale. Very approximately:
+If the Quantize control is turned to the point where three notes are allowed, being in a major scale will restrict quantization to a major chord. Very approximately:
 
 | 0%  | 25% | 50% | 75% | 100% |
 | --- | --- | --- | --- | ---- |
@@ -99,11 +99,11 @@ Changing the scale from major to minor would change the E to an E-flat, but the 
 
 With the Quantize control fully clockwise, all notes of the scale may be quantized to.
 
-With the Quantize control at 12-o-clock, half of the notes of the scale are disallowed. This is done with some trickery to keep the sequences sounding as pretty as possible - For each scale, the notes that are kept tend to make up chords or harmonies of some kind.
+With the Quantize control at 12-o-clock, half of the notes of the scale are disallowed. This is done with some trickery to keep the sequences sounding as pretty as possible - for each scale, the notes that are kept tend to make up chords or harmonies of some kind.
 
 Sycamore's firmware comes bundled with a number of scales already defined (45 at the time of writing), covering many of the scales on the [List of musical scales and modes](https://en.wikipedia.org/wiki/List_of_musical_scales_and_modes) wikipedia page.
 
-## Quantisation ordering
+## Quantization ordering
 
 Now that you know about scales, quantization, ranges and offsets, let's go through the full process of how a note gets quantized.
 
