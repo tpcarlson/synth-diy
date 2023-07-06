@@ -119,7 +119,7 @@ Changing each of Range, Shift, and Quantize, or the scale to be quantized to, wi
 
 ## Left-hand side buttons
 
-Sycamore has three buttons along the left hand side of the module. This will light up whenever triggers are input and recognised.
+Sycamore has three buttons along the left hand side of the module. These will light up whenever triggers are input and recognised, and also when pressed.
 
 The buttons are:
 
@@ -212,7 +212,6 @@ This can be a really nice way of changing up a sequence and then returning to th
 | G        |         |         | G        |
 |          |         | A       |          |
 |          | B       |         |          |
-|          |         |         |          |
 
 Short press the Scale knob to continue shuffling through different quantization variations. 
 
