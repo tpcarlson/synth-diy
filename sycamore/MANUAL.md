@@ -43,7 +43,15 @@ Cutting range in half makes the notes look like this:
 | C0  | F#0 | C1  | F#1 | C2  |
 | --- | --- | --- | --- | --- |
 
-Try to think of the F#s here more like "C and a half". To understand more about why Sycamore breaks notes up like this, we will need to dive more deeply into scales and quantization.
+Try to think of the F#s here more like "C and a half".
+
+Offset is related to range, allowing for nudging the notes of a scale up or down up to an octave in either direction. Going back to the example above:
+
+| C0  | F#0 | C1  | F#1 | C2  | Original         |
+| --- | --- | --- | --- | --- | ---------------- |
+| C1  | F#1 | C2  | F#2 | C3  | Offset +1 octave |
+
+To understand more about how Sycamore changes notes, we will need to dive more deeply into scales and quantization.
 
 ## Scales and quantization
 
@@ -111,8 +119,8 @@ Let's bring back a 5-step sequence, represented as numbers, and once again using
 
 | 42     | 14     | 53      | 31     | 12     | Original sequence               |
 | ------ | ------ | ------- | ------ | ------ | ------------------------------- |
-| 32     | 11     | 40      | 23     | 9      | **Range ** @ 75%                |
-| 92     | 71     | 100     | 83     | 69     | **Shift ** @ 100% (+1 octave)   |
+| 32     | 11     | 40      | 23     | 9      | Range @ 75%                     |
+| 92     | 71     | 100     | 83     | 69     | Shift @ 100% (+1 octave)        |
 | 95 (G) | 70 (D) | 100 (G) | 85 (F) | 70 (D) | **Quantize** @ 100% (All notes) |
 
 Changing each of Range, Shift, and Quantize, or the scale to be quantized to, will change the notes that pop out at the end.
@@ -155,7 +163,7 @@ Output 2's mode is indicated by the three LEDs at the top-right of the panel. Th
 
 ### Harmony
 
-Sycamore uses the current sequence's notes to generate a harmony. This is a fifth (7 semitones) above the note being output in output 1.
+Sycamore uses the current sequence's notes to generate a harmony. By default, this is a fifth (7 semitones) above the note being output in output 1.
 
 For example, bringing back yet another 5-step sequence:
 
