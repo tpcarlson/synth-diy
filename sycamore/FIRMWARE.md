@@ -2,7 +2,7 @@
 
 ##### Requirements
 
-To program the DrumFiend firmware you will need:
+To program the Sycamore firmware you will need:
 
 - Rasperry Pi Pico
 
