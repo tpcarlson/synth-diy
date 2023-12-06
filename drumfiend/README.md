@@ -28,7 +28,7 @@ Sorry, no. Things go out of stock so frequently it'd be a lot of work to keep th
 
 ##### Can I buy PCBs or a kit?
 
-Yes! DrumFiend is available at Thonk: [Divergent Waves – DrumFiend (Full Kit)](https://www.thonk.co.uk/shop/divergent-waves-drumfiend/)
+Available as a [DIY Kit](https://www.tindie.com/products/divergentwaves/logic/) from Tindie
 
 ##### Other resources
 

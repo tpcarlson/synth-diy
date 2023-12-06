@@ -28,7 +28,7 @@ Sorry, no. Things go out of stock so frequently it'd be a lot of work to keep th
 
 ##### Can I buy PCBs or a kit?
 
-Send me an email (twigathy+synth@gmail.com)...
+Available as a [DIY Kit](https://www.tindie.com/products/divergentwaves/logic/) from Tindie
 
 ##### Other resources
 
