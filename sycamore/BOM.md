@@ -24,23 +24,22 @@ For full kits the SMT parts will already be soldered and are omitted, with the e
 | Mono jack            | Thoniconn/Qingpu PJ398SM              | 10       |
 | SPST Button with LED | LP4OA1PBCTG                           | 3        |
 | 7-segment LED        | LSHD-7801                             | 2        |
-| SIL socket           | 5 pin                                 | 4        |
 
 ##### Other parts
 
-| Type                  | Value                                          | Quantity |
-| --------------------- | ---------------------------------------------- | -------- |
-| Screws                |                                                | 4        |
-| Power cable           | Eurorack                                       | 1        |
-| Jack washers          |                                                | 10       |
-| Jack nuts             |                                                | 10       |
-| Potentiometer washers |                                                | 4        |
-| Potentiometer nuts    |                                                | 4        |
-| Encoder washers       |                                                | 1        |
-| Encoder nuts          |                                                | 1        |
-| Potentiometer knobs   | D shaft, Rogan 1PS                             | 4        |
-| Encoder knob          | Sifam 12mm, D shaft                            | 1        |
-| LED light pipes       | PLP1-313 (aliexpress, seek better alternative) | 3        |
+| Type                  | Value               | Quantity |
+| --------------------- | ------------------- | -------- |
+| Screws                |                     | 4        |
+| Power cable           | Eurorack            | 1        |
+| Jack washers          |                     | 10       |
+| Jack nuts             |                     | 10       |
+| Potentiometer washers |                     | 4        |
+| Potentiometer nuts    |                     | 4        |
+| Encoder washers       | r                   | 1        |
+| Encoder nuts          |                     | 1        |
+| Potentiometer knobs   | D shaft, Rogan 1PS  | 4        |
+| Encoder knob          | Sifam 12mm, D shaft | 1        |
+| LED light pipes       | PLP1-313            | 3        |
 
 ##### Customisation
 
