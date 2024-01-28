@@ -15,9 +15,9 @@ For full kits the SMT parts will already be soldered and are omitted, with the e
 | Type                 | Value                                 | Quantity |
 | -------------------- | ------------------------------------- | -------- |
 | Rasperri Pi Pico     | -                                     | 1        |
-| Male pin header      | 20 pin                                | 2        |
-| Female pin header    | 20 pin                                | 2        |
-| SPST Button          | D6R50 F1 LFS                          | 1        |
+| Pin header           | 20 pin, 2.54mm                        | 2        |
+| Pin socket           | 20 pin, 2.54mm                        | 2        |
+| SPST Button          | D6R50 F1 LFS (Green)                  | 1        |
 | Rotary Encoder       | With button, D shaft                  | 1        |
 | Potentiometer        | Alpha, 10k, linear taper (B), D shaft | 4        |
 | Shrouded header      | 2.54mm, 2x5 pins                      | 1        |
@@ -35,7 +35,7 @@ For full kits the SMT parts will already be soldered and are omitted, with the e
 | Jack nuts             |                     | 10       |
 | Potentiometer washers |                     | 4        |
 | Potentiometer nuts    |                     | 4        |
-| Encoder washers       | r                   | 1        |
+| Encoder washers       |                     | 1        |
 | Encoder nuts          |                     | 1        |
 | Potentiometer knobs   | D shaft, Rogan 1PS  | 4        |
 | Encoder knob          | Sifam 12mm, D shaft | 1        |
