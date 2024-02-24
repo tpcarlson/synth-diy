@@ -4,11 +4,13 @@
 
 Sycamore is a looping quantized sequencer with up to 64 steps, and up to 100 scales. Sycamore allows for CV control over many of its internal parameters including the loop length, range, and note range in a scale to be quantized to.
 
+Some advanced features are accessible through a one-layer menu to allow for more deep tweaking of harmonies, delay, and scale quantization - however, Sycamore is perfectly usable without touching these at all!
+
+Sycamore makes use of CircuitPython for its program code, allowing for easy modification and tweaking should you wish to do so. The module also features an i2c expansion port reserved for future use, or for you own hacking.
+
 ##### How much power does it use?
 
-(TODO: Add power draw for v1.1)
-
-(eg.) As measured by the joranalogue Test 3, around x mA on +12v and y mA on -12v at peak. The 5v rail is unused.
+As measured by the joranalogue Test 3, around 60 mA on +12v and 10 mA on -12v at peak. The 5v rail is unused.
 
 ##### Where does the design come from?
 
@@ -30,7 +32,7 @@ Sorry, no. Things go out of stock so frequently it'd be a lot of work to keep th
 
 ##### Can I buy PCBs or a kit?
 
-(Links)
+Coming soon...
 
 ##### Other resources
 
