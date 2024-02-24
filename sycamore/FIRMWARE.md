@@ -8,7 +8,7 @@ To program the Sycamore firmware you will need:
 
 - Micro USB cable. Make sure the cable is not a "charging" cable, you need data and power
 
-- Firmware.zip (TODO: Add a link to the firmware)
+- [Sycamore firmware ZIP](https://raw.githubusercontent.com/tpcarlson/synth-diy/main/sycamore/firmware/sycamore-1.0.zip)
 
 - The CircuitPython U2F file for Rasperry Pi Pico ([Pi Pico Download]([Pico Download](https://circuitpython.org/board/raspberry_pi_pico/)))
 
@@ -29,8 +29,6 @@ Once you're done, the disk's contents should look like this. You may be missing 
 ![](images/firmware.png)
 
 That's it, the Sycamore firmware is now on your Pico. See [MANUAL.md](MANUAL.md) for how to use the module.
-
-
 
 ##### Firmware hacking
 
