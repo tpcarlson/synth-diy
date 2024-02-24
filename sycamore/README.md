@@ -42,4 +42,4 @@ Coming soon...
 
 [Assembly guide](ASSEMBLY.md)
 
-![multmult-panel](images/panel.png)
+![sycamore-panel](images/panel.jpg)
