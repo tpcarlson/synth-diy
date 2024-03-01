@@ -8,7 +8,7 @@ This is a repository of the various Eurorack modules that I've been working on r
 
 The contents of this repository are licensed CC BY-NC-SA 4.0, unless otherwise noted. This means you're free to use these projects directly, remix or change them, but no commercial use is permitted. If you are going to re-release any of these projects you should also stick to the same license. For more information please check out the CC license (https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
-Finally, I'm an amateur when it comes to PCB and schematic design. Many of the schematics are redrawn from others available online, and each project contains some information about attribution. Not all the modules work perfectly - some have significant issues - and this will be noted in the README in each folder.
+I'm an enthusiastic amateur when it comes to PCB and schematic design. Many of the schematics are redrawn from others available online, and each project contains some information about attribution. Not all the modules work perfectly - some have significant issues - and this will be noted in the README in each folder.
 
 ##### Kits
 
@@ -17,8 +17,15 @@ Some projects are available as kits from Tindie!
 - [Divergent Waves - Logic (Full Kit)](https://www.tindie.com/products/divergentwaves/logic/)
 - [Divergent Waves – DrumFiend (Full Kit)](https://www.tindie.com/products/divergentwaves/drumfiend/)
 - [Divergent Waves - Dice (Full Kit)](https://www.tindie.com/products/divergentwaves/dice/)
+- [Divergent Waves - Sycamore (Full Kit)](https://www.tindie.com/products/divergentwaves/sycamore-dual-looping-eurorack-sequencer/)
 
-You can also buy [PCB & Panel Sets on Tindie](https://www.tindie.com/products/divergentwaves/divergent-waves-pcb-panel-sets/) as well.
+You may also buy [PCB & Panel Sets on Tindie](https://www.tindie.com/products/divergentwaves/divergent-waves-pcb-panel-sets/) as well.
+
+##### Built modules
+
+Modules available as kits are available on [Reverb](https://reverb.com/uk/shop/divergent-waves)!
+
+------
 
 ##### Projects
 
