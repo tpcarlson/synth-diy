@@ -42,4 +42,8 @@ Sorry, no. Things go out of stock so frequently it'd be a lot of work to keep th
 
 Cornucopia is open-source hardware. Please take a chance to review the [LICENSE](LICENSE.md) file.
 
+##### Special thanks
+
+Thanks to everybody on the Winterbloom Discord instance who workshopped names, to Stargirl in particular for the original Micronova design & the excellent CORN footprint too.
+
 ![](images/cornucopia.png)
