@@ -6,7 +6,7 @@ PCB versions 1.0 & 1.1 come _without_ the DAC soldered.
 
 PCB versions 1.2+ come _with_ the DAC soldered.
 
-PCB version 1.2-production has a manufacturing mistake! Expect to see one cut trace and one blob of solder bridging two pins on the ADC chip.
+PCB version 1.2-production has a [manufacturing mistake](images/1.2-production-cut-trace.png)! Expect to see one cut trace and one blob of solder bridging two pins on the ADC chip.
 
 Kits for Sycamore include the headers and sockets for the Rasperry Pi Pico cut to size already.
 
@@ -84,7 +84,7 @@ Gather up the remaining front panel parts and add them to the PCB. It's best to 
 
 - Add the round button to the top-right of the PCB. Make sure the flat edge of the button is pointing upwards, as indicated by the silkscreen on the PCB
 
-- Finally, add a nut to the Rotary Encoder. Try and get it as level as you can with the four potentiometers - you're aiming to get the top of the nut and the top of the boxy section of the potentiometers to the same height. If it's off by a little then that's OK! Once you're happy, add a washer on top of the bolt
+- 
 
 ![](images/11-stuffed-pcb.jpg)
 
@@ -98,7 +98,7 @@ Light pipes are a press-fit item, just press them firmly into the panel from beh
 
 ##### Securing front panel parts
 
-Thread the panel carefully over the front panel components. The 7-segment displays might need a little bit of gentle persuasion to locate themselves into the PCB, but everything else should slip into place easily. Take care with the round button which has shorter legs than the other parts.
+Thread the panel carefully over the front panel components. Take care with the round button which has shorter legs than the other parts.
 
 Secure the front panel to the PCB by adding:
 
