@@ -32,7 +32,7 @@ Note that the DC-DC converters for +12 and -12v are flipped compared to Micronov
 
 ##### Are there any problems with the design?
 
-With right-angled spade connectors, the screw holes on the right hand side are impossible to access. If you're building one for yourself, I'd recommend vertical spade connectors instead.
+With right-angled spade connectors, the screw holes on the right hand side are impossible to access. If you're building one for yourself, I'd recommend vertical spade connectors!
 
 ##### Do you have a BOM/Mouser cart/Tayda links?
 
