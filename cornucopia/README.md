@@ -42,4 +42,4 @@ Sorry, no. Things go out of stock so frequently it'd be a lot of work to keep th
 
 Cornucopia is open-source hardware. Please take a chance to review the [LICENSE](LICENSE.md) file.
 
-![]()
+![](images/cornucopia.png)
