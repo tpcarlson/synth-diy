@@ -12,7 +12,7 @@ To program the DrumFiend firmware you will need:
 
 - Firmware.zip in this repository ([firmware/drumfiend/firmware.zip](firmware/drumfiend/firmware.zip))
 
-- The CircuitPython HEX file for Teensy 4.0 ([Teensy 4.0 Download](https://circuitpython.org/board/teensy40/))
+- The CircuitPython HEX file for Teensy 4.0. DrumFiend works with an older version of CircuitPython (7.x.x)  ([Teensy 4.0 Download](https://adafruit-circuit-python.s3.amazonaws.com/bin/teensy40/en_US/adafruit-circuitpython-teensy40-en_US-7.3.0.hex))
 
 ##### CircuitPython Installation
 
