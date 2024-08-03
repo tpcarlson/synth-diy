@@ -40,4 +40,4 @@ Coming soon...
 
 (BOM, assembly guide etc.)
 
-![sycamore-panel](images/panel.jpg)
+![sycamore-panel](images/panel.png)
