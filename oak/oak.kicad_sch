@@ -10273,6 +10273,17 @@
 		)
 		(uuid "318e75d7-dd75-4fea-ba46-285ae27b419a")
 	)
+	(text "1.0 bugs\n========\nNeed a way to hold the panel and PCB together at the top\nLED_BUILTIN was not included in the BOM\n2.5 vs. 2.54mm pitch pads for the i2c connectors? (Seems the library footprint is just this way...)\nThe bottom divider between buttons and sockets could move down a little to match Sycamore\nHoles for the LED buttons are slightly tight"
+		(exclude_from_sim no)
+		(at 280.924 39.624 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "44d3074f-4b51-41b3-b001-43183bd3b8b2")
+	)
 	(text "i2c expander (In)"
 		(exclude_from_sim no)
 		(at 238.76 114.3 0)
@@ -12045,6 +12056,12 @@
 			(uuid "7cef2389-ef15-4838-8dc7-ddf62d3a70e4")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0200")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0200")
@@ -12394,6 +12411,12 @@
 			(uuid "82db55b6-8de8-4354-93a4-1b37125c576c")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0140")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0140")
@@ -12594,6 +12617,12 @@
 			(uuid "e93ac327-fc7c-455d-8f55-57d6d7fd959b")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0129")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0129")
@@ -12660,6 +12689,12 @@
 			(uuid "d494b2b1-7a43-4a96-8616-e216144568ee")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0192")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0192")
@@ -12727,6 +12762,12 @@
 			(uuid "b35c476e-9376-4f33-abaf-42d7b66aa1b5")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0160")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0160")
@@ -12884,6 +12925,12 @@
 			(uuid "28e121d4-527a-4739-b943-801c00669869")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0180")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0180")
@@ -13037,6 +13084,12 @@
 			(uuid "a683ecf2-482d-40af-9010-1521fb73b068")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0178")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0178")
@@ -13104,6 +13157,12 @@
 			(uuid "82a06de3-d835-4dc8-bfcd-760040c0d7fa")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0147")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0147")
@@ -13487,6 +13546,12 @@
 			(uuid "ffe70c0b-e380-40dc-956c-b2cb29459f23")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0116")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0116")
@@ -13622,6 +13687,12 @@
 			(uuid "c6a26466-a54f-4bd4-93c5-0c5a3b48dca8")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0194")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0194")
@@ -13826,6 +13897,12 @@
 			(uuid "b5e3ad12-bc49-4131-996c-15a32d155a99")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0137")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0137")
@@ -14041,6 +14118,12 @@
 			(uuid "2bcc9669-d702-4512-b2ee-e41fd8d3ee70")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0155")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0155")
@@ -14242,6 +14325,12 @@
 			(uuid "1150bb12-251b-408f-aec1-9f76b34e7093")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0168")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0168")
@@ -14511,6 +14600,12 @@
 			(uuid "a8e7187f-bdc0-47ef-9857-1d5b402c58cc")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0142")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0142")
@@ -14644,6 +14739,12 @@
 			(uuid "9fa9bdef-9de0-4b2d-9ac0-2f49deb5b1d8")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0186")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0186")
@@ -14711,6 +14812,12 @@
 			(uuid "50dad496-5e4c-411f-92d7-3813dfd54f36")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0163")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0163")
@@ -15007,6 +15114,12 @@
 			(uuid "e645a4a7-d933-441e-aa7e-df55f34e491e")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0128")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0128")
@@ -15210,6 +15323,12 @@
 			(uuid "39380695-d628-4c23-966f-ad224f66a91f")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0133")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0133")
@@ -15275,6 +15394,12 @@
 			(uuid "75f7f818-d23e-40db-8465-0799e4c8f7ec")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0171")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0171")
@@ -15340,6 +15465,12 @@
 			(uuid "ed998c55-7cda-4b41-a22c-abe3888d71d5")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0173")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0173")
@@ -15406,6 +15537,12 @@
 			(uuid "5141afa4-d411-48fb-9ed0-30f89dc63741")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0141")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0141")
@@ -15471,6 +15608,12 @@
 			(uuid "52fbca29-1f80-4f4b-85b2-8cfdb9e7d0a5")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0189")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0189")
@@ -15538,6 +15681,12 @@
 			(uuid "66a4e278-2223-45b7-b854-8f8936f763ef")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0130")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0130")
@@ -15670,6 +15819,12 @@
 			(uuid "06648d94-14de-4c12-8087-98986c9963d8")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0135")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0135")
@@ -15827,6 +15982,12 @@
 			(uuid "4ce52b8a-3cc8-4d48-8ca4-60c3891929e7")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0177")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0177")
@@ -15894,6 +16055,12 @@
 			(uuid "6c293cb5-55ab-4cec-988f-ae67d4818dab")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0199")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0199")
@@ -16030,6 +16197,12 @@
 			(uuid "261b6dad-7076-451a-93f1-e9ac93d4e245")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0159")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0159")
@@ -16096,6 +16269,12 @@
 			(uuid "2a96067f-05d4-4dd4-bbc7-28bf3b601d77")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0139")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0139")
@@ -16161,6 +16340,12 @@
 			(uuid "8d151b46-cc83-45e2-944b-c251390021e7")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0183")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0183")
@@ -16226,6 +16411,12 @@
 			(uuid "ccd91da8-3461-4e11-b6ff-5e3f01174a77")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0166")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0166")
@@ -16362,6 +16553,12 @@
 			(uuid "82531f54-a1b3-4e20-a40c-151647180f90")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0154")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0154")
@@ -16428,6 +16625,12 @@
 			(uuid "9036e2df-3afb-4d4c-9c8c-5aaa3f0f5c1a")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0113")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0113")
@@ -16493,6 +16696,12 @@
 			(uuid "3a077090-2f7e-413f-bf53-8e17ceb70f7f")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0174")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0174")
@@ -16627,6 +16836,12 @@
 			(uuid "d02bf31a-c373-49d1-a45c-cbd70f912505")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0119")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0119")
@@ -16838,6 +17053,12 @@
 			(uuid "ef27e788-9505-4284-a96d-7395b83bf31a")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0127")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0127")
@@ -17041,6 +17262,12 @@
 			(uuid "9a92d521-6a9e-4938-91a2-ef9e8bf732c7")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0165")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0165")
@@ -17106,6 +17333,12 @@
 			(uuid "a36ca37b-4ae7-48b2-a1e3-cb2210d925a2")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0182")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0182")
@@ -17309,6 +17542,12 @@
 			(uuid "dab9cddb-c0c2-4168-a49c-151b3609b377")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0126")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0126")
@@ -17376,6 +17615,12 @@
 			(uuid "f21773c9-a0fb-40cc-9f47-12dc304b9392")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0152")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0152")
@@ -17441,6 +17686,12 @@
 			(uuid "e763fd15-b6a1-4244-86ff-587c41a74e3a")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0125")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0125")
@@ -17644,6 +17895,12 @@
 			(uuid "0e66907b-843c-49da-baaf-833115e31148")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0187")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0187")
@@ -17854,6 +18111,12 @@
 			(uuid "f0f2ef7d-e99b-4903-9b88-60302b2cbdf1")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0197")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0197")
@@ -17919,6 +18182,12 @@
 			(uuid "532e9f94-bc43-4015-a7c6-100ee237958b")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0170")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0170")
@@ -17984,6 +18253,12 @@
 			(uuid "dd5b2802-032d-4509-832c-f20a98aa066d")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0172")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0172")
@@ -18406,6 +18681,12 @@
 			(uuid "cc88855d-0d71-47d6-9708-6ab08aa033a5")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0114")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0114")
@@ -18473,6 +18754,12 @@
 			(uuid "dd517ea3-39b9-4856-a8f8-fc1102e8c4ea")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0149")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0149")
@@ -18539,6 +18826,12 @@
 			(uuid "30a24d98-ed76-443b-b7c9-e037ab72ad51")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0150")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0150")
@@ -18749,6 +19042,12 @@
 			(uuid "9c6541b0-a3b6-4ea8-ad24-15660b983efc")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0146")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0146")
@@ -18814,6 +19113,12 @@
 			(uuid "74e2f91b-4a7f-46b5-a77c-5f402876ca0a")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0179")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0179")
@@ -18881,6 +19186,12 @@
 			(uuid "6c9b6ef6-4fff-4e64-afe3-afb6b39bfa29")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0138")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0138")
@@ -19149,6 +19460,12 @@
 			(uuid "579f4e62-7045-4982-8751-fcd99a179d1a")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0118")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0118")
@@ -19216,6 +19533,12 @@
 			(uuid "d91fb3d2-5fe5-44f7-94a3-2a5a70f59bff")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0136")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0136")
@@ -19499,6 +19822,12 @@
 			(uuid "4cf0fc2b-ec79-49e0-9ff9-137d1dbbcfe2")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0195")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0195")
@@ -19566,6 +19895,12 @@
 			(uuid "96f501bd-0bee-49b4-ba18-aed102043ef4")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0132")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0132")
@@ -19698,6 +20033,12 @@
 			(uuid "2433151a-3a51-4f69-9b71-bd4c710c5edf")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0181")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0181")
@@ -19834,6 +20175,12 @@
 			(uuid "e50ebdd2-6393-4a50-a3c7-9a612eb5b4fb")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0193")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0193")
@@ -19901,6 +20248,12 @@
 			(uuid "ff969112-a605-4dd2-a345-98288a5a0d3e")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0161")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0161")
@@ -19967,6 +20320,12 @@
 			(uuid "60d6f8cd-17e3-448d-a9d4-ea55ad6ea8b8")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0185")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0185")
@@ -20178,6 +20537,12 @@
 			(uuid "118589ef-9a8b-4282-b9db-3800a06195ec")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0162")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0162")
@@ -20311,6 +20676,12 @@
 			(uuid "0d3d94b4-6856-4a17-80c7-fa62d3854e08")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0167")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0167")
@@ -20450,6 +20821,12 @@
 			(uuid "9ae42561-f4e1-4775-8176-20181fe2952c")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0148")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0148")
@@ -20651,6 +21028,12 @@
 			(uuid "8500c87e-a47e-4952-a869-33f6a7850765")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0153")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0153")
@@ -21067,6 +21450,12 @@
 			(uuid "cc8fefa4-a54b-4320-a4ec-3f1b31ec4ba1")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0151")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0151")
@@ -21272,6 +21661,12 @@
 			(uuid "50a65f9a-6ebf-43a7-b72f-717a7a255655")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0134")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0134")
@@ -21337,6 +21732,12 @@
 			(uuid "5a020ba0-3ad7-42d7-8e48-19c6dc87ecdd")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0188")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0188")
@@ -21403,6 +21804,12 @@
 			(uuid "d78e5bcf-b66a-493d-8c2a-5d40fb165a90")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0196")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0196")
@@ -21859,6 +22266,12 @@
 			(uuid "88797d44-591b-4b4f-9c31-717a765442a7")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0184")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0184")
@@ -22059,6 +22472,12 @@
 			(uuid "a8f23b70-b442-41a2-93c0-186e59299cdf")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0145")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0145")
@@ -22125,6 +22544,12 @@
 			(uuid "48e86784-72b4-48dc-bd4a-d9d7c660f2af")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0143")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0143")
@@ -22191,6 +22616,12 @@
 			(uuid "efc201dd-92d0-4f2d-b6ee-a88836432f4d")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0117")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0117")
@@ -22393,6 +22824,12 @@
 			(uuid "d0f47354-320c-4164-b18d-e212a8d0c35a")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0190")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0190")
@@ -22597,6 +23034,12 @@
 			(uuid "404d3a05-d0be-4ac0-bcc9-b7f04cbd672d")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0131")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0131")
@@ -22663,6 +23106,12 @@
 			(uuid "bca8191a-903e-4d9c-aa23-90a6d4f67437")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0120")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0120")
@@ -22878,6 +23327,12 @@
 			(uuid "29ee7c6d-d2ee-4c43-818b-e181cc910d77")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0201")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0201")
@@ -23170,6 +23625,12 @@
 			(uuid "0598b7a3-5fb2-4275-8309-96cc0f92f068")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0169")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0169")
@@ -23302,6 +23763,12 @@
 			(uuid "a7907571-88c8-4e37-8985-9599f2d24dde")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0157")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0157")
@@ -23367,6 +23834,12 @@
 			(uuid "7e1bcf8d-bbce-48e6-a3cb-cc9d531405af")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0156")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0156")
@@ -23433,6 +23906,12 @@
 			(uuid "cefff2c3-05f4-4427-9a58-57c5930f9542")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0191")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0191")
@@ -23499,6 +23978,12 @@
 			(uuid "e14dca90-15fd-4bd0-acb6-501582f5a930")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0158")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0158")
@@ -23566,6 +24051,12 @@
 			(uuid "a433ea03-3062-4567-9b3a-e2f2c85f5cd3")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0198")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0198")
@@ -23631,6 +24122,12 @@
 			(uuid "3275752d-487a-43a2-b093-b45c27c313ae")
 		)
 		(instances
+			(project "oak"
+				(path "/1df64a66-6d8a-4876-abe9-f1c8f305bb09"
+					(reference "#PWR0175")
+					(unit 1)
+				)
+			)
 			(project "sycamore"
 				(path "/c7652107-faef-4cac-97d7-867323a7ac7f/bc53362f-30f8-4285-a234-b11222c5757e"
 					(reference "#PWR0175")
@@ -23921,6 +24418,11 @@
 					(unit 1)
 				)
 			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
 		)
 	)
 )
