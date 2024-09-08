@@ -21,6 +21,7 @@
 #define I2C_ADDRESS 0x42
 #define I2C_SDA D4
 #define I2C_SCL D5
+#define I2C_CLOCK_SPEED 1000000
 
 OneButton scaleButton;
 OneButton loopButton;
@@ -158,6 +159,7 @@ void setupOutputs() {
 void setupi2c() {
   Wire.setSDA(I2C_SDA);
   Wire.setSCL(I2C_SCL);
+  Wire.setClock(I2C_CLOCK_SPEED);
   Wire.begin(I2C_ADDRESS);
 
   Wire.onReceive(receiveData);
@@ -180,6 +182,7 @@ void receiveData(int len) {
 // Send state back to Sycamore.
 // Do so quickly as this is in an interrupt
 void dataRequested() {
+  Serial.println("i2c data requested from Sycamore");
   Wire.write(
     scaleClicked << 6
   | loopClicked << 5
@@ -188,6 +191,11 @@ void dataRequested() {
   | quantizeLock << 2
   | lengthLock << 1
   | rangeLock);
+
+  // Reset triggers. Locks stay as they are.
+  scaleClicked = false;
+  loopClicked = false;
+  scaleResetClicked = false;
 }
 
 void loop() {
@@ -201,14 +209,14 @@ void loop() {
 void updatei2cRead() {
   if (i2cReceived) {
     // 3 outpouts
-    bool loopStart = i2cReceivedData & loopStartMask >> 6;
-    bool noteChange = i2cReceivedData & noteChangeMask >> 5;
-    bool step = i2cReceivedData & stepMask >> 4;
+    bool loopStart = (i2cReceivedData & loopStartMask) >> 6;
+    bool noteChange = (i2cReceivedData & noteChangeMask) >> 5;
+    bool step = (i2cReceivedData & stepMask) >> 4;
 
     // 4 LED toggles (These are confirmation/checks that Sycamore and Oak are in sync)
-    bool shift = i2cReceivedData & shiftMask >> 3;
-    bool quant = i2cReceivedData & quantMask >> 2;
-    bool length = i2cReceivedData & lengthMask >> 1;
+    bool shift = (i2cReceivedData & shiftMask) >> 3;
+    bool quant = (i2cReceivedData & quantMask) >> 2;
+    bool length = (i2cReceivedData & lengthMask) >> 1;
     bool range = i2cReceivedData & rangeMask;
 
     unsigned long currentTime = millis();
