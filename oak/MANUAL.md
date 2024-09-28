@@ -16,7 +16,7 @@ Oak is an expander for Sycamore, a dual random quantized looping sequencer. Oak 
 
 - Scale shuffling and manipulation (Green sections)
 
-<img src="images/oak-annotated.jpg" title="" alt="oak-panel-annotated" width="109">
+<img src="images/oak-annotated.jpg" title="" alt="oak-annotated" width="128">
 
 ##### Parameter locking
 
