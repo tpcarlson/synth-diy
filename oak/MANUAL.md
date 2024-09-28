@@ -59,7 +59,7 @@ For example, here's the notes a C major scale, as Sycamore understands it. With 
 | C        | D       | C     |
 | E        | G       | E     |
 | G        | B       | G     |
-| A        | C       | D     |
+| A        | C       | A     |
 | D        | E       | D     |
 | F        | F       | F     |
 | B        | A       | B     |
