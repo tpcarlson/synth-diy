@@ -36,6 +36,8 @@ Coming soon...
 
 [Firmware guide](FIRMWARE.md)
 
-(Assembly guide to follow)
+[Manual](MANUAL.md)
+
+Assembly guide (TBC)
 
 ![sycamore-panel](images/panel.png)
