@@ -8,11 +8,27 @@ To program the Oak firmware you will need:
 
 - The Oak UF2 firmware file. See the [firmware directory](firmware/) for the latest version.
 
+Sycamore will also need to be configured to see Oak.
+
 ##### Oak Firmware
 
 With Oak powered by your rack, plug the USB-C cable in to the port on the rear of the module. Oak should show up as a new removable drive. Copy the UF2 firmware file to the drive and wait for the module to restart.
 
 To verify that the firmware is installed, press one of the four LED buttons and verify the button lights up.
+
+##### Sycamore Firmware
+
+If not done already, program Sycamore with the latest firmware. See the Sycamore [firmware guide](../sycamore/FIRMWARE.md) for more information.
+
+Configure Sycamore to enable the Oak expander:
+
+```json
+{
+ "auxMode": "mutate",
+ "expanders": ["oak"],
+ "dacLookupTable": [0, 68.. (etc)]
+}
+```
 
 ##### Firmware hacking
 
