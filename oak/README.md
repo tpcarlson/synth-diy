@@ -6,7 +6,7 @@ Oak is an expander for the looping, quantized sequencer Sycamore. Oak includes s
 
 ##### How much power does it use?
 
-As measured by the joranalogue Test 3, at the very most 90 mA on +12v. The -12v and 5v rails are unused. When idle, around 25-40mA.
+As measured by the joranalogue Test 3, at the very most 50 mA on +12v. The -12v and 5v rails are unused. When idle, around 25-40mA.
 
 ##### Where does the design come from?
 
@@ -38,6 +38,6 @@ Coming soon...
 
 [Manual](MANUAL.md)
 
-Assembly guide (TBC)
+[Assembly guide](ASSEMBLY.md)
 
 ![sycamore-panel](images/panel.png)
