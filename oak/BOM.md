@@ -20,7 +20,7 @@ This is the bill of materials for the Oak module's Kit. For full kits the SMT pa
 | Type           | Value                                | Quantity |
 | -------------- | ------------------------------------ | -------- |
 | Screws         | M2.5/M3 (Case screws)                | 2        |
-| Screws         | M3, hex head, black                  | 2        |
+| Screws         | M3, hex head, black                  | 4        |
 | Standoff       | M3x11mm ideally, 10mm/12mm will work | 2        |
 | Power cable    | Eurorack 2.54mm                      | 1        |
 | Data cable     | 2.5mm JST-XH to 2.5mm JST-XH         | 1        |
