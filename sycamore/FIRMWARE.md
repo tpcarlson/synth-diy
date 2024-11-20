@@ -10,7 +10,9 @@ To program the Sycamore firmware you will need:
 
 - [Sycamore firmware ZIP](https://raw.githubusercontent.com/tpcarlson/synth-diy/main/sycamore/firmware/sycamore-1.4.zip) (Version 1.4)
 
-- The CircuitPython U2F file for Rasperry Pi Pico ([Pi Pico Download](https://circuitpython.org/board/raspberry_pi_pico/))
+- The CircuitPython U2F file for Rasperry Pi Pico ([Pi Pico Download](https://circuitpython.org/board/raspberry_pi_pico/)). 
+  
+  - At the time of writing, please choose the 8.2.10 release - there are some compatibility issues with the 9.x releases that need fixes to be written for Sycamore. I will update this page once the fixes are in place. https://adafruit-circuit-python.s3.amazonaws.com/bin/raspberry_pi_pico/en_GB/adafruit-circuitpython-raspberry_pi_pico-en_GB-8.2.10.uf2
 
 ##### CircuitPython Installation
 
