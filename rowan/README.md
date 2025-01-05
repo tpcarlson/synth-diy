@@ -40,4 +40,4 @@ Coming soon...
 
 [Assembly guide](ASSEMBLY.md) (Not complete - drafted)
 
-![sycamore-panel](images/panel.jpg)
+![rowan-panel](images/panel.png)
