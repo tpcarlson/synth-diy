@@ -61,8 +61,8 @@ class Oak:
             self._toWrite[0] |= self._quantizeLock << 2
             self._toWrite[0] |= self._shiftLock << 3
             self._toWrite[0] |= 1 << 4 # step
-            self._toWrite[0] |= noteChanged
-            self._toWrite[0] |= loopStart
+            self._toWrite[0] |= noteChanged << 5
+            self._toWrite[0] |= loopStart << 6
             self._i2c.writeto(0x42, self._toWrite)
         finally:
             self._i2c.unlock()
