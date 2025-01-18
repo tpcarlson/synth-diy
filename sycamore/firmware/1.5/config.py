@@ -4,7 +4,7 @@ import os
 class Config:
     """Configuration loading for Sycamore"""
     def __init__(self):
-        self.validAuxModes = ["resetClock", "shuffle", "mutate"]
+        self.validAuxModes = ["resetClock", "shuffle", "mutate", "transpose"]
 
     def load(self):
         # Load up values

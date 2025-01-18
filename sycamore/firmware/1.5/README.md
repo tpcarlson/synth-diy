@@ -14,14 +14,16 @@ Firmware for the Sycamore Eurorack module
     
     - White when unshuffled, purple with scale shuffle enabled
 
+- A new Transposition auxMode. This responds to approximately 1v/octave and allows for true transposition of the sequence, separate to Shift
+
 - Significant refactoring to the Python core of Sycamore. It's certainly not perfect, but it's an improvement.
 
-Syntax for enabling the Rowan expander:
+Syntax for enabling the Rowan expander, and the transposition feature:
 
 ```json
 {
-    "auxMode": "resetClock",
-    "expanders": ["rowan"],
+    "auxMode": "transpose",
+    "expanders": ["rowan", "oak"],
     "dacLookupTable": [0, 68.. (etc)]
 }
 ```

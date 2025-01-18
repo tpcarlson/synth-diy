@@ -29,18 +29,13 @@ class Rowan:
     maskLeft = 4
     maskRight = 8
 
-    def __init__(self, sequenceRaw, sequenceRaw2, sequenceRaw4, i2c, chromaticScale, dacLut, gc, quantizer):
+    def __init__(self, sequenceRaw, sequenceRaw2, sequenceRaw4, i2c, chromaticScale, quantizer):
         self._sequenceRaw = sequenceRaw
         self._sequenceRaw2 = sequenceRaw2
         self._sequenceRaw4 = sequenceRaw4
         self._i2c = i2c
         self._toWrite = bytearray(2)
-        self._chromaticScaleScaled = [0] * len(chromaticScale)
-        for i in chromaticScale:
-            self._chromaticScaleScaled[i] = dacLut[i]
-        self._dacLUTMax = len(dacLut)
-        self._dacLUT = dacLut
-        self._gc = gc
+        self._chromaticScaleScaled = chromaticScale
         self._quantizer = quantizer
         self._quantizedIndex = 0
         # This is default-false

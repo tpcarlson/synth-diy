@@ -87,6 +87,7 @@ oak = Oak(i2c)
 auxModeClockReset = auxMode == "resetClock"
 auxModeShuffle = auxMode == "shuffle"
 auxModeMutate = auxMode == "mutate"
+auxModeTranspose = auxMode == "transpose"
 
 # Buttons (Debounced)
 clockButton = digitalio.DigitalInOut(board.GP28)
@@ -199,6 +200,9 @@ sequenceRaw3.seed(dac)
 sequenceRaw4 = deque.deque(64, [0] * 64)
 sequenceRaw4.seed(dac)
 
+# When in auxModeTranspose, sets the transposition amount in semitones
+transpose = 0
+
 ledcontrol = LedControl(i2c)
 
 scales = Scales(config.getScales(), ledcontrol, gc)
@@ -254,14 +258,17 @@ lengthAdcCount = 0
 stepQuantizedOld = 0
 
 ledcontrol.setLoading()
-# Storage for direct DAC lookups
+# Storage for direct DAC lookups. This is used by the Quantizer, and by the transposition feature.
 expandedDacLookup = [None] * 4096 # Unquantized value -> scale slice number
 for dacLookupKey in range(0, 4096):
     expandedDacLookup[dacLookupKey] = config.getDacLUT().index(min(config.getDacLUT(), key=lambda x: abs(x-dacLookupKey)))
 quantizer = Quantizer(scales, expandedDacLookup, expandersEnabled["rowan"])
-expandedDacLookup = None
 
-rowan = Rowan(sequenceRaw, sequenceRaw2, sequenceRaw4, i2c, config.getScales()[0], config.getDacLUT(), gc, quantizer)
+chromaticScaleScaled = [0] * len(config.getScales()[0])
+for i in config.getScales()[0]:
+    chromaticScaleScaled[i] = config.getDacLUT()[i]
+
+rowan = Rowan(sequenceRaw, sequenceRaw2, sequenceRaw4, i2c, chromaticScaleScaled, quantizer)
 if expandersEnabled["rowan"]:
     rowan.updateColours(32, 32, 32) # Reset colours, just to make sure Rowan is in the right state.
 
@@ -398,6 +405,13 @@ while True:
             scales.shuffle()
             if expandersEnabled["rowan"]:
                 rowan.updateColours(32, 0, 64)
+        elif sampleInputs == 12 and auxModeTranspose:
+            # To try and reduce jitter a bit, read a lot of transpositions...
+            transpose = 4095 - adc.readAdc(4)
+            transpose += 4095 - adc.readAdc(4)
+            transpose += 4095 - adc.readAdc(4)
+            transpose += 4095 - adc.readAdc(4)
+            transpose = expandedDacLookup[transpose >> 2]
         elif sampleInputs == 10:
             # This will take around 10ms
             # Note that GC is also performed after quantization and DAC changes,
@@ -459,12 +473,16 @@ while True:
         # Output 1:
         stepQuantizedOld = stepQuantized
         stepQuantized = quantizer.quantize(sequenceRaw.sequence[clock], rangePotAdc, rangeAdc, shiftPotAdc, shiftAdc, quantPotAdc, quantAdc, 0)
+        stepQuantized += transpose
+        if stepQuantized >= dacLUTMax:
+            stepQuantized = dacLUTMax - 1 # Will result in "clipping", but that's alright
         sequenceRaw3.push(config.getDacLUT()[stepQuantized])
         sequenceRaw4.push(sequenceRaw.sequence[clock])
         dac.write(config.getDacLUT()[stepQuantized], DAC_ZERO)
 
         # Output 2:
-        # Mode 0: Output semitones above
+        # Mode 0: Output semitones above.
+        # Don't apply transposition here, it's already been applied to stepQuantized
         if out2Mode == 0:
             stepQuantized2 = stepQuantized
             if stepQuantized2 + out2TweakValue[out2Mode] >= dacLUTMax:
@@ -475,10 +493,14 @@ while True:
             rowan.setModeZeroOffset(config.getDacLUT()[stepQuantized2] - config.getDacLUT()[stepQuantized])
         # Mode 1: Output the previous sequence, but offset
         elif out2Mode == 1:
+            # Transposition does not apply to offset (delayed) notes
             dac.write(sequenceRaw3.get(out2TweakValue[out2Mode]), DAC_ONE)
         # Mode 2: Output a whole other sequence
         elif out2Mode == 2:
             stepQuantized2 = quantizer.quantize(sequenceRaw2.sequence[clock], rangePotAdc, rangeAdc, shiftPotAdc, shiftAdc, quantPotAdc, quantAdc, 1)
+            stepQuantized2 += transpose
+            if stepQuantized2 >= dacLUTMax:
+                stepQuantized2 = dacLUTMax - 1
             dac.write(config.getDacLUT()[stepQuantized2], DAC_ONE)
 
         clock += 1
