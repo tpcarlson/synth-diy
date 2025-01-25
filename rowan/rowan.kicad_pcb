@@ -27111,7 +27111,7 @@
 			(justify left bottom mirror)
 		)
 	)
-	(gr_text "Rowan 1.0 (Prototype 1)\nTom Carlson 2024\nhello@divergentwaves.co.uk"
+	(gr_text "Rowan 1.1 (Production 1)\nTom Carlson 2024-2025\nhello@divergentwaves.co.uk"
 		(at 218.75 133.75 0)
 		(layer "B.SilkS")
 		(uuid "6aaf0281-91b7-469d-86f0-091facd448ba")
@@ -27123,7 +27123,7 @@
 			(justify left mirror)
 		)
 	)
-	(gr_text "Rowan 1.0 (Prototype 1)\nTom Carlson 2024\nhello@divergentwaves.co.uk"
+	(gr_text "Rowan 1.1 (Production 1)\nTom Carlson 2024-2025\nhello@divergentwaves.co.uk"
 		(at 226 100.5 0)
 		(layer "B.SilkS")
 		(uuid "8aab6863-284f-467a-9d3b-ff0995908990")
@@ -27135,7 +27135,7 @@
 			(justify left mirror)
 		)
 	)
-	(gr_text "Rowan 1.0 (Prototype 1)\nTom Carlson 2024\nhello@divergentwaves.co.uk"
+	(gr_text "Rowan 1.1 (Production 1)\nTom Carlson 2024-2025\nhello@divergentwaves.co.uk"
 		(at 147.5 143.25 0)
 		(layer "B.SilkS")
 		(uuid "a595a782-a043-4009-bb0a-f79f7743338c")
@@ -27857,19 +27857,6 @@
 			(justify left bottom)
 		)
 	)
-	(gr_text "Bottom board to top board:\nTrig A\nTrig B\nEarth\n\nUnquant A\nChro A\nEarth\n\nUnquant B\nChro B\nEarth\n\nLED driver\n+5v\nEarth\n\n\n"
-		(at 247.1 128.6 0)
-		(layer "Cmts.User")
-		(uuid "bc15ba9b-7c06-4080-86a9-6acbf4259a0e")
-		(effects
-			(font
-				(size 1.5 1.5)
-				(thickness 0.3)
-				(bold yes)
-			)
-			(justify left bottom)
-		)
-	)
 	(gr_text "Horizontal center"
 		(at 201.8 146.6 0)
 		(layer "Cmts.User")
@@ -27887,31 +27874,6 @@
 		(at 130.225 155.2 0)
 		(layer "Cmts.User")
 		(uuid "c776c54a-ae47-48d9-ae44-9f852e5ed858")
-		(effects
-			(font
-				(size 1.5 1.5)
-				(thickness 0.3)
-				(bold yes)
-			)
-			(justify left bottom)
-		)
-	)
-	(gr_text "TODO:\nDate/version etc. label"
-		(at 180.25 153.5 0)
-		(layer "Cmts.User")
-		(uuid "dbc00a26-7a5d-455d-924f-13674d9ee12b")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.15)
-			)
-			(justify left bottom)
-		)
-	)
-	(gr_text "LED centerline (Top)"
-		(at 246.4 129.2488 0)
-		(layer "Cmts.User")
-		(uuid "e4db666c-d00b-4855-a90a-a6be0cf270f3")
 		(effects
 			(font
 				(size 1.5 1.5)
