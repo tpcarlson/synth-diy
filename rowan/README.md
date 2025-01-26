@@ -8,7 +8,7 @@ Rowan's core is an RP2040 microcontroller running a small Arduino sketch.
 
 ##### How much power does it use?
 
-As measured by the joranalogue Test 3, around xx mA on +12v at peak. The -12v and 5v rails are unused.
+As measured by the joranalogue Test 3, around 40mA on +12v at peak. The -12v and 5v rails are unused.
 
 ##### Where does the design come from?
 
@@ -38,6 +38,8 @@ Coming soon...
 
 [Firmware guide](FIRMWARE.md)
 
-[Assembly guide](ASSEMBLY.md) (Not complete - drafted)
+[Assembly guide](ASSEMBLY.md)
+
+[Manual](MANUAL.md)
 
 ![rowan-panel](images/panel.png)
