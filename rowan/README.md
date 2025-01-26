@@ -28,7 +28,7 @@ Sorry, no. Things go out of stock so frequently it'd be a lot of work to keep th
 
 ##### Can I buy PCBs or a kit?
 
-Coming soon...
+Available as a [DIY Kit from Tindie](https://www.tindie.com/products/divergentwaves/rowan/), or as a [built module from Reverb](https://reverb.com/uk/item/86800780-divergent-waves-rowan).
 
 <!-- Available as a [DIY Kit from Tindie]([DrumFiend from Divergent Waves on Tindie](https://www.tindie.com/products/divergentwaves/sycamore-dual-looping-eurorack-sequencer/)), or as a [built module from Reverb]([Divergent Waves - Sycamore | Reverb UK](https://reverb.com/uk/item/80138906-divergent-waves-sycamore)).-->
 

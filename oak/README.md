@@ -28,7 +28,7 @@ Sorry, no. Things go out of stock so frequently it'd be a lot of work to keep th
 
 ##### Can I buy PCBs or a kit?
 
-Coming soon...
+Available as a [DIY Kit from Tindie](https://www.tindie.com/products/divergentwaves/oak/), or as a [built module from Reverb](https://reverb.com/uk/item/85429774-divergent-waves-oak).
 
 ##### Other resources
 

@@ -18,6 +18,8 @@ Some projects are available as kits from Tindie!
 - [Divergent Waves – DrumFiend (Full Kit)](https://www.tindie.com/products/divergentwaves/drumfiend/)
 - [Divergent Waves - Dice (Full Kit)](https://www.tindie.com/products/divergentwaves/dice/)
 - [Divergent Waves - Sycamore (Full Kit)](https://www.tindie.com/products/divergentwaves/sycamore-dual-looping-eurorack-sequencer/)
+- [Divergent Waves - Oak (Full Kit)](https://www.tindie.com/products/divergentwaves/oak/)
+- [Divergent Waves - Rowan (Full Kit)](https://www.tindie.com/products/divergentwaves/rowan/)
 
 You may also buy [PCB & Panel Sets on Tindie](https://www.tindie.com/products/divergentwaves/divergent-waves-pcb-panel-sets/) as well.
 
