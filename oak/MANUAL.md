@@ -1,6 +1,6 @@
 # Oak - Manual
 
-(Add youtube demo link)
+For a quick overview of the module, see the [Oak Overview](https://www.youtube.com/watch?v=Zvx0Bf0yH-E) video.
 
 ##### Installation
 

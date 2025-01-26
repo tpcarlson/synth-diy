@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is more of an in-depth look at the guts of Sycamore than you might want - if you would prefer to watch a video of it in action, see https://www.youtube.com/watch?v=Z_jfuflqjoc (Currently unlisted). Sycamore lends itself to experimentation and play, probably the best way to learn it is to get a sequence going and start fiddling!
+This is more of an in-depth look at the guts of Sycamore than you might want - if you would prefer to watch a video of it in action, see https://www.youtube.com/watch?v=Z_jfuflqjoc . Sycamore lends itself to experimentation and play, probably the best way to learn it is to get a sequence going and start fiddling!
 
 Sycamore is, at its heart, a looping sequencer with quantization. The loop can have its lenth changed, and the notes produced can be shifted up and down along a scale. The scale can also be constrained to just a few notes, or the full scale.
 
