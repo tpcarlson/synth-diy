@@ -14,6 +14,7 @@ class Oak:
         self._i2c = i2c
 
         # Masks for reading i2c values
+        self._ledLevelMask     = 0b10000000
         self._scaleShuffleMask = 0b01000000
         self._resetLoopMask    = 0b00100000
         self._scaleResetMask   = 0b00010000
@@ -40,7 +41,7 @@ class Oak:
 
     @property
     def scaleShuffle(self):
-        return self._scaleReset
+        return self._scaleShuffle
 
     @property
     def scaleReset(self):
@@ -85,3 +86,21 @@ class Oak:
         self._quantizeLock = (self._toRead[0] & self._quantMask) >> 2
         self._lengthLock = (self._toRead[0] & self._lengthMask) >> 1
         self._rangeLock = self._toRead[0] & self._rangeMask
+
+    def applyConfig(self, expanderConfig):
+        if expanderConfig.get("ledBrightness") is not None:
+            self.setLedBrightness(expanderConfig.get("ledBrightness"))
+
+    def setLedBrightness(self, ledBrightness: int):
+        while not self._i2c.try_lock():
+            pass
+        try:
+            if ledBrightness.isalpha():
+                ledBrightness = 20
+            if ledBrightness > 127:
+                ledBrightness = 127
+            print("Setting Oak LED brightness to " + str(ledBrightness))
+            self._toWrite[0] = self._ledLevelMask & ledBrightness
+            self._i2c.writeto(0x42, self._toWrite)
+        finally:
+            self._i2c.unlock()

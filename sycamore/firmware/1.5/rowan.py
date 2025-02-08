@@ -52,9 +52,9 @@ class Rowan:
         self._noteA = 0
         self._out2Value = 0
         self._mode0Offset = 0
-        self._red = 0
-        self._green = 0
-        self._blue = 0
+        self._red = -1
+        self._green = -1
+        self._blue = -1
 
     def setModeZeroOffset(self, offset: int):
         self._mode0Offset = offset

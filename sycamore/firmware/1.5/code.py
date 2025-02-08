@@ -83,6 +83,12 @@ for expander in expanders:
         expandersEnabled[expander] = True
 
 oak = Oak(i2c)
+# At the time of writing there is only one configuration block
+# and that is the LED duration (Perceived brightness)  of Oak's LEDs.
+# Refactor to take other modules into account when necessary.
+if expandersEnabled["oak"]:
+    if config.getExpanderSettings() is not None and config.getExpanderSettings()[0].get("expander") == "oak":
+        oak.applyConfig(config.getExpanderSettings()[0])
 
 auxModeClockReset = auxMode == "resetClock"
 auxModeShuffle = auxMode == "shuffle"
@@ -200,7 +206,7 @@ sequenceRaw3.seed(dac)
 sequenceRaw4 = deque.deque(64, [0] * 64)
 sequenceRaw4.seed(dac)
 
-# When in auxModeTranspose, sets the transposition amount in semitones
+# When in auxModeTranspose, sets the transposition amount in notes
 transpose = 0
 
 ledcontrol = LedControl(i2c)
@@ -432,13 +438,13 @@ while True:
             oak.read()
 
             if oak.scaleShuffle == 1:
-                scale.shuffle()
+                scales.shuffle()
                 if expandersEnabled["rowan"]:
                     rowan.updateColours(32, 0, 64)
 
             # Scale reset + scale shuffle will result in scale reset
             if oak.scaleReset == 1:
-                scale.unshuffle()
+                scales.unshuffle()
                 if expandersEnabled["rowan"]:
                     rowan.updateColours(32, 32, 32)
 

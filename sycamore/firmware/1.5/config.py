@@ -11,6 +11,7 @@ class Config:
         with open("settings.txt", "r") as infile:
             config = json.load(infile)
             self.expanders = config.get("expanders")
+            self.expanderSettings = config.get("expanderSettings")
             self.auxMode = config.get("auxMode")
             if self.auxMode is None or self.auxMode not in self.validAuxModes:
                 print("Aux mode not set, defaulting to mutate CV")
@@ -54,3 +55,6 @@ class Config:
 
     def getScales(self):
         return self.scales
+
+    def getExpanderSettings(self):
+        return self.expanderSettings

@@ -4,7 +4,7 @@ Firmware for the Sycamore Eurorack module
 
 #### Changelog
 
-<u>Version 1.5 (Alpha)</u>
+<u>Version 1.5</u>
 
 - Added support for the "Rowan" expander module
   
@@ -18,12 +18,20 @@ Firmware for the Sycamore Eurorack module
 
 - Significant refactoring to the Python core of Sycamore. It's certainly not perfect, but it's an improvement.
 
-Syntax for enabling the Rowan expander, and the transposition feature:
+- LED brightness configuration for Oak
+
+Syntax for enabling the Rowan expander, Oak's LED brightness, and the transposition feature in config.txt:
 
 ```json
 {
     "auxMode": "transpose",
     "expanders": ["rowan", "oak"],
+    "expanderSettings": [
+        {
+            "expander":"oak",
+            "ledBrightness": "20"
+        }
+    ],
     "dacLookupTable": [0, 68.. (etc)]
 }
 ```
