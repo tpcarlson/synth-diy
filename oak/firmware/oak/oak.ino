@@ -15,7 +15,8 @@
 #define NOTE_OUTPUT D22
 #define STEP_OUTPUT D19
 
-#define LED_PULSE_MILLIS 50
+// Default LED pulse is 10ms, but can be modified
+#define LED_PULSE_MILLIS 10
 #define OUTPUT_TRIGGER_MILLIS 50
 
 #define I2C_ADDRESS 0x42
@@ -57,9 +58,10 @@ volatile bool i2cReceived = false;
 volatile int i2cReceivedData;
 /*
 * i2c data for Sycamore -> Oak:
-* UNUSED | loop start | note change | step | shift | quant | length | range
+* led duration | loop start | note change | step | shift | quant | length | range
 * 8 bits or 1 byte
 */
+const int ledDurationMask = 0b10000000;
 const int loopStartMask = 0b01000000;
 const int noteChangeMask = 0b00100000;
 const int stepMask = 0b00010000;
@@ -82,6 +84,9 @@ const int resetLoopMask = 0b00010000;
 volatile bool scaleClicked = false;
 volatile bool loopClicked = false;
 volatile bool scaleResetClicked = false;
+
+// LED pulse duration. Should always be >1ms.
+int ledPulseMillis = LED_PULSE_MILLIS;
 
 void setup() {
   Serial.begin(9600);
@@ -208,6 +213,15 @@ void loop() {
 // See https://bitwisecmd.com/
 void updatei2cRead() {
   if (i2cReceived) {
+    bool ledPulseDuration = (i2cReceivedData & ledDurationMask) >> 7;
+    if (ledPulseDuration) {
+      ledPulseMillis = i2cReceivedData ^ ledDurationMask;
+      if (ledPulseMillis == 0) {
+        ledPulseMillis = LED_PULSE_MILLIS;
+      }
+      return;
+    }
+
     // 3 outpouts
     bool loopStart = (i2cReceivedData & loopStartMask) >> 6;
     bool noteChange = (i2cReceivedData & noteChangeMask) >> 5;
@@ -223,7 +237,7 @@ void updatei2cRead() {
     if (loopStart) {
       loopOutputMillis = currentTime;
       loopStartLedMillis = currentTime;
-      digitalWrite(LOOP_START_LED, HIGH);
+      analogWrite(LOOP_START_LED, 10);
       digitalWrite(LOOP_OUTPUT, HIGH);
     }
 
@@ -285,19 +299,19 @@ void updateButtons() {
 // "all LEDs are off" and skip updateLeds()
 void updateLeds() {
   unsigned long currentTime = millis();
-  if (scaleShuffleLedMillis + LED_PULSE_MILLIS < currentTime) {
+  if (scaleShuffleLedMillis + ledPulseMillis < currentTime) {
     digitalWrite(SCALE_SHUFFLE_LED, LOW);
   }
 
-  if (scaleResetLedMillis + LED_PULSE_MILLIS < currentTime) {
+  if (scaleResetLedMillis + ledPulseMillis < currentTime) {
     digitalWrite(SCALE_RESET_LED, LOW);
   }
 
-  if (loopResetLedMillis + LED_PULSE_MILLIS < currentTime) {
+  if (loopResetLedMillis + ledPulseMillis < currentTime) {
     digitalWrite(LOOP_RESET_LED, LOW);
   }
 
-  if (loopStartLedMillis + LED_PULSE_MILLIS < currentTime) {
+  if (loopStartLedMillis + ledPulseMillis < currentTime) {
     digitalWrite(LOOP_START_LED, LOW);
   }
 }
@@ -323,14 +337,14 @@ void updateOutputs() {
 // Button handling callbacks
 void scaleClick() {
   Serial.println("Scale shuffle button clicked");
-  digitalWrite(SCALE_SHUFFLE_LED, HIGH);
+  analogWrite(SCALE_SHUFFLE_LED, 10);
   scaleShuffleLedMillis = millis();
   scaleClicked = true;
 }
 
 void loopClick() {
   Serial.println("Loop button clicked");
-  digitalWrite(LOOP_RESET_LED, HIGH);
+  analogWrite(LOOP_RESET_LED, 10);
   loopResetLedMillis = millis();
   loopClicked = true;
 }
@@ -338,7 +352,7 @@ void loopClick() {
 // Trigger input
 void scaleResetClick() {
   Serial.print("Scale reset clicked");
-  digitalWrite(SCALE_RESET_LED, HIGH);
+  analogWrite(SCALE_RESET_LED, 10);
   scaleResetLedMillis = millis();
   scaleResetClicked = true;
 }
