@@ -28763,7 +28763,7 @@
 		(layer "Edge.Cuts")
 		(uuid "fe8cd0ff-f6d4-4988-9c9e-c2ae7942ba7d")
 	)
-	(gr_text "Oak 1.1 (Prototype 2)\nTom Carlson 2024\nhello@divergentwaves.co.uk"
+	(gr_text "Oak 1.2 (Production 1)\nTom Carlson 2024\nhello@divergentwaves.co.uk"
 		(at 151.203 103.611 0)
 		(layer "B.SilkS")
 		(uuid "37b80627-e224-477d-bf54-1ff0990ad1dd")
@@ -31052,7 +31052,7 @@
 			)
 		)
 	)
-	(gr_text "Oak 1.1 (Prototype 2)\nTom Carlson 2024\nhello@divergentwaves.co.uk"
+	(gr_text "Oak 1.2 (Production 1)\nTom Carlson 2024\nhello@divergentwaves.co.uk"
 		(at 182.773 95.951 270)
 		(layer "F.SilkS")
 		(uuid "ff79ea16-b4ae-402d-bb5d-1d6cdcdbc184")

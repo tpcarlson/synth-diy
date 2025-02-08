@@ -1,0 +1,13 @@
+fabrication-toolkit-options.json
+fp-lib-table
+gerbers/
+oak-backups/
+oak-main-backups/
+oak-panel-backups/
+oak-firmware-notes.txt
+oak-main.*
+oak-panel.*
+production/
+sycamore*.*
+oak.kicad_prl
+
