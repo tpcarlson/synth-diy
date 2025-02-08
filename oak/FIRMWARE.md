@@ -12,7 +12,7 @@ Sycamore will also need to be configured to see Oak.
 
 ##### Oak Firmware
 
-With Oak powered by your rack, plug the USB-C cable in to the port on the rear of the module. Oak should show up as a new removable drive. Copy the UF2 firmware file to the drive and wait for the module to restart.
+With Oak powered by your rack, plug the USB-C cable in to the port on the rear of the module. Oak should show up as a new removable drive, but if it does not try pressing and holding the button on the back of the module while plugging in the USB cable. Copy the UF2 firmware file to the drive and wait for the module to restart.
 
 To verify that the firmware is installed, press one of the four LED buttons and verify the button lights up.
 
@@ -41,7 +41,7 @@ The i2c protocol used for Sycamore and Oak to talk to one another is very simple
 For messages from Sycamore to Oak:
 
 ```
-UNUSED | loop start | note change | step | shift | quant | length | range
+led brightness | loop start | note change | step | shift | quant | length | range
 ```
 
 For messages from Oak to Sycamore:
