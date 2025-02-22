@@ -1,0 +1,12 @@
+*bot*
+*panel*
+*top*
+3-phase-lfo-backups/
+3-phase-lfo-cache.lib
+3-phase-lfo-rescue.dcm
+3-phase-lfo-rescue.lib
+*.kicad_prl
+*.pro
+*.pdf
+fp-lib-table
+sym-lib-table
