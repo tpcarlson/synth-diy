@@ -45,3 +45,11 @@ vcadsr/vcadsr-cache.lib
 vcadsr/vcadsr-panel.pro
 vcadsr/vcadsr-board.pro
 yarmplus/yarmplus-logic.pro
+
+# More global cruft
+fabrication-toolkit-options.json
+*/*-backups/*
+*/*/backups/*
+*/*/*-backups/*
+*.gbr
+netlist.ipc
