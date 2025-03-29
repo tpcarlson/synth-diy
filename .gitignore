@@ -53,3 +53,5 @@ fabrication-toolkit-options.json
 */*/*-backups/*
 *.gbr
 netlist.ipc
+sym-lib-table
+fp-lib-table

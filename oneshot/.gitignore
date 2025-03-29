@@ -1,0 +1,8 @@
+production/*
+oneshot.kicad_prl
+front_*
+oneshot-top*
+oneshot-panel*
+oneshot-back*
+oneshot-front-*
+oneshot-before-*
