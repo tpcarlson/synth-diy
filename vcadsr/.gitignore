@@ -1,0 +1,5 @@
+panel/
+vcadsr-backups/
+vcadsr-board-backups/
+vcadsr-board.*
+vcadsr.kicad_prl
