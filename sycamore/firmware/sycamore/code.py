@@ -412,7 +412,7 @@ while True:
             scales.shuffle()
             if expandersEnabled["rowan"]:
                 rowan.updateColours(32, 0, 64)
-        elif sampleInputs == 12 and auxModeTranspose:
+        elif sampleInputs == 12 and auxModeTranspose and not oak.shiftLock:
             # To try and reduce jitter a bit, read a lot of transpositions...
             transpose = 4095 - adc.readAdc(4)
             transpose += 4095 - adc.readAdc(4)
