@@ -10,6 +10,14 @@ Sycamore doesn't deal with transposition in the _usual_ way, but instead allows 
 
 The data that Sycamore stores about the current sequence means that it is always possible to transition from one set of knob settings to another and back again and get back to your original sequence, even as the loop length changes. All 64 steps in the sequence are persisted through sequence, quantization, loop length and offset modifications.
 
+## Expanders
+
+Sycamore has two expanders: Oak, and Rowan. For an overview video with both expanders, see [Divergent Waves - Rowan Demo](https://www.youtube.com/watch?v=BKmuK5jGsxY).
+
+Oak adds parameter locking, scale mask shuffling, and trigger outputs - [Oak's Manual](https://github.com/tpcarlson/synth-diy/blob/main/oak/MANUAL.md)
+
+Rowan adds unquantized and chromatic outputs, and more trigger outputs - [Rowan's Manual](https://github.com/tpcarlson/synth-diy/blob/main/rowan/MANUAL.md)
+
 ## Controls
 
 ## Loops
