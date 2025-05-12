@@ -12,7 +12,35 @@ Sycamore will also need to be configured to see Oak.
 
 ##### Oak Firmware
 
-With Oak powered by your rack, plug the USB-C cable in to the port on the rear of the module. Oak should show up as a new removable drive, but if it does not try pressing and holding the button on the back of the module while plugging in the USB cable. Copy the UF2 firmware file to the drive and wait for the module to restart.
+###### Initial install
+
+- Power off Oak (Turn off power to the rack if it is on)
+
+- Plug the USB-C cable in to the port on the rear of the module
+
+- Power on Oak (Turn on power to the rack)
+
+- Oak should show up as a new removable drive, but if it does not please follow the "Updating Oak" instructions below instead
+
+- Copy the UF2 firmware file to the drive and wait for the module to restart
+
+###### Updating Oak from a previous firmware
+
+- Power off Oak (Turn off power to the rack if it is on)
+
+- Using a 2 pin, 2.54mm jumper or cable, short the two pins next to the button on the rear of Oak
+
+- Plug the USB-C cable in to the port on the rear of the module
+
+- Power on Oak (Turn on power to the rack)
+
+- Oak will show up as a new removable drive
+
+- Remove the jumper
+
+- Copy the UF2 firmware file to the drive and wait for the module to restart
+
+###### Checking the firmware is installed
 
 To verify that the firmware is installed, press one of the four LED buttons and verify the button lights up.
 
