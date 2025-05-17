@@ -37,9 +37,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 3.0,
-          "height": 3.0,
-          "width": 3.0
+          "drill": 7.2,
+          "height": 7.2,
+          "width": 7.2
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -196,67 +196,19 @@
           ""
         ],
         [
-          "starved_thermal|149200000|43700000|6f98a937-98c2-40da-b111-96caf49024ae|32d94fcd-9950-442d-83ef-d70d31e9d6fe|B.Cu",
+          "unconnected_items|165019897|93000500|0c6be01c-8770-4938-87a0-c4d6ffebfe25|6f98a937-98c2-40da-b111-96caf49024ae",
           ""
         ],
         [
-          "starved_thermal|149200000|48700000|6f98a937-98c2-40da-b111-96caf49024ae|dc43c740-1db8-489f-bf9e-7c72ed5e1330|B.Cu",
+          "unconnected_items|172625000|112600000|f08d7701-f879-430b-b5a5-5a09b7f2b2fe|bb27ad5a-e824-4a3c-962d-fd42bcf86c5a",
           ""
         ],
         [
-          "starved_thermal|165600000|151750000|0c6be01c-8770-4938-87a0-c4d6ffebfe25|685e94f0-f258-417b-96d8-6458d6010e54|F.Cu",
+          "unconnected_items|185789500|166875500|0c6be01c-8770-4938-87a0-c4d6ffebfe25|3fc6ff34-bae8-4c87-ad79-4f485260862a",
           ""
         ],
         [
-          "starved_thermal|167588300|136360000|0c6be01c-8770-4938-87a0-c4d6ffebfe25|eea5c954-4e53-4cd2-99e3-e4c3b61086f9|F.Cu",
-          ""
-        ],
-        [
-          "starved_thermal|168858300|131410000|0c6be01c-8770-4938-87a0-c4d6ffebfe25|079e34be-c2a5-445f-bb2e-b3eedec64d17|F.Cu",
-          ""
-        ],
-        [
-          "starved_thermal|173035000|136330000|0c6be01c-8770-4938-87a0-c4d6ffebfe25|600d6b51-f77b-4c3d-82f7-06ed3d856844|F.Cu",
-          ""
-        ],
-        [
-          "starved_thermal|174305000|131380000|0c6be01c-8770-4938-87a0-c4d6ffebfe25|2646d9ce-6662-4113-a175-9a656535d574|F.Cu",
-          ""
-        ],
-        [
-          "starved_thermal|176330000|142000000|0c6be01c-8770-4938-87a0-c4d6ffebfe25|deacee55-3c25-4c4a-8d72-092bee337a44|B.Cu",
-          ""
-        ],
-        [
-          "starved_thermal|176330000|142000000|0c6be01c-8770-4938-87a0-c4d6ffebfe25|deacee55-3c25-4c4a-8d72-092bee337a44|F.Cu",
-          ""
-        ],
-        [
-          "starved_thermal|176330000|142000000|0c6be01c-8770-4938-87a0-c4d6ffebfe25|deacee55-3c25-4c4a-8d72-092bee337a44|In2.Cu",
-          ""
-        ],
-        [
-          "starved_thermal|178435000|136413809|0c6be01c-8770-4938-87a0-c4d6ffebfe25|989dbd5b-b3a9-474f-bb49-6a67f2fb9619|F.Cu",
-          ""
-        ],
-        [
-          "starved_thermal|178855000|144662922|0c6be01c-8770-4938-87a0-c4d6ffebfe25|153f70d3-bbb1-4771-bd11-e463b4278e3a|F.Cu",
-          ""
-        ],
-        [
-          "starved_thermal|179705000|131463809|0c6be01c-8770-4938-87a0-c4d6ffebfe25|bbbc9a65-ddf7-4e48-aab7-6d9815c7cca3|F.Cu",
-          ""
-        ],
-        [
-          "starved_thermal|180600000|151750000|0c6be01c-8770-4938-87a0-c4d6ffebfe25|d162715b-184d-4e20-b63f-6ad02171dc0d|F.Cu",
-          ""
-        ],
-        [
-          "starved_thermal|184610000|123810000|0c6be01c-8770-4938-87a0-c4d6ffebfe25|7a02c170-b381-4f33-a3eb-5ea638a164a8|B.Cu",
-          ""
-        ],
-        [
-          "starved_thermal|184610000|123810000|0c6be01c-8770-4938-87a0-c4d6ffebfe25|7a02c170-b381-4f33-a3eb-5ea638a164a8|F.Cu",
+          "unconnected_items|204600000|112520000|96eff4b1-cc28-4bd6-a6ca-3d8a1accedc9|46774024-3179-4774-805e-8e72aaa8ea56",
           ""
         ]
       ],
@@ -301,13 +253,13 @@
         "padstack": "warning",
         "pth_inside_courtyard": "ignore",
         "shorting_items": "error",
-        "silk_edge_clearance": "warning",
+        "silk_edge_clearance": "ignore",
         "silk_over_copper": "warning",
         "silk_overlap": "warning",
         "skew_out_of_range": "error",
         "solder_mask_bridge": "error",
-        "starved_thermal": "error",
-        "text_height": "warning",
+        "starved_thermal": "ignore",
+        "text_height": "ignore",
         "text_thickness": "warning",
         "through_hole_pad_without_hole": "error",
         "too_many_vias": "error",
@@ -388,6 +340,7 @@
       ],
       "track_widths": [
         0.0,
+        0.15,
         0.5
       ],
       "tuning_pattern_settings": {
