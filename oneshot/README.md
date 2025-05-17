@@ -4,13 +4,11 @@
 
 Oneshot is a kind of envelope generator, with a built-in mixer for adding other CV signals to the output or for chaining together Oneshot modules. 
 
-Oneshot's brains are on one PCB, with the front PCB offering options for 1U and 3U. The 3U design is my favourite, with a large arcade button, but the 1U design might be useful if you have some 1U space to fill.
+Oneshot's brains are on one PCB, with the front PCB offering options for 1U and 3U. The 3U design is my favourite, with a large arcade button and good knob spacing. The 1U design files are also included, if you wish to try them out too.
 
 ##### How much power does it use?
 
-(TBC)
-
-As measured by the joranalogue Test 3, at the very most XX mA on +12v. The -12v and 5v rails are unused. When idle, around XX-XXmA.
+As measured by the joranalogue Test 3, at the very most 40 mA on +12v and 20mA on -12v. The 5v rail is unused. When idle, around 20mA.
 
 ##### Where does the design come from?
 
@@ -20,9 +18,11 @@ This one's a bit of a mongrel of different designs, with some sections from the 
 
 Oneshot's parts should be easy and inexpensive to source. The one exception to this is the Oneshot IC itself which can be bought from ElectricDruid's website ([ONESHOT Event Generator](https://electricdruid.net/product/oneshot-event-generator/)).
 
+Oneshot's arcade button is a 30mm snap-in part.
+
 ##### Are there any problems with the design?
 
-(TBC)
+Prototype 2 PCBs have the JST-XH header silkscreen for the button on the wrong side of the PCB.
 
 ##### Do you have a BOM/Mouser cart/Tayda links?
 
