@@ -36,7 +36,7 @@ Available as a [DIY Kit from Tindie](https://www.tindie.com/products/divergentwa
 
 ##### Other resources
 
-(TBC - links dead until design is validated good)
+
 
 [Kit BOM](BOM.md)
 
@@ -44,6 +44,4 @@ Available as a [DIY Kit from Tindie](https://www.tindie.com/products/divergentwa
 
 [Assembly guide](ASSEMBLY.md)
 
-(TBC - add a photo of a build 1U/3U module)
-
-![sycamore-panel](images/panel.png)
+![sycamore-panel](images/18-reallydone.jpg)
