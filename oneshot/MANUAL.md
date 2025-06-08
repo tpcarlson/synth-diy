@@ -1,6 +1,6 @@
 # Oneshot - Manual
 
-(Link to demo video)
+If you would prefer to watch a video of Oneshot, see https://www.youtube.com/watch?v=v3djYLEpFeE
 
 ##### Installation
 
