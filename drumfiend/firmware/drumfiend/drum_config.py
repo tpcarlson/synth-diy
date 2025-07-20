@@ -26,7 +26,8 @@ class DrumConfig(Drummer):
                     startStop = configLine.get("startStop")
                     clock = configLine.get("clock")
                     arpMode = configLine.get("arpMode") # True or False
-                    drumList.append(drum.Drum(note=note, programChange=programChange, controlChange=controlChange, startStop=startStop, clock=clock, pin=pin, arpMode=arpMode, description=description))
+                    channel = configLine.get("channel")
+                    drumList.append(drum.Drum(note=note, programChange=programChange, controlChange=controlChange, startStop=startStop, clock=clock, pin=pin, arpMode=arpMode, description=description, channel=channel))
                 return drumList, config.get("midi_channel"), config.get("midi_note_off")
         except OSError as error:
             print(error)

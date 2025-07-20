@@ -1,7 +1,7 @@
 import digitalio
 
 class Drum:
-    def __init__(self, note, programChange, controlChange, startStop, clock, pin, arpMode, description):
+    def __init__(self, note, programChange, controlChange, startStop, clock, pin, arpMode, description, channel):
         self.note = note
         self.programChange = programChange
         self.controlChange = controlChange
@@ -14,3 +14,4 @@ class Drum:
         self.value = False
         self.hardwarePin = digitalio.DigitalInOut(self.pin)
         self.hardwarePin.direction = digitalio.Direction.INPUT
+        self.channel = channel

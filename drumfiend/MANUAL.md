@@ -78,6 +78,12 @@ Configure DrumFiend's inputs like this:
 
 DrumFiend will cycle through the notes in the arp one by one. DrumFiend has no internal clock - send more triggers to advance the played note. As with playing single or multiple notes, send a gate rather than a trigger to hold each note of the arpeggio as it is played.
 
+###### Setting a custom MIDI channel for triggers
+
+The top-level ```midi_channel``` is a default for all triggers, but if you wish to send a trigger to a specific MIDI channel you can. For example, to send note 36 to channel 1:
+
+```{"input":1,"note":36,"channel":1,"description":"Trig 1"}```
+
 ###### MIDI Program Change
 
 DrumFiend also supports MIDI Program Change messages. These are usually used to swap between presets on a synthesizer.
