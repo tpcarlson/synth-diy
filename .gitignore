@@ -55,3 +55,5 @@ fabrication-toolkit-options.json
 netlist.ipc
 sym-lib-table
 fp-lib-table
+*/replicate_layout.log
+*.kicad_prl
