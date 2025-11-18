@@ -10,19 +10,27 @@ To program the Sycamore firmware you will need:
 
 - [Sycamore firmware ZIP](https://raw.githubusercontent.com/tpcarlson/synth-diy/main/sycamore/firmware/sycamore-1.5.zip) (Version 1.5)
 
-- The CircuitPython U2F file for Rasperry Pi Pico ([Pi Pico Download](https://circuitpython.org/board/raspberry_pi_pico/)). 
+- The CircuitPython U2F file for Rasperry Pi Pico
   
-  - At the time of writing, please choose the 8.2.10 release - there are some compatibility issues with the 9.x releases that need fixes to be written for Sycamore. I will update this page once the fixes are in place. https://adafruit-circuit-python.s3.amazonaws.com/bin/raspberry_pi_pico/en_GB/adafruit-circuitpython-raspberry_pi_pico-en_GB-8.2.10.uf2
+  - At the time of writing, please use this 8.2.10 release - there are some compatibility issues with the 9.x and 10.x releases that need fixes to be written for Sycamore. https://adafruit-circuit-python.s3.amazonaws.com/bin/raspberry_pi_pico/en_GB/adafruit-circuitpython-raspberry_pi_pico-en_GB-8.2.10.uf2
 
 ##### CircuitPython Installation
 
-*Disconnect the Sycamore module from your modular synth before programming the pico!*
+*If reflashing an already built Sycamore, disconnect Sycamore from your modular synth before programming the Pi Pico!*
 
-Follow the [Adafruit tutorial]((https://learn.adafruit.com/getting-started-with-raspberry-pi-pico-circuitpython/circuitpython)) to flash CircuitPython onto the Pi Pico. Essentially, you need to copy the CircuitPython U2F to the Pico and wait for it to restart.
+1. With the BOOTSEL button held down, plug the Pi Pico in to your computer with a USB cable
 
-Once installed, you should find the CIRCUITPY drive mounted automatically.
+2. Wait for the RPI-RP2 drive to appear on your computer. It should show up a little like a USB stick or other removable device
+
+3. Copy the U2F file downloaded above onto the drive
+
+4. The RPI-RP2 drive will vanish, and a new drive called CIRCUITPY will show up
+
+If you do get stuck, try to follow the steps in the [Adafruit tutorial]((https://learn.adafruit.com/getting-started-with-raspberry-pi-pico-circuitpython/circuitpython)) to flash CircuitPython onto the Pi Pico, or feel free to send an email to hello@divergentwaves.co.uk for help.
 
 ##### Sycamore Firmware
+
+Open the new CIRCUITPY removable drive. If you still see an RPI-RP2 drive and no CIRCUITPY drive, that means the CircuitPython install didn't work - go back to the previous set of instructions and try again.
 
 Unzip the firmware.zip somewhere on your computer, then copy the extracted files over to the CIRCUITPY drive. You can overwrite the code.py file already present.
 

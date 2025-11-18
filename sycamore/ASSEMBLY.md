@@ -26,6 +26,8 @@ First, gather together the tools you are going to use to assemble the module. At
 
 Take a look through the bill of materials and make sure you have all the parts. I like to organise mine by putting them into tupperware or take-away boxes - if you do too, just don't use them for food again afterwards.
 
+To avoid surprises, it can be helpful to read the build guide through before starting.
+
 ###### Preparing the Pico
 
 First, solder the headers to the Pico. To hold everything in place, use a couple of sockets.
@@ -38,13 +40,13 @@ If you are building this from your own parts, cut down some sockets to size (2 s
 
 Connect the Pico to your computer and program it with the firmware. See the [FIRMWARE.md](FIRMWARE.md) guide for more details.
 
-##### LEDs
+##### SMT LEDs
 
 The mode LEDs are first to solder. On the back of the LED is a long vertical line, this indicates the 5V side, which is on the left hand side of the module. [This page](https://lighthouseleds.com/blog/polarity-guide-of-0402-0603-0805-1206-and-most-all-smd-leds.html) has a good set of pictures for common LED indicators in case yours are different.
 
 ![](images/4-led.jpg)
 
-The vertical line on the LEDs (The anode) should be on the left hand side of the PCB. The indicator line should be on the bottom of the LED as you place it, with LED's lens facing up.
+The vertical line on the LEDs (The anode) should be on the left hand side of the PCB. The smaller, horizontal line (The cathode) should be on the right hand side of the PCB. The line should be on the bottom of the LED as you place it, with LED's lens facing up.
 
 You can decide how exactly to solder the LEDs. Either a hot air gun and paste or a soldering iron will work. A hotplate will not work as there are already parts on the other side.
 
@@ -52,7 +54,7 @@ To solder with a soldering iron, first add a little bit of solder to one of the 
 
 If you're going to use a soldering iron, make sure not to hold the iron on the solder joints for too long to avoid damaging the LEDs.
 
-Here you can see an in-progress shot from soldering with hot air and paste where I added a little too much of the paste Your soldering should look much cleaner than this!
+Here you can see an in-progress shot from soldering with hot air and paste where I added a little too much of the paste. Your soldering should look much cleaner than this!
 
 ![](images/5-led.jpg)
 
@@ -83,8 +85,6 @@ Gather up the remaining front panel parts and add them to the PCB. It's best to 
 - Add the 10 mono Thonkiconn sockets to the bottom of the PCB. Make sure they all lie flat against the PCB.
 
 - Add the round button to the top-right of the PCB. Make sure the flat edge of the button is pointing upwards, as indicated by the silkscreen on the PCB
-
-- 
 
 ![](images/11-stuffed-pcb.jpg)
 
