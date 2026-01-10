@@ -31,6 +31,7 @@ Modules available as kits are available on [Reverb](https://reverb.com/uk/shop/d
 
 ##### Projects
 
+- [Cyclic](/cyclic) - A standalone 8-channel, 16 step trigger sequencer
 - [Dice](d6/) - 16hp, clickless signal router
 - [DrumFiend](drumfiend/) - 8hp, 19 channel triggers-to-MIDI converter
 - [Kinky Lynx](kinky-lynx/) - 8hp CV swiss army knife, a clone of the Mutable Instruments [Kinks](https://mutable-instruments.net/modules/kinks/) and [Links](https://mutable-instruments.net/modules/links/) modules behind a single panel
