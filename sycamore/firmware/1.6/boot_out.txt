@@ -1,0 +1,2 @@
+Adafruit CircuitPython 7.3.2 on 2022-07-20; Raspberry Pi Pico with rp2040
+Board ID:raspberry_pi_pico

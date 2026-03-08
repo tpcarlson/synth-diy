@@ -8,7 +8,7 @@ To program the Sycamore firmware you will need:
 
 - Micro USB cable. Make sure the cable is not a "charging" cable, you need data and power
 
-- [Sycamore firmware ZIP](https://raw.githubusercontent.com/tpcarlson/synth-diy/main/sycamore/firmware/sycamore-1.5.zip) (Version 1.5)
+- [Sycamore firmware ZIP](https://raw.githubusercontent.com/tpcarlson/synth-diy/main/sycamore/firmware/sycamore-1.6.zip) (Version 1.6)
 
 - The CircuitPython U2F file for Rasperry Pi Pico
   
@@ -53,6 +53,8 @@ auxMode controls the function of the "Aux" input on Sycamore. It can be any of:
 - "resetClock": Reset to the start of the sequence
 
 - "transpose": Chromatic transposition for Sycamore's sequences. This is a complement to Diatonic transposition which the Shift control & CV use.
+  
+  - In transpose mode, you may wish to confiure a `transposeOffset` if Sycamore is outputting notes a semitone above where you expect for a given aux CV input
 
 Expanders controls the expanders installed for Sycamore. Oak and Rowan are the only expanders for Sycamore. To enable an expander, add it to the Expanders list in the configuration file. Leave expanders an empty list ("[]") if you have no expanders for Sycamore installed.
 
@@ -60,6 +62,7 @@ Expanders controls the expanders installed for Sycamore. Oak and Rowan are the o
 {
     "auxMode": "mutate",
     "expanders": ["oak","rowan"],
+    "transposeOffset": -1,
     "expanderSettings": [
         {
             "expander":"oak",
