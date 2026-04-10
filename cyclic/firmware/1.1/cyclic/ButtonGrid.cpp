@@ -40,11 +40,15 @@ void ButtonGrid::loop() {
     for (int i=0; i<8; i++) {
       buttonResult = (~readResult) & mask;
       if (buttonResult) {
-        Serial.print("Button pressed: ");
-        Serial.println(i);
-        // Handle button press?
-        buttonToTrackA[i].track->toggleActive(buttonToTrackA[i].index);
-      } // TODO handle held button state
+        if (!(pressedA & mask)) {
+          Serial.print("Button pressed: ");
+          Serial.println(i);
+          buttonToTrackA[i].track->toggleActive(buttonToTrackA[i].index);
+          pressedA |= mask;
+        }
+      } else {
+        pressedA &= ~mask;
+      }
       mask = mask >> 1;
     }
 
@@ -59,11 +63,17 @@ void ButtonGrid::loop() {
     for (int i=0; i<8; i++) {
       buttonResult = (~readResult) & mask;
       if (buttonResult) {
-        Serial.print("Button pressed: ");
-        Serial.println(i);
-        // Handle button press?
-        buttonToTrackB[i].track->toggleActive(buttonToTrackB[i].index);
+        if (!(pressedB & mask)) {
+          Serial.print("Button pressed: ");
+          Serial.println(i);
+          buttonToTrackB[i].track->toggleActive(buttonToTrackB[i].index);
+          pressedB |= mask;
+        }
       }
+      else {
+        pressedB &= ~mask;
+      }
+
       mask = mask >> 1;
     }
 
