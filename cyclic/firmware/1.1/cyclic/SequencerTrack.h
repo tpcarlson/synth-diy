@@ -2,10 +2,11 @@
 #define SEQTRACK
 
 #include <Adafruit_NeoPixel.h>
+#include "CyclicConfiguration.h"
 
 class SequencerTrack {
   public:
-    SequencerTrack(Adafruit_NeoPixel* pixels, int (&stepToPixel)[16], int midiChannel, int midiNote, int gateOutput);
+    SequencerTrack(Adafruit_NeoPixel* pixels, int (&stepToPixel)[16], int gateOutput);
 
     // Clock the sequencer. This will be triggered from an external source,
     // either the MIDI in or the clock input for a given sequencer track.
@@ -32,6 +33,8 @@ class SequencerTrack {
     // to the main loop.
     bool needsLedUpdate();
     void resetNeedsLedUpdate();
+
+    void updateConfig(CyclicTrackConfig* config);
   private:
     // For readability. Could pack this into an int16_t if needed.
     bool stepActive[16] = {false};
@@ -39,8 +42,9 @@ class SequencerTrack {
     int currentStep;
     bool loopUpdate = false;
     Adafruit_NeoPixel* pixels;
-    int midiChannel;
-    int midiNote;
+
+    CyclicTrackConfig* config;
+
     int gateOutput;
     unsigned long lastGate = 0;
     bool gateOutputting = false;

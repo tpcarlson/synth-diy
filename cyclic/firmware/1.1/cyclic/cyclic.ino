@@ -11,6 +11,30 @@
 #include "SequencerTrack.h"
 #include "ButtonGrid.h"
 
+#include "ff.h"
+#include "diskio.h"
+
+// USB Mass stoage imports:
+#include "SPI.h"
+#include "SdFat_Adafruit_Fork.h"
+#include "Adafruit_SPIFlash.h"
+#include "Adafruit_TinyUSB.h"
+
+// for flashTransport definition
+#include "flash_config.h"
+#include <Arduino_JSON.h>
+
+#include "CyclicConfiguration.h"
+
+#include "FlashFormatter.h"
+
+FatVolume fatfs;
+Adafruit_SPIFlash flash(&flashTransport);
+Adafruit_USBD_MSC usb_msc;
+
+// Set to true when PC write to flash
+bool fs_changed = true;
+
 // BUGS/issues:
 // - Need to make sure the "Generic RP2350" is set to the B varient for pins beyond 30
 // - Hardware addressing for MCP23S17 SPI
@@ -37,8 +61,6 @@ MCP23S17 MCP7(29, 16, 19, 18, 0b111);
 
 // Weird ordering because of physical layout!
 MCP23S17 MCPs[8] = {MCP4, MCP5, MCP6, MCP7, MCP0, MCP1, MCP2, MCP3};
-int setupSuccess[8];
-int printedSetup = 0;
 
 Adafruit_NeoPixel pixels(NUMPIXELS * NUMSEGMENTS, PIXEL_PIN, NEO_GRB + NEO_KHZ800);
 
@@ -82,18 +104,29 @@ int clockInputPins[8] = { 40, 41, 42, 43, 44, 45, 46, 47 };
 // Clock output pins are on GPIOs 40-47
 
 // Top half
-SequencerTrack track0 = SequencerTrack(&pixels, stepToPixel0, 10, 36, 31); // drumbrute impact kick
-SequencerTrack track1 = SequencerTrack(&pixels, stepToPixel1, 10, 37, 32);
-SequencerTrack track2 = SequencerTrack(&pixels, stepToPixel2, 10, 42, 34);
-SequencerTrack track3 = SequencerTrack(&pixels, stepToPixel3, 10, 39, 35);
+SequencerTrack track0 = SequencerTrack(&pixels, stepToPixel0, 31);
+SequencerTrack track1 = SequencerTrack(&pixels, stepToPixel1, 32);
+SequencerTrack track2 = SequencerTrack(&pixels, stepToPixel2, 34);
+SequencerTrack track3 = SequencerTrack(&pixels, stepToPixel3, 35);
 
 // Bottom half (Different pixel layout)
-SequencerTrack track4 = SequencerTrack(&pixels, stepToPixel4, 10, 40, 36);
-SequencerTrack track5 = SequencerTrack(&pixels, stepToPixel5, 10, 43, 37);
-SequencerTrack track6 = SequencerTrack(&pixels, stepToPixel6, 10, 44, 38);
-SequencerTrack track7 = SequencerTrack(&pixels, stepToPixel7, 10, 45, 39);
+SequencerTrack track4 = SequencerTrack(&pixels, stepToPixel4, 36);
+SequencerTrack track5 = SequencerTrack(&pixels, stepToPixel5, 37);
+SequencerTrack track6 = SequencerTrack(&pixels, stepToPixel6, 38);
+SequencerTrack track7 = SequencerTrack(&pixels, stepToPixel7, 39);
 
 SequencerTrack* allTracks[8] { &track0, &track1, &track2, &track3, &track4, &track5, &track6, &track7 };
+
+CyclicTrackConfig defaultTrackConfigs[8] = {
+    {127, 36, 10, 100},
+    {127, 37, 10, 100},
+    {127, 42, 10, 100},                                                                         
+    {127, 39, 10, 100},
+    {127, 40, 10, 100},                                                                                
+    {127, 43, 10, 100},
+    {127, 44, 10, 100},
+    {127, 45, 10, 100}
+  };
 
 ButtonToTrack buttonsToTracks0A[8] = {nullptr, 0};
 ButtonToTrack buttonsToTracks0B[8] = {nullptr, 0};
@@ -119,21 +152,19 @@ ButtonToTrack buttonsToTracks6B[8] = {nullptr, 0};
 ButtonToTrack buttonsToTracks7A[8] = {nullptr, 0};
 ButtonToTrack buttonsToTracks7B[8] = {nullptr, 0};
 
-TimerEvent clockTrigger;
-
 bool needsLedUpdate = false;
 
 // Naming is the same as the hardware.
 // Top-left through top-right
-ButtonGrid grid7 = ButtonGrid(26, 27, &MCP7, buttonsToTracks0A, buttonsToTracks0B);
-ButtonGrid grid6 = ButtonGrid(23, 24, &MCP6, buttonsToTracks1A, buttonsToTracks1B);
-ButtonGrid grid5 = ButtonGrid(14, 15, &MCP5, buttonsToTracks2A, buttonsToTracks2B);
-ButtonGrid grid4 = ButtonGrid(6, 4, &MCP4, buttonsToTracks3A, buttonsToTracks3B);
+ButtonGrid grid7 = ButtonGrid(&MCP7, buttonsToTracks0A, buttonsToTracks0B);
+ButtonGrid grid6 = ButtonGrid(&MCP6, buttonsToTracks1A, buttonsToTracks1B);
+ButtonGrid grid5 = ButtonGrid(&MCP5, buttonsToTracks2A, buttonsToTracks2B);
+ButtonGrid grid4 = ButtonGrid(&MCP4, buttonsToTracks3A, buttonsToTracks3B);
 // Bottom-left through bottom-right
-ButtonGrid grid0 = ButtonGrid(28, 30, &MCP0, buttonsToTracks4A, buttonsToTracks4B);
-ButtonGrid grid1 = ButtonGrid(20, 22, &MCP1, buttonsToTracks5A, buttonsToTracks5B);
-ButtonGrid grid2 = ButtonGrid(11, 12, &MCP2, buttonsToTracks6A, buttonsToTracks6B);
-ButtonGrid grid3 = ButtonGrid(2, 3, &MCP3, buttonsToTracks7A, buttonsToTracks7B);
+ButtonGrid grid0 = ButtonGrid(&MCP0, buttonsToTracks4A, buttonsToTracks4B);
+ButtonGrid grid1 = ButtonGrid(&MCP1, buttonsToTracks5A, buttonsToTracks5B);
+ButtonGrid grid2 = ButtonGrid(&MCP2, buttonsToTracks6A, buttonsToTracks6B);
+ButtonGrid grid3 = ButtonGrid(&MCP3, buttonsToTracks7A, buttonsToTracks7B);
 
 // This is a map<pinNumber, ButtonGrid>. As each GPIO expander has a pair of interrupt
 // pins, this will waste 16 pointers worth of array, but it's a good alternative to a
@@ -206,34 +237,62 @@ void fillButtonToTrack(SequencerTrack* first,
 void setup() {
   // Regular messages
   Serial.begin(115200);
+  while (!Serial)
+    delay(100);
+  
+  // Set some defaults for the sequencer. These are from the Drumbrute Impact MIDI implementation.
+  for (int i = 0; i < 8; i++) {
+    allTracks[i]->updateConfig(&defaultTrackConfigs[i]);
+  }
+
+  if (!flash.begin()) {
+    Serial.println(F("Error, failed to initialize flash chip!"));
+    while (1)
+      yield();
+  }
+
+  format_filesystem_if_needed();
+
+  // USB mass storage bits and pieces:
+  // Set disk vendor id, product id and revision with string up to 8, 16, 4 characters respectively
+  usb_msc.setID("Adafruit", "External Flash", "1.0");
+
+  // Set callback
+  usb_msc.setReadWriteCallback(msc_read_cb, msc_write_cb, msc_flush_cb);
+
+  // Set disk size, block size should be 512 regardless of spi flash page size
+  usb_msc.setCapacity(flash.size()/512, 512);
+
+  // MSC is ready for read/write
+  usb_msc.setUnitReady(true);
+
+  usb_msc.begin();
+
+  // If already enumerated, additional class driver begin() e.g msc, hid, midi won't take effect until re-enumeration
+  if (TinyUSBDevice.mounted()) {
+    TinyUSBDevice.detach();
+    delay(10);
+    TinyUSBDevice.attach();
+  }
+
+  // Init file system on the flash. This should already be done within format_filesystem_if_needed(), but just to be sure...:
+  fatfs.begin(&flash);
 
   // MIDI
   Serial1.setTX(0);
   Serial1.setRX(1);
   Serial1.begin(31250);
 
-  delay(500);
-
-  // put your setup code here, to run once:
   pixels.begin();
 
+  // Reset the GPIO expanders. 
+  // Inhibit updates while this is happening to prevent nasty false-presses later.
   pinMode(RESET_PIN, OUTPUT);
   digitalWrite(RESET_PIN, HIGH);
 
-  MCP0.begin(true);
-  MCP1.begin(true);
-  MCP2.begin(true);
-  MCP3.begin(true);
-  MCP4.begin(true);
-  MCP5.begin(true);
-  MCP6.begin(true);
-  MCP7.begin(true);
-
   for (int mcpNum = 0; mcpNum < 8; mcpNum++) {
-    // "hardware addresses" just means the weird i2c-over-spi address pins
-    // Because every GPIO expander got its own CS line, can ignore this.
-    // MCPs[mcpNum].enableHardwareAddress();
-
+    MCPs[mcpNum].begin(true);
+    
     // Input mode, both banks
     MCPs[mcpNum].pinMode8(0, 0xFF);
     MCPs[mcpNum].pinMode8(1, 0xFF);
@@ -243,7 +302,11 @@ void setup() {
     MCPs[mcpNum].setPullup8(1, 0xFF);
 
     // Verify 2-way comms
-    setupSuccess[mcpNum] = testConnection(MCPs[mcpNum]);
+    int success = testConnection(MCPs[mcpNum]);
+    Serial.print("Setup success (MCP ");
+    Serial.print(mcpNum);
+    Serial.print("):");
+    Serial.println(success);
 
     // Enable interrupts. This is "CHANGE" which will fire an interrupt
     // when the button is pressed and released. Button presses need to
@@ -251,6 +314,7 @@ void setup() {
     MCPs[mcpNum].enableInterrupt8(0, 0xFF, CHANGE);
     MCPs[mcpNum].enableInterrupt8(1, 0xFF, CHANGE);
 
+    // Active-low (Inputs pulled to ground)
     MCPs[mcpNum].setPolarity8(0, false);
     MCPs[mcpNum].setPolarity8(1, false);
   }
@@ -275,9 +339,6 @@ void setup() {
   pinMode(46, INPUT);
   pinMode(47, INPUT);
 
-  // Test timer
-  //clockTrigger.set(250, clockCallback);
-
   pixels.clear();
 
   // Top half
@@ -290,8 +351,8 @@ void setup() {
   fillButtonToTrack(&track0, &track1, buttonsToTracks2A, 2, 8);
   fillButtonToTrack(&track2, &track3, buttonsToTracks2B, 3, 8);
 
-  fillButtonToTrack(&track0, &track1, buttonsToTracks3A, 2, 12); // working
-  fillButtonToTrack(&track2, &track3, buttonsToTracks3B, 3, 12); // working
+  fillButtonToTrack(&track0, &track1, buttonsToTracks3A, 2, 12);
+  fillButtonToTrack(&track2, &track3, buttonsToTracks3B, 3, 12);
 
   // Bottom half
   fillButtonToTrack(&track4, &track5, buttonsToTracks4B, 1, 0);
@@ -386,7 +447,7 @@ void setup() {
     gpio_set_irq_enabled(clockInputPins[i], GPIO_IRQ_EDGE_FALL, true);
   }
 
-  delay(5000);
+  delay(1000);
   pixels.clear();
 }
 
@@ -409,36 +470,7 @@ void callback(unsigned int gpio, long unsigned int events) {
   }
 }
 
-void clockCallback() {
-  track0.clockSequencer();
-  track1.clockSequencer();
-  //track2.clockSequencer();
-  //track3.clockSequencer();
-  //track4.clockSequencer();
-  //track5.clockSequencer();
-  //track6.clockSequencer();
-  //track7.clockSequencer();
-}
-
 void loop() {
-  if (printedSetup == 0) {
-    // Check that the GPIO chips were set up as expected:
-    for (int mcpNum=0; mcpNum < 8; mcpNum++) {
-      Serial.print("Setup success ");
-      Serial.print(mcpNum);
-      Serial.print(" :");
-      Serial.println(setupSuccess[mcpNum]);
-    }
-  }
-
-  // Just read a value, no idea why this isn't working properly
-  // Read from the MCP chips
-  //Serial.println(MCP0.read8(0));
-  //Serial.println(MCP0.read8(1));
-  //delay(250);
-
-  clockTrigger.update();
-
   if (track0.needsLedUpdate() || 
       track1.needsLedUpdate() || 
       track2.needsLedUpdate() || 
@@ -480,6 +512,28 @@ void loop() {
   grid5.loop();
   grid6.loop();
   grid7.loop();
+
+  if (fs_changed) {
+    fs_changed = false;
+    // try reading the contents of the JSON file
+    File32 readFile = fatfs.open("/settings.txt", FILE_READ);
+
+    String fileContent;
+    while (readFile.available()) {                                                                                                                   
+      fileContent += (char)readFile.read();
+    }
+    readFile.close();
+
+    CyclicTrackConfig* loadedConfigurations = getTrackConfigurations(fileContent);
+    track0.updateConfig(&loadedConfigurations[0]);
+    track1.updateConfig(&loadedConfigurations[1]);
+    track2.updateConfig(&loadedConfigurations[2]);
+    track3.updateConfig(&loadedConfigurations[3]);
+    track4.updateConfig(&loadedConfigurations[4]);
+    track5.updateConfig(&loadedConfigurations[5]);
+    track6.updateConfig(&loadedConfigurations[6]);
+    track7.updateConfig(&loadedConfigurations[7]);
+  }
 }
 
 int testConnection(MCP23S17 & mcp)
@@ -504,4 +558,94 @@ int testConnection(MCP23S17 & mcp)
   if (temp != magic_test_number) return -5;
 
   return 0;  //  OK
+}
+
+// More USB mass storage bits and pieces:
+
+// Callback invoked when received READ10 command.
+// Copy disk's data to buffer (up to bufsize) and 
+// return number of copied bytes (must be multiple of block size) 
+int32_t msc_read_cb (uint32_t lba, void* buffer, uint32_t bufsize) {
+  return flash.readBlocks(lba, (uint8_t*) buffer, bufsize/512) ? bufsize : -1;
+}
+
+// Callback invoked when received WRITE10 command.
+// Process data in buffer to disk's storage and 
+// return number of written bytes (must be multiple of block size)
+int32_t msc_write_cb (uint32_t lba, uint8_t* buffer, uint32_t bufsize) {
+  return flash.writeBlocks(lba, buffer, bufsize/512) ? bufsize : -1;
+}
+
+// Callback invoked when WRITE10 command is completed (status received and accepted by host).
+// used to flush any pending cache.
+void msc_flush_cb (void) {
+  // sync with flash
+  flash.syncBlocks();
+
+  // clear file system's cache to force refresh
+  fatfs.cacheClear();
+
+  fs_changed = true;
+}
+
+//--------------------------------------------------------------------+
+// fatfs diskio
+//--------------------------------------------------------------------+
+extern "C" {
+
+DSTATUS disk_status(BYTE pdrv) {
+  (void)pdrv;
+  return 0;
+}
+
+DSTATUS disk_initialize(BYTE pdrv) {
+  (void)pdrv;
+  return 0;
+}
+
+DRESULT disk_read(BYTE pdrv,  /* Physical drive nmuber to identify the drive */
+                  BYTE *buff, /* Data buffer to store read data */
+                  DWORD sector, /* Start sector in LBA */
+                  UINT count    /* Number of sectors to read */
+) {
+  (void)pdrv;
+  return flash.readBlocks(sector, buff, count) ? RES_OK : RES_ERROR;
+}
+
+DRESULT disk_write(BYTE pdrv, /* Physical drive nmuber to identify the drive */
+                   const BYTE *buff, /* Data to be written */
+                   DWORD sector,     /* Start sector in LBA */
+                   UINT count        /* Number of sectors to write */
+) {
+  (void)pdrv;
+  return flash.writeBlocks(sector, buff, count) ? RES_OK : RES_ERROR;
+}
+
+DRESULT disk_ioctl(BYTE pdrv, /* Physical drive nmuber (0..) */
+                   BYTE cmd,  /* Control code */
+                   void *buff /* Buffer to send/receive control data */
+) {
+  (void)pdrv;
+
+  switch (cmd) {
+  case CTRL_SYNC:
+    flash.syncBlocks();
+    return RES_OK;
+
+  case GET_SECTOR_COUNT:
+    *((DWORD *)buff) = flash.size() / 512;
+    return RES_OK;
+
+  case GET_SECTOR_SIZE:
+    *((WORD *)buff) = 512;
+    return RES_OK;
+
+  case GET_BLOCK_SIZE:
+    *((DWORD *)buff) = 8; // erase block size in units of sector size
+    return RES_OK;
+
+  default:
+    return RES_PARERR;
+  }
+}
 }

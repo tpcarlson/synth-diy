@@ -10,7 +10,7 @@ struct ButtonToTrack {
 
 class ButtonGrid {
   public:
-    ButtonGrid(int interruptA, int interruptB, MCP23S17* mcp23S17, ButtonToTrack (&buttonToTrackA)[8], ButtonToTrack (&buttonToTrackB)[8]);
+    ButtonGrid(MCP23S17* mcp23S17, ButtonToTrack (&buttonToTrackA)[8], ButtonToTrack (&buttonToTrackB)[8]);
     MCP23S17* mcp23S17;
     static ButtonGrid* instance;
     void loop();
@@ -21,13 +21,15 @@ class ButtonGrid {
     volatile bool requiresUpdateA;
     volatile bool requiresUpdateB;
 
-    // Interrupt pins (Maybe no longer needed?)
-    int interruptA;
-    int interruptB;
-
     // Button -> track maps
     ButtonToTrack (&buttonToTrackA)[8]; // Map<buttonNumber, track+number>
     ButtonToTrack (&buttonToTrackB)[8]; // Map<buttonNumber, track+number>
+
+    // Button tracking to better handle hold state
+    uint8_t pressedA = 0;
+    uint8_t pressedB = 0;
+
+    void processButtonSide(int regA, int regB, uint8_t& pressed, const ButtonToTrack (&buttonToTrack)[8]);
 };
 
 struct GridAndSide {

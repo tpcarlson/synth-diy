@@ -3,34 +3,52 @@
 #include "MCP23S17.h"
 #include "SequencerTrack.h"
 
-// TODO: Debounce button inputs!
-// Figure out why the MCP23S17 isn't happy if not reading all the time with interrupts enabled
-// Wire up button presses to sequencer
-// -> Needs a map of button address on A and B ports to 4 sequencer pointers
-//    Maybe a struct { SequencerTrack*, sequenceIndex(0-127) }?
-//    Then an array of these for the A and B sides (With array index being the map key)
-//    16 structs per ButtonGrid, 128 total
+const uint8_t BUTTON_MASK = 0b10000000;
 
+// TODO: Debounce button inputs! This hasn't really been necessary so far, but might be nice to do.
 ButtonGrid* ButtonGrid::instance = nullptr;
 
-ButtonGrid::ButtonGrid(int interruptA, int interruptB, MCP23S17* mcp23S17, ButtonToTrack (&buttonToTrackA)[8], ButtonToTrack (&buttonToTrackB)[8])
-   : interruptA(interruptA), interruptB(interruptB), mcp23S17(mcp23S17), buttonToTrackA(buttonToTrackA), buttonToTrackB(buttonToTrackB) {
+ButtonGrid::ButtonGrid(MCP23S17* mcp23S17, ButtonToTrack (&buttonToTrackA)[8], ButtonToTrack (&buttonToTrackB)[8])
+   : mcp23S17(mcp23S17), buttonToTrackA(buttonToTrackA), buttonToTrackB(buttonToTrackB) {
   instance = this;
 }
 
 void ButtonGrid::begin() {
-  //delay(5000);
-  //attachInterrupt(digitalPinToInterrupt(interruptA), isrRouterA, CHANGE);
-  //attachInterrupt(digitalPinToInterrupt(interruptB), isrRouterB, CHANGE);
-  //Serial.println("Attached ISRs");
-  //Serial.println(interruptA);
-  //Serial.println(interruptB);
+}
+
+void ButtonGrid::processButtonSide(int regA, int regB, uint8_t& pressed, const ButtonToTrack (&buttonToTrack)[8]) {
+  int readResult = mcp23S17->getInterruptCaptureRegister8(regA);
+  int readResult2 = mcp23S17->getInterruptCaptureRegister8(regB);
+
+  int mask = BUTTON_MASK;
+  for (int i = 0; i < 8; i++) {
+    int buttonResult = (~readResult) & mask;
+    if (buttonResult) {
+      if (!(pressed & mask)) {
+        buttonToTrack[i].track->toggleActive(buttonToTrack[i].index);
+        pressed |= mask;
+      }
+    } else {
+      pressed &= ~mask;
+    }
+    mask >>= 1;
+  }
 }
 
 void ButtonGrid::loop() {
-  // TODO: This is hacky, but seems to fix reads only working once...
   mcp23S17->read8(0);
   mcp23S17->read8(1);
+
+  if (requiresUpdateA) {
+    processButtonSide(0, 1, pressedA, buttonToTrackA);
+    requiresUpdateA = false;
+  }
+  if (requiresUpdateB) {
+    processButtonSide(1, 0, pressedB, buttonToTrackB);
+    requiresUpdateB = false;
+  }
+
+  /*
   if (requiresUpdateA) {
     int readResult = mcp23S17->getInterruptCaptureRegister8(0);
     int readResult2 = mcp23S17->getInterruptCaptureRegister8(1);
@@ -78,9 +96,10 @@ void ButtonGrid::loop() {
     }
 
     requiresUpdateB = false;
-  }
+  } */
 }
 
+// Called from within the GPIO callback, see cyclic.ino.
 void ButtonGrid::isrRouter(int index) {
   if (index == 0) {
     requiresUpdateA = true;

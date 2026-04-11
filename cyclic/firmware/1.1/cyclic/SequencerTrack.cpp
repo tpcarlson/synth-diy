@@ -7,8 +7,8 @@
 
 const unsigned long gateLengthMillis = 100;
 
-SequencerTrack::SequencerTrack(Adafruit_NeoPixel* pixels, int (&stepToPixel)[16], int midiChannel, int midiNote, int gateOutput)
-   : pixels(pixels), currentStep(0), stepToPixel(stepToPixel), midiChannel(midiChannel-1), gateOutput(gateOutput), midiNote(midiNote) {
+SequencerTrack::SequencerTrack(Adafruit_NeoPixel* pixels, int (&stepToPixel)[16], int gateOutput)
+   : pixels(pixels), currentStep(0), stepToPixel(stepToPixel), gateOutput(gateOutput) {
 }
 
 void SequencerTrack::clockSequencer() {
@@ -17,18 +17,19 @@ void SequencerTrack::clockSequencer() {
   pixels->setPixelColor(stepToPixel[currentStep], stepActive[currentStep] ? CLOCKED_ACTIVE_SEQUENCE_STEP : CLOCKED_OFF_SEQUENCE_STEP);
   loopUpdate = true;
 
-  // TODO: Gate outputs are currently 100% duty (ie. active for the whole step)
-  // Adjacent steps will just be tied. Once there is support for firmware, some
-  // kind of gate length might be worth adding, with the caveat that as all the
-  // sequencer tracks are clocked externally this'll be of the form "delay x ms"
-  // rather than the form "50% duty cycle".
+  // Gate outputs are tied to a duration in configuration (Default 100ms).
+  // This is because the clock inputs to the sequencer are clock -> advance
+  // sequence, so we can't do duty cycle. If Cyclic clocked itself, then it
+  // would be possible to add duty cycles in. An alternative could be to
+  // guess the BPM to derive a duration, but with the kind of uneven clocks that
+  // I want to use with Cyclic, this won't work very well.
   if (stepActive[currentStep]) {
-    noteOn(0x90 | midiChannel, midiNote, 0x45);
+    noteOn(0x90 | config->midiChannel-1, config->midiNote, config->velocity);
     digitalWrite(gateOutput, HIGH);
     lastGate = millis();
     gateOutputting = true;
   } else {
-    noteOn(0x80 | midiChannel, midiNote, 0);
+    noteOn(0x80 | config->midiChannel-1, config->midiNote, 0);
     digitalWrite(gateOutput, LOW);
     gateOutputting = false;
   }
@@ -51,7 +52,7 @@ void SequencerTrack::loop() {
     loopUpdate = false;
   }
 
-  if (gateOutputting && (millis() - gateLengthMillis) > lastGate) {
+  if (gateOutputting && (millis() - config->gateDurationMs) > lastGate) {
     digitalWrite(gateOutput, LOW);
     gateOutputting = false;
   }
@@ -71,4 +72,8 @@ void SequencerTrack::noteOn(int cmd, int pitch, int velocity) {
   Serial1.write(cmd);
   Serial1.write(pitch);
   Serial1.write(velocity);
+}
+
+void SequencerTrack::updateConfig(CyclicTrackConfig* newConfig) {
+  config = newConfig;
 }
