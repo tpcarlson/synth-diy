@@ -26,7 +26,7 @@ The button pads are the same as the Silicone Elastomer 4x4 pads from Adafruit, a
 
 As of the second revision, the clocking, trigger outputs, and MIDI outputs portions of the firmware are complete. MIDI input code does not exist yet. Connecting Cyclic to a computer exposes a configuration file which can be used to change the trigger assignments. The hardware is otherwise complete.
 
-The 3D printed PLA case can be printed in a couple of pieces. The "bottom" half of the case consists of the bottom, sides, and rear of the case and can be printed easily on a large enough printer (250x250x250mm). The "top" half of the case is comprised of the front, button pad cover, and top socket cover. This needs to be printed stood on-end. I have not tried printing the case in materials other than PLA.
+The 3D printed PLA case can be printed in a couple of pieces. The "bottom" half of the case consists of the bottom, sides, and rear of the case and can be printed easily on a large enough printer (250x250x250mm). The "top" half of the case is comprised of the front, button pad cover, and top socket cover. This needs to be printed stood on its side. I have not tried printing the case in materials other than PLA.
 
 ##### Do you have a BOM/Mouser cart/Tayda links?
 
@@ -46,6 +46,10 @@ For this project, PCBWay sponsored the topmost socket PCB with PCB assembly to a
 
 ##### Other resources
 
-(BOM, Firmware, Assembly guides to follow)
+- [Kit BOM](BOM.md)
+
+- [Kit assembly instructions](ASSEMBLY.md)
+
+- [Manual](MANUAL.md)
 
 ![](images/case-resized.jpg)
