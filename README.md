@@ -51,4 +51,4 @@ Modules available as kits are available on [Reverb](https://reverb.com/uk/shop/d
 
 ##### Non-synth Projects
 
-- [Stack Light](stack-light/) - A small PCB for controlling three channel stack-lights usually used in factories.
+- [Stack Light](stack-lights/) - A small PCB for controlling three channel stack-lights usually used in factories.
