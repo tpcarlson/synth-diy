@@ -48,3 +48,7 @@ Modules available as kits are available on [Reverb](https://reverb.com/uk/shop/d
 - [VCDO](VCDO/) - 10hp, Wavetable VCDO using the ElectricDruid [Wavetable chip](https://electricdruid.net/product/vcdo-wavetable-oscillator/)
 - [YARM+](yarmplus/) - 4hp Ring Modulator, based on the René Schmitz [YARM+](https://www.schmitzbits.de/vca.html) design
 - [YASH](yash/) - 5hp Sample and Hold based on the René Schmitz [YASH](https://www.schmitzbits.de/sah.html) design, with some modifications
+
+##### Non-synth Projects
+
+- [Stack Light](stack-light/) - A small PCB for controlling three channel stack-lights usually used in factories.
